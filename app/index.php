@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="dist/css/semantic.min.css">
-    <link rel="stylesheet" t<link rel="stylesheet" type="text/css" href="dist/css/semantic.min.css">ype="text/css" href="dist/css/vuetify.css">
+    <link rel="stylesheet" type="text/css" href="dist/css/vuetify.css">
     <link rel="stylesheet" type="text/css" href="dist/css/main.css">
 </head>
 <body>
