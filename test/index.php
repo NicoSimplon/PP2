@@ -11,6 +11,7 @@
 </head>
 
 <body>
+
     <nav id="navbar">
         
     </nav>
@@ -59,51 +60,6 @@
             v-bind:key="item.id"></todo-item>
         </ol>
     </div>
-
-
-
-
-    
-    <!-- <img id="ok" src="325547.jpg" style="width:50%" style="cursor:pointer "> -->
-
-<?php 
-// $today = date("Y-m-d");
-// echo $today;
-
-
-//     $file = scandir('photo');
-
-//     foreach ($file as $value) {
-//         echo '<img src="photo/' . $value . '"> ';
-//     }
-
-
-#https://openclassrooms.com/courses/supprimer-des-fichiers-sur-le-serveur-grace-a-php
-
-    // $upload_file_name = preg_replace( $upload_file_name);
-    // $dest = '/photo/' . $upload_file_name;
-    // echo $dest;
-
-
-    // if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    //     if (is_uploaded_file($_FILES['my_upload']['tmp_name'])) {
-
-    //         if (move_uploaded_file($_FILES['my_upload']['tmp_name'], $dest)) {
-    //             echo 'File Has Been Uploaded !';
-    //         }
-    //          else {
-    //             echo "nop";
-    //         }
-    //     }
-    // }
-
-    ?>
-
-    <!-- <form action="" method="post" enctype="multipart/form-data">
-        <input id="my_upload" name="my_upload" type="file">
-        <input type="submit" value="Upload Now">
-    </form> -->
-
 
 
     <script src="vue.js"></script>

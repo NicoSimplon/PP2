@@ -1,18 +1,3 @@
-// Vue.component('navmenu', {
-//     template: '<div id="cool" :style="modusfocus">Un composant personnalisé !</div>',
-
-    
-// })
-
-// // créer une instance racine
-// var navbar = new Vue({
-//     el: 'header',
-//     data:{
-    	
-//     }
-// })
-
-
 var app = new Vue({
   el: '#app',
   data: {
@@ -82,7 +67,6 @@ Vue.component('todo-item', {
   template: '<li>{{ todo.text }}</li>'
 })
 
-
 var app7 = new Vue({
   el: '#app-7',
   data: {
@@ -101,11 +85,3 @@ var vm = new Vue({
  		
  	}
 })
-// $(document).ready(function(){
-// $("img").on('click', function(){
-//         var url = $(this).attr('src');    
-//         console.log(url);
-//     $('#cool').html(url);
-//     });
-
-// })
