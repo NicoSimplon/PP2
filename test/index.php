@@ -12,33 +12,36 @@
 
 <body>
     <header>
+
         <navmenu></navmenu>
     </header>
+    <div id="app">
+      {{ message }}
+    </div>
 
 
 
 
 
-    
-    <img id="ok" src="325547.jpg" style="width:50%" style="cursor:pointer ">
+    <!-- <img id="ok" src="325547.jpg" style="width:50%" style="cursor:pointer "> -->
 
-<?php 
-$today = date("Y-m-d");
-echo $today;
-
-
-    $file = scandir('photo');
-
-    foreach ($file as $value) {
-        echo '<img src="photo/' . $value . '"> ';
-    }
-
-
-#https://openclassrooms.com/courses/supprimer-des-fichiers-sur-le-serveur-grace-a-php
-
-    $upload_file_name = preg_replace( $upload_file_name);
-    $dest = '/photo/' . $upload_file_name;
-    echo $dest;
+<!-- <?php
+// $today = date("Y-m-d");
+// echo $today;
+//
+//
+//     $file = scandir('photo');
+//
+//     foreach ($file as $value) {
+//         echo '<img src="photo/' . $value . '"> ';
+//     }
+//
+//
+// #https://openclassrooms.com/courses/supprimer-des-fichiers-sur-le-serveur-grace-a-php
+//
+//     $upload_file_name = preg_replace( $upload_file_name);
+//     $dest = '/photo/' . $upload_file_name;
+//     echo $dest;
 
 
     // if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -53,7 +56,7 @@ echo $today;
     //     }
     // }
 
-    ?>
+    ?>-->
 
     <!-- <form action="" method="post" enctype="multipart/form-data">
         <input id="my_upload" name="my_upload" type="file">

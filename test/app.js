@@ -1,25 +1,28 @@
-Vue.component('navmenu', {
-    template: '<div id="cool" :style="caca">Un composant personnalisé !</div>',
+// Vue.component('navmenu', {
+//     template: '<div id="cool" :style="caca">Un composant personnalisé !</div>',
 
-    
-})
+
+// })
 
 // créer une instance racine
-new Vue({
-    el: 'header',
-    data:{
-    
-    }
+// new Vue({
+//     el: 'header',
+//     data:{
+//
+//     }
+// })
+//
+// $(document).ready(function(){
+// $("img").on('click', function(){
+//         var url = $(this).attr('src');
+//         console.log(url);
+//     $('#cool').html(url);
+//     });
+
 })
-
-$(document).ready(function(){
-$("img").on('click', function(){
-        var url = $(this).attr('src');    
-        console.log(url);
-    $('#cool').html(url);
-    });
-
+var app = new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue!'
+  }
 })
-
-
-
