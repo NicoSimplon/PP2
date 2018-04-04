@@ -6,15 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Test de la mort qui tue</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-    </style>
 </head>
 
 <body>
-
-    <nav id="navbar">
-        
-    </nav>
 
     <div id="app">
         {{ message }}

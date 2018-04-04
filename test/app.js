@@ -78,10 +78,3 @@ var app7 = new Vue({
   }
 })
 
-
-var vm = new Vue({
- 	el: 'nav',
- 	data: {
- 		
- 	}
-})
