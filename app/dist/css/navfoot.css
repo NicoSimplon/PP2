@@ -1,0 +1,34 @@
+html body {
+  margin: 0;
+  display: inline-flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+nav {
+  width: 100%;
+  background: blue;
+  height: 4.5rem;
+}
+nav #containerElnav {
+  width: 100%;
+  height: 100%;
+  display:inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+nav #containerElnav #menuptgauche {
+width : 20%;
+height: 100%;
+background: red;
+float:left;
+  }
+  nav #containerElnav #menuptdroit {
+    width : 80%;
+    height: 100%;
+    background: violet;
+    float:right ;
+      }
