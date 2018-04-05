@@ -1,7 +1,6 @@
 html body {
   margin: 0;
   display: inline-flex;
-  flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
   width: 100%;
@@ -18,6 +17,7 @@ nav #containerElnav {
   height: 100%;
   display:inline-flex;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
 }
 nav #containerElnav #menuptgauche {
