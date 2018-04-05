@@ -12,6 +12,7 @@
 <body>
 	<nav id="barnave">
 		<navigation></navigation>
+        <!-- <div v-for="nav in navi">{{nav.lien}}</div> -->
 	</nav>
 	
 	<script src="dist/js/vue.js"></script>
@@ -21,3 +22,4 @@
     <script src="dist/js/main.js"></script>
 </body>
 </html>
+
