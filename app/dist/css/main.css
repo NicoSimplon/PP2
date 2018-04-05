@@ -1,0 +1,9 @@
+/* style commun */
+
+html body {
+	margin: 0;
+	display: inline-flex;
+ 	flex-flow: column;
+ 	width: 100%;
+}
+
