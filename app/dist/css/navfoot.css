@@ -1,34 +1,170 @@
 html body {
   margin: 0;
   display: inline-flex;
-  flex-wrap: wrap;
-  align-items: center;
+  flex-flow: column;
   width: 100%;
-  height: auto;
+  height: 100rem;
+}
+.ImgLogo {
+  width: 5rem;
+  height: 4.5rem;
 }
 
+a:focus {
+  outline: 0;
+}
+a:link {
+  text-decoration: none;
+}
+header {
+  background: turquoise;
+}
 nav {
   width: 100%;
-  background: blue;
+  /* background: blue; */
   height: 4.5rem;
+  position: sticky;
+  top: 0rem;
+  z-index: 10;
 }
 nav #containerElnav {
   width: 100%;
   height: 100%;
-  display:inline-flex;
+  display: inline-flex;
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
+  background: slategrey;
+}
+nav #containerElnav .imgAngre {
+  /* background: chartreuse; */
+  width: 100%;
+  height: auto;
+  display: flex;
+  z-index: -1;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: -4.5rem;
+}
+nav #containerElnav .imgAngre .GrosAngre {
+  font-size: 10rem;
+  -webkit-animation: rotate 10s linear 0s infinite normal;
+  animation: rotate 10s linear 0s infinite normal;
+}
+
+@-webkit-keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
 }
 nav #containerElnav #menuptgauche {
-width : 20%;
-height: 100%;
-background: red;
-float:left;
+  align-items: center;
+  justify-content: center;
+  width: 10%;
+  height: 100%;
+  float: left;
+}
+nav #containerElnav #menuptdroit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  height: 100%;
+  float: right;
+  background: slategrey;
+}
+nav #containerElnav #menuptdroit .containerBtnTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10%;
+  height: 100%;
+  font-size: 1rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+nav #containerElnav #menuptdroit .petitsAngre {
+  height: 100%;
+  display: flex;
+  transform: rotate(-45deg);
+}
+.petitAngre1 {
+  position: absolute;
+  font-size: 10px;
+  top: 3rem;
+  -webkit-animation: rotate 3s linear 0s infinite normal;
+  animation: rotate 3s linear 0s infinite normal;
+}
+
+/* @-webkit-keyframes rotate {
+                 100%{
+                 -webkit-transform: rotate(360deg);
+                 transform: rotate(360deg);
+                 }
+                } 
+                
+                @keyframes rotate {
+                 100%{
+                 transform: rotate(360deg);
+                 }
+                } */
+.petitAngre2 {
+  position: absolute;
+  font-size: 10px;
+  top: 2.4rem;
+  -webkit-animation: rotate 3s linear 0s infinite normal;
+  animation: rotate 3s linear 0s infinite normal;
+}
+
+/* @-webkit-keyframes rotate {
+                 100%{
+                 -webkit-transform: rotate(-360deg);
+                 transform: rotate(-360deg);
+                 }
+                } 
+                
+                @keyframes rotate {
+                 100%{
+                 transform: rotate(-360deg);
+                 }
+                } */
+
+@media all and (max-width: 860px) {
+  nav #containerElnav .imgAngre .GrosAngre {
+    cursor: pointer;
+  }
+
+  nav #containerElnav #menuptgauche {
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
   }
   nav #containerElnav #menuptdroit {
-    width : 80%;
-    height: 100%;
-    background: violet;
-    float:right ;
-      }
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    height: 60vh;
+  }
+  nav #containerElnav #menuptdroit .containerBtnTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 2.5rem ;
+    font-size: 1rem;
+    margin:0;
+  }
+}
