@@ -1,3 +1,4 @@
+// Carousel de la page d'accueil
 $('.owl-carousel').owlCarousel({
     autoplay: true,
     autoplayTimeout: 5000,
@@ -20,3 +21,4 @@ $('.owl-carousel').owlCarousel({
         }
     }
 })
+

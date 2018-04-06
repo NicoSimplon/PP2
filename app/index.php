@@ -39,7 +39,7 @@
 	<!-- Partie contenant la barre d'alerte -->
 
 	<div id="alert_bar" class="row">
-
+		
 		<div class="col s12 m4">
 			<p>zerg</p>
 			<img src="piscine.jpg" width="100%">
@@ -47,7 +47,7 @@
 		
 		<div class="col s12 m4">
 			<p>zerg</p>
-			<img src="piscine.jpg" width="100%">	
+			<img src="piscine.jpg" width="100%">
 		</div>
 			
 		<div class="col s12 m4">
