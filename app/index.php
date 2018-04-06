@@ -1,10 +1,16 @@
 <!DOCTYPE html>
+
 <html>
 <head>
 	<title>Accueil</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
    	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+   	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk"
+    crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P"
+    crossorigin="anonymous">    
+    <link rel="stylesheet" type="text/css" href="dist/css/navfoot.css"></link>
    	<link rel="stylesheet" type="text/css" href="dist/css/materialize.css">
 	<link rel="stylesheet" href="dist/owlcarousel/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="dist/owlcarousel/assets/owl.theme.default.min.css">
@@ -12,8 +18,14 @@
 </head>
 <body>
 	<!-- Partie contenant le bandeau -->
-
+	<header>
+		<p>Photo</p>
+	</header>
 	<!-- Partie contenant la navbar -->
+		
+	<nav>
+        <navmenu></navmenu>
+    </nav>
 
 	<!-- Partie contenant la slide des évènements -->
 
@@ -232,6 +244,7 @@
 	<script src="dist/js/materialize.js"></script>
 	<script src="dist/js/jquery.js"></script>
 	<script src="dist/owlcarousel/owl.carousel.js"></script>
+    <script src="dist/js/navfoot.js"></script>
 	<script src="dist/js/main.js"></script>
 </body>
 </html>
