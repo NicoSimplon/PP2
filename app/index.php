@@ -38,44 +38,47 @@
 	
 	<!-- Partie contenant la barre d'alerte -->
 
-	<div id="alert_bar" class="ui three column grid">
+	<div id="alert_bar" class="row">
 
-		<div class="column">
-			zerg
+		<div class="col s12 m4">
+			<p>zerg</p>
+			<img src="piscine.jpg" width="100%">
 		</div>
 		
-		<div class="column">
-			zerg	
+		<div class="col s12 m4">
+			<p>zerg</p>
+			<img src="piscine.jpg" width="100%">	
 		</div>
 			
-		<div class="column">
-			zerg
+		<div class="col s12 m4">
+			<p>zerg</p>
+			<img src="piscine.jpg" width="100%">
 		</div>
 		
 	</div>
 
 	<!-- Partie du milieu de la page -->
 
-	<div id="descriptifFacebookNewsletter" class="ui internally celled grid">
+	<div id="descriptifFacebookNewsletter" class="row">
 
-		<div class="twelve wide column">
-			<div class="ui two column grid">
-				<div class="column">
+		<div class="col s12 m9">
+			<div class="row">
+				<div class="col s12 m6">
 					<img src="piscine.jpg" width="100%">
 				</div>
-				<div class="column">
+				<div class="col s12 m6">
 					Labore aute irure elit fugiat dolor aute aute esse ullamco excepteur incididunt officia duis magna adipisicing magna ut magna amet ut ut proident nostrud veniam amet eu id id incididunt laboris id tempor proident deserunt labore voluptate ea dolor in magna magna dolor adipisicing nisi cillum eu mollit reprehenderit aliqua pariatur ut consequat sit pariatur tempor tempor anim laboris ullamco non officia proident sit proident sint qui labore ut commodo nulla labore in ut dolor ut non sed ad mollit duis incididunt anim in cillum ullamco ad nisi in nisi aliquip laboris voluptate magna esse consequat sed in velit laborum mollit deserunt sunt nisi dolore dolore eiusmod pariatur ex quis laborum proident consectetur duis officia sed ad eiusmod sed ea irure cillum amet velit reprehenderit non velit cupidatat cupidatat magna tempor sint magna qui sunt magna proident laborum consequat ullamco proident esse tempor eu minim laborum laborum consequat anim incididunt dolor dolor dolor do minim culpa est labore enim ut velit in non voluptate elit dolor ullamco fugiat ut quis esse occaecat magna laboris sunt duis sed dolor qui occaecat nostrud aute qui nulla excepteur eu est dolor enim sed cillum dolor mollit cillum in ut cillum pariatur excepteur officia ut.
 				</div>
-				<div class="column">
+				<div class="col s12 m6">
 					Labore aute irure elit fugiat dolor aute aute esse ullamco excepteur incididunt officia duis magna adipisicing magna ut magna amet ut ut proident nostrud veniam amet eu id id incididunt laboris id tempor proident deserunt labore voluptate ea dolor in magna magna dolor adipisicing nisi cillum eu mollit reprehenderit aliqua pariatur ut consequat sit pariatur tempor tempor anim laboris ullamco non officia proident sit proident sint qui labore ut commodo nulla labore in ut dolor ut non sed ad mollit duis incididunt anim in cillum ullamco ad nisi in nisi aliquip laboris voluptate magna esse consequat sed in velit laborum mollit deserunt sunt nisi dolore dolore eiusmod pariatur ex quis laborum proident consectetur duis officia sed ad eiusmod sed ea irure cillum amet velit reprehenderit non velit cupidatat cupidatat magna tempor sint magna qui sunt magna proident laborum consequat ullamco proident esse tempor eu minim laborum laborum consequat anim incididunt dolor dolor dolor do minim culpa est labore enim ut velit in non voluptate elit dolor ullamco fugiat ut quis esse occaecat magna laboris sunt duis sed dolor qui occaecat nostrud aute qui nulla excepteur eu est dolor enim sed cillum dolor mollit cillum in ut cillum pariatur excepteur officia ut.
 				</div>
-				<div class="column">
+				<div class="col s12 m6">
 					<img src="piscine.jpg" width="100%">
 				</div>
 			</div>
 		</div>
 
-		<div class="four wide column">
+		<div class="col s12 m3">
 			
 			<div>Dolor dolore commodo deserunt sed cillum elit sint laborum adipisicing voluptate magna incididunt laborum et irure voluptate irure amet nostrud in reprehenderit ut deserunt.Dolor dolore commodo deserunt sed cillum elit sint laborum adipisicing voluptate magna incididunt laborum et irure voluptate irure amet nostrud in reprehenderit ut deserunt.Dolor dolore commodo deserunt sed cillum elit sint laborum adipisicing voluptate magna incididunt laborum et irure voluptate irure amet nostrud in reprehenderit ut deserunt.Dolor dolore commodo deserunt sed cillum elit sint laborum adipisicing voluptate magna incididunt laborum et irure voluptate irure amet nostrud in reprehenderit ut deserunt.Dolor dolore commodo deserunt sed cillum elit sint laborum adipisicing voluptate magna incididunt laborum et irure voluptate irure amet nostrud in reprehenderit ut deserunt.Dolor dolore commodo deserunt sed cillum elit sint laborum adipisicing voluptate magna incididunt laborum et irure voluptate irure amet nostrud in reprehenderit ut deserunt.</div>
 			
@@ -85,8 +88,8 @@
 				
 				<h2>S'abonner à la newsletter</h2>
 
-				<form method="post" class="ui form">
-				  	<div class="input-field col s12 m4">
+				<form method="post">
+				  	<div class="input-field">
 			          	<input id="email" type="email" required class="validate">
 			          	<label for="email">E-mail</label>
 			        </div>
@@ -101,13 +104,13 @@
 
 	<!-- Partie contenant les derniers commentaires du site -->
 
-	<div id="commentaires" class="ui three column grid">
+	<div id="commentaires" class="row">
 		
-		<div class="column">
+		<div class="col m3 hide-on-small-and-down">
 			<img src="piscine.jpg" width="100%">
 		</div>
 		
-		<div class="column">
+		<div class="col s12 m6">
 			<div class="ui feed">
 			  <div class="event">
 			    <div class="label">
@@ -217,7 +220,7 @@
 			</div>
 		</div>
 		
-		<div class="column">
+		<div class="col m3 hide-on-small-and-down">
 			<img src="piscine.jpg" width="100%">
 		</div>
 		
