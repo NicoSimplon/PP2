@@ -53,7 +53,7 @@ nav #containerElnav .imgAngre .GrosAngre {
   animation: rotate 10s linear 0s infinite normal;
 }
 
-@-webkit-keyframes rotate {
+/* @-webkit-keyframes rotate {
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
@@ -64,7 +64,7 @@ nav #containerElnav .imgAngre .GrosAngre {
   100% {
     transform: rotate(360deg);
   }
-}
+} */
 nav #containerElnav #menuptgauche {
   align-items: center;
   justify-content: center;
