@@ -32,18 +32,19 @@
 	<div id="slide_event">
 		
 		<div class="owl-carousel owl-theme">
-		    <div class="item"><img src="piscine.jpg" width="100%" height="500vh"></div>
-		    <div class="item"><img src="piscine.jpg" width="100%" height="500vh"></div>
-		    <div class="item"><img src="piscine.jpg" width="100%" height="500vh"></div>
-		    <div class="item"><img src="piscine.jpg" width="100%" height="500vh"></div>
-		    <div class="item"><img src="piscine.jpg" width="100%" height="500vh"></div>
-		    <div class="item"><img src="piscine.jpg" width="100%" height="500vh"></div>
-		    <div class="item"><img src="piscine.jpg" width="100%" height="500vh"></div>
-		    <div class="item"><img src="piscine.jpg" width="100%" height="500vh"></div>
-		    <div class="item"><img src="piscine.jpg" width="100%" height="500vh"></div>
-		    <div class="item"><img src="piscine.jpg" width="100%" height="500vh"></div>
-		    <div class="item"><img src="piscine.jpg" width="100%" height="500vh"></div>
-		    <div class="item"><img src="piscine.jpg" width="100%" height="500vh"></div>
+		    <div class="item size"><img src="piscine.jpg"></div>
+		    <div class="item size"><img src="piscine.jpg"></div>
+		    <div class="item size"><img src="piscine.jpg"></div>
+		    <div class="item size"><img src="piscine.jpg"></div>
+		    <div class="item size"><img src="piscine.jpg"></div>
+		    <div class="item size"><img src="piscine.jpg"></div>
+		    <div class="item size"><img src="piscine.jpg"></div>
+		    <div class="item size"><img src="piscine.jpg"></div>
+		    <div class="item size"><img src="piscine.jpg"></div>
+		    <div class="item size"><img src="piscine.jpg"></div>
+		    <div class="item size"><img src="piscine.jpg"></div>
+				<div class="item size"><img src="piscine.jpg"></div>
+				<div class="owl-dots"></div>
 		</div>
 		
 	</div>
@@ -52,19 +53,19 @@
 
 	<div id="alert_bar" class="row">
 		
-		<div class="col s12 m4">
+		<div class="col s12 m4 h100">
 			<p>zerg</p>
-			<img src="piscine.jpg" width="100%">
+			<img src="piscine.jpg" >
 		</div>
 		
-		<div class="col s12 m4">
+		<div class="col s12 m4 h100">
 			<p>zerg</p>
-			<img src="piscine.jpg" width="100%">
+			<img src="piscine.jpg" >
 		</div>
 			
-		<div class="col s12 m4">
+		<div class="col s12 m4 h100">
 			<p>zerg</p>
-			<img src="piscine.jpg" width="100%">
+			<img src="piscine.jpg" >
 		</div>
 		
 	</div>
@@ -79,10 +80,10 @@
 					<img src="piscine.jpg" width="100%">
 				</div>
 				<div class="col s12 m6">
-					Labore aute irure elit fugiat dolor aute aute esse ullamco excepteur incididunt officia duis magna adipisicing magna ut magna amet ut ut proident nostrud veniam amet eu id id incididunt laboris id tempor proident deserunt labore voluptate ea dolor in magna magna dolor adipisicing nisi cillum eu mollit reprehenderit aliqua pariatur ut consequat sit pariatur tempor tempor anim laboris ullamco non officia proident sit proident sint qui labore ut commodo nulla labore in ut dolor ut non sed ad mollit duis incididunt anim in cillum ullamco ad nisi in nisi aliquip laboris voluptate magna esse consequat sed in velit laborum mollit deserunt sunt nisi dolore dolore eiusmod pariatur ex quis laborum proident consectetur duis officia sed ad eiusmod sed ea irure cillum amet velit reprehenderit non velit cupidatat cupidatat magna tempor sint magna qui sunt magna proident laborum consequat ullamco proident esse tempor eu minim laborum laborum consequat anim incididunt dolor dolor dolor do minim culpa est labore enim ut velit in non voluptate elit dolor ullamco fugiat ut quis esse occaecat magna laboris sunt duis sed dolor qui occaecat nostrud aute qui nulla excepteur eu est dolor enim sed cillum dolor mollit cillum in ut cillum pariatur excepteur officia ut.
+					Labore aute irure elit fugiat dolor aute aute esse ullamco excepteur incididunt officia duis magna adipisicing magna ut magna amet ut ut proident nostrud veniam amet eu id id incididunt laboris id tempor proident deserunt labore voluptate ea dolor in magna magna dolor adipisicing nisi cillum eu mollit reprehenderit aliqua pariatur ut consequat sit pariatur tempor tempor anim laboris ullamco non officia proident sit proident sint qui labore ut a ut.
 				</div>
 				<div class="col s12 m6">
-					Labore aute irure elit fugiat dolor aute aute esse ullamco excepteur incididunt officia duis magna adipisicing magna ut magna amet ut ut proident nostrud veniam amet eu id id incididunt laboris id tempor proident deserunt labore voluptate ea dolor in magna magna dolor adipisicing nisi cillum eu mollit reprehenderit aliqua pariatur ut consequat sit pariatur tempor tempor anim laboris ullamco non officia proident sit proident sint qui labore ut commodo nulla labore in ut dolor ut non sed ad mollit duis incididunt anim in cillum ullamco ad nisi in nisi aliquip laboris voluptate magna esse consequat sed in velit laborum mollit deserunt sunt nisi dolore dolore eiusmod pariatur ex quis laborum proident consectetur duis officia sed ad eiusmod sed ea irure cillum amet velit reprehenderit non velit cupidatat cupidatat magna tempor sint magna qui sunt magna proident laborum consequat ullamco proident esse tempor eu minim laborum laborum consequat anim incididunt dolor dolor dolor do minim culpa est labore enim ut velit in non voluptate elit dolor ullamco fugiat ut quis esse occaecat magna laboris sunt duis sed dolor qui occaecat nostrud aute qui nulla excepteur eu est dolor enim sed cillum dolor mollit cillum in ut cillum pariatur excepteur officia ut.
+					Labore aute irure elit fugiat dolor aute aute esse ullamco excepteur incididunt officia duis magna adipisicing magna ut magna amet ut ut proident nostrud veniam amet eu id id incididunt laboris id tempor proident deserunt labore voluptate ea dolor in magna magna dolor adipisicing nisi cillum eu mollit reprehenderit aliqua pariatur ut consequat sit pariatur tempor tempor anim laboris ullamco non officia proident sit proident sint qui labore ut 
 				</div>
 				<div class="col s12 m6">
 					<img src="piscine.jpg" width="100%">
@@ -91,8 +92,7 @@
 		</div>
 
 		<div class="col s12 m3">
-			
-			<div>Dolor dolore commodo deserunt sed cillum elit sint laborum adipisicing voluptate magna incididunt laborum et irure voluptate irure amet nostrud in reprehenderit ut deserunt.Dolor dolore commodo deserunt sed cillum elit sint laborum adipisicing voluptate magna incididunt laborum et irure voluptate irure amet nostrud in reprehenderit ut deserunt.Dolor dolore commodo deserunt sed cillum elit sint laborum adipisicing voluptate magna incididunt laborum et irure voluptate irure amet nostrud in reprehenderit ut deserunt.Dolor dolore commodo deserunt sed cillum elit sint laborum adipisicing voluptate magna incididunt laborum et irure voluptate irure amet nostrud in reprehenderit ut deserunt.Dolor dolore commodo deserunt sed cillum elit sint laborum adipisicing voluptate magna incididunt laborum et irure voluptate irure amet nostrud in reprehenderit ut deserunt.Dolor dolore commodo deserunt sed cillum elit sint laborum adipisicing voluptate magna incididunt laborum et irure voluptate irure amet nostrud in reprehenderit ut deserunt.</div>
+			<div>Dolor dolore commodo deserunt sed cillum elit sint laborum adipisicing voluptate magna incididunt laborum et irure voluptate irure amet nostrud in reprehenderit ut deserunt.Dolor dolore commodo deserunt sed cillum elit sint laborum adipisicing voluptate magna incididunt laborum et irure voluptate irure amet nostrud in reprehenderit ut deserunt.Dolor dolore commodo deserunt sed cillum elit sint laborum adipisicing voluptate magna incididunt laborum et irure .</div>
 			
 			<br>
 
