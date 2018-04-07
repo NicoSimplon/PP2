@@ -10,6 +10,7 @@
     crossorigin="anonymous">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P"
     crossorigin="anonymous">    
+    <!-- <link rel="stylesheet" type="text/css" href="dist/css/swiper.css"></link> -->
     <link rel="stylesheet" type="text/css" href="dist/css/navfoot.css"></link>
 </head>
 
@@ -34,8 +35,8 @@
 
     <script src="dist/js/vue.js"></script>
     <script src="dist/js/jquery.js"></script>
-    <script src="dist/js/swiper.js"></script>
     <script src="dist/js/navfoot.js"></script>
+    <script src="dist/js/swipe.js"></script>
 </body>
 
 </html>
