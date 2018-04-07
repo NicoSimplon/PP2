@@ -10,6 +10,7 @@
     crossorigin="anonymous">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P"
     crossorigin="anonymous">    
+    <!-- <link rel="stylesheet" type="text/css" href="dist/css/swiper.css"></link> -->
     <link rel="stylesheet" type="text/css" href="dist/css/navfoot.css"></link>
    	<link rel="stylesheet" type="text/css" href="dist/css/materialize.css">
 	<link rel="stylesheet" href="dist/owlcarousel/assets/owl.carousel.min.css">
@@ -95,6 +96,7 @@
 			<div>Dolor dolore commodo deserunt sed cillum elit sint laborum adipisicing voluptate magna incididunt laborum et irure voluptate irure amet nostrud in reprehenderit ut deserunt.Dolor dolore commodo deserunt sed cillum elit sint laborum adipisicing voluptate magna incididunt laborum et irure voluptate irure amet nostrud in reprehenderit ut deserunt.Dolor dolore commodo deserunt sed cillum elit sint laborum adipisicing voluptate magna incididunt laborum et irure .</div>
 			
 			<br>
+
 
 			<div>
 				
@@ -244,7 +246,8 @@
 	<script src="dist/js/materialize.js"></script>
 	<script src="dist/js/jquery.js"></script>
 	<script src="dist/owlcarousel/owl.carousel.js"></script>
-    <script src="dist/js/navfoot.js"></script>
+		<script src="dist/js/navfoot.js"></script>
+		<script src="dist/js/swipe.js"></script>
 	<script src="dist/js/main.js"></script>
 </body>
 </html>
