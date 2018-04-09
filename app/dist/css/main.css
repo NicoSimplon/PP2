@@ -1,0 +1,131 @@
+.sizeCard{
+    width:20rem !important;
+    height:34rem !important;
+    margin:1rem;
+}
+
+.cardImg{
+    width:100% !important;
+    height:50% !important; 
+    opacity:0.85;
+}
+.containerCenterWrap{
+display: inline-flex;
+align-items: center;
+justify-content: center;
+flex-wrap: wrap;
+width:auto;
+}
+
+.containerInfosView{
+width:100%;
+height:3rem;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+.InfosView{
+padding:0 !important;
+
+}
+
+.NameEvent{
+    font-size:1.4rem;
+}
+
+.ResumeCard{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-justify: auto;
+    padding:0 !important;
+}
+.ResumeCard p{
+padding: 1rem;
+}
+i{
+    color:black;
+}
+.footerCard{
+height: 2rem;
+width:100%;
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+.plus{
+    color:mediumseagreen;
+    cursor: pointer;
+}
+.headerCard{
+    width:100%;
+    height:5rem;
+    display: flex;
+    align-items: center;
+}
+.TitleDate{
+    margin-left:1.5rem;
+}
+.slideInUp {
+    -webkit-animation-name: slideInUp;
+    animation-name: slideInUp;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    }
+    @-webkit-keyframes slideInUp {
+    0% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    visibility: visible;
+    }
+    100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    }
+    }
+    @keyframes slideInUp {
+    0% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    visibility: visible;
+    }
+    100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    }
+    } 
+
+    .slideInDown {
+        -webkit-animation-name: slideInDown;
+        animation-name: slideInDown;
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        }
+        @-webkit-keyframes slideInDown {
+        0% {
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%);
+        visibility: visible;
+        }
+        100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        }
+        }
+        @keyframes slideInDown {
+        0% {
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%);
+        visibility: visible;
+        }
+        100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        }
+        } 
