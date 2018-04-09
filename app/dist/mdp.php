@@ -1,0 +1,3 @@
+<?php 
+	$pswd = "admin";
+?>

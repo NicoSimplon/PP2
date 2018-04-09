@@ -1,3 +1,7 @@
+<?php
+	include 'dist/connexion_bdd.php';
+?>
+
 <!DOCTYPE html>
 
 <html>
@@ -104,11 +108,36 @@
 
 				<form method="post">
 				  	<div class="input-field">
-			          	<input id="email" type="email" required class="validate">
+			          	<input id="email" type="email" name="newsletter" required class="validate">
 			          	<label for="email">E-mail</label>
 			        </div>
 				  	<button class="btn waves-effect waves-light" type="submit">S'abonner</button>
 				</form>
+
+				<?php
+
+					$mail_news = $_POST['newsletter'];
+
+					if(isset($mail_news)){
+						if(filter_var($mail_news, FILTER_VALIDATE_EMAIL)){
+							$verif_mail = pg_query("SELECT mail_news FROM news WHERE mail_news = '".$mail_news."';")  or die ('Erreur : '.pg_last_error());
+							
+							$result = pg_fetch_array($verif_mail);
+
+							if($result[0] == $mail_news){
+								echo "<p>Cet email est déjà abonné.</p>";
+							}
+							
+							else{
+								$inscription = pg_query("INSERT INTO news (mail_news) VALUES('".$mail_news."');")  or die ('Erreur : '.pg_last_error());
+							}
+						}
+						else{
+							echo "<p>Veuillez vérifier que l'adresse renseignée est bien un email.</p>";
+						}
+					}
+					
+				?>
 
 			</div>
 
