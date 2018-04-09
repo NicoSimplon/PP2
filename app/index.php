@@ -48,8 +48,7 @@
 		    <div class="item size"><img src="piscine.jpg"></div>
 		    <div class="item size"><img src="piscine.jpg"></div>
 		    <div class="item size"><img src="piscine.jpg"></div>
-				<div class="item size"><img src="piscine.jpg"></div>
-				<div class="owl-dots"></div>
+			<div class="item size"><img src="piscine.jpg"></div>
 		</div>
 		
 	</div>
@@ -97,11 +96,24 @@
 		</div>
 
 		<div class="col s12 m3">
-			<div>Dolor dolore commodo deserunt sed cillum elit sint laborum adipisicing voluptate magna incididunt laborum et irure voluptate irure amet nostrud in reprehenderit ut deserunt.Dolor dolore commodo deserunt sed cillum elit sint laborum adipisicing voluptate magna incididunt laborum et irure voluptate irure amet nostrud in reprehenderit ut deserunt.Dolor dolore commodo deserunt sed cillum elit sint laborum adipisicing voluptate magna incididunt laborum et irure .</div>
+		<!-- Commentaires Facebook -->
+			<div>
+				<img src="dist/img/fb.jpg" width="15%">
+				<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.12';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div class="fb-comments" data-href="https://www.facebook.com/colo.co.81/" data-numposts="3"></div>
+				
+			</div>
 			
 			<br>
 
-
+		<!-- Abonnement newsletter -->
 			<div>
 				
 				<h2>S'abonner à la newsletter</h2>
@@ -113,7 +125,8 @@
 			        </div>
 				  	<button class="btn waves-effect waves-light" type="submit">S'abonner</button>
 				</form>
-
+				
+				<div>
 				<?php
 
 					$mail_news = $_POST['newsletter'];
@@ -130,15 +143,50 @@
 							
 							else{
 								$inscription = pg_query("INSERT INTO news (mail_news) VALUES('".$mail_news."');")  or die ('Erreur : '.pg_last_error());
+								echo "<p>Votre abonnement a bien été pris en compte.</p>";
 							}
 						}
 						else{
 							echo "<p>Veuillez vérifier que l'adresse renseignée est bien un email.</p>";
 						}
 					}
-					
 				?>
 
+				 <!-- Modal -->
+				<div id="modal_desabo" class="modal modal-fixed-footer">
+			        <div class="modal-content">
+			            <h4>Se désabonner</h4>
+			            <form method="post">
+							<div class="input-field">
+					          	<input id="email" type="email" name="newsletter2" required class="validate">
+					          	<label for="email">E-mail</label>
+					        </div>
+							<button class="btn waves-effect waves-light" name="desabonnement" type="submit">Se désabonner</button>
+						</form>
+			        </div>
+			        <div class="modal-footer">
+			            <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat ">Annuler</a>
+			        </div>
+			        
+				</div>
+				<?php
+					$mail_news2 = $_POST['newsletter2'];
+
+					if(isset($_POST['newsletter2'])){
+						if(filter_var($mail_news2, FILTER_VALIDATE_EMAIL)){
+							$deco = pg_query("DELETE FROM news WHERE mail_news = '".$mail_news2."';") or die ('Erreur : '.pg_last_error());
+							echo "<p>Vous avez été correctment désabonné.</p>";
+						}
+						 else{
+						 	echo "<p>Une erreur est survenue, veuillez réessayer plus tard.</p>";
+						 };
+					}
+					
+				?>
+			    </div>
+
+				<br>
+				<a class="waves-effect waves-light btn modal-trigger" href="#modal_desabo">Se désabonner</a>
 			</div>
 
 		</div>
@@ -272,8 +320,8 @@
 	<!-- Partie contenant le footer -->
 
 	<script src="dist/js/vue.js"></script>
-	<script src="dist/js/materialize.js"></script>
 	<script src="dist/js/jquery.js"></script>
+	<script src="dist/js/materialize.js"></script>
 	<script src="dist/owlcarousel/owl.carousel.js"></script>
 		<script src="dist/js/navfoot.js"></script>
 		<script src="dist/js/swipe.js"></script>

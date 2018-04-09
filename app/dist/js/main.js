@@ -20,5 +20,10 @@ $('.owl-carousel').owlCarousel({
             nav:false,
         }
     }
-})
+});
 
+// initialisation modale
+$(document).ready(function(){
+    $('.modal').modal();
+  });
+      
