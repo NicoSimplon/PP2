@@ -1,0 +1,25 @@
+html body {
+  margin: 0;
+  display: inline-flex;
+  flex-flow: column;
+  width: 100%
+}
+.niark{
+  background-color: pink;
+  z-index:0;
+}
+.niark2{
+  background-color: blue;
+  z-index: 0;
+  text-align: center;
+  display:flex !important ;
+  align-items: center;
+  justify-content: center;
+}
+#carte{
+  z-index: 0;
+}
+/* réseau social: */
+.fab{
+  font-size: 45em;
+}
