@@ -1,17 +1,7 @@
-<<<<<<< HEAD
-$(document).ready(function(){
 
-	// $(".card") .mouseout(function() {
-	// 	$(".card-reveal ", this).css({display: "none", transform: "translateY(0)"});
-	// 	$(".card",this).css({overflow: "hidden"});
-		
-	//   })
-	//   .mouseover(function() {
-	// 	$(" .card-reveal ", this).css({display: "block", transform: "translateY(-100%)",cursor:"pointer"});
-	// 	$(".card",this).css({overflow: "visible"});
-	//   });
-});
-=======
+$(document).ready(function(){
+$('#modalReservation').modal();
+$('#modal_desabo').modal();
 // Carousel de la page d'accueil
 $('.owl-carousel').owlCarousel({
     autoplay: true,
@@ -34,11 +24,7 @@ $('.owl-carousel').owlCarousel({
             nav:false,
         }
     }
+
 });
 
-// initialisation modale
-$(document).ready(function(){
-    $('#modal_desabo').modal();
-  });
-      
->>>>>>> dev
+
