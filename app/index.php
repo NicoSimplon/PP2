@@ -98,7 +98,7 @@
 		<div class="col s12 m3">
 		<!-- Commentaires Facebook -->
 			<div>
-				<img src="dist/img/fb.jpg" width="15%">
+				<i class="fab fa-facebook"></i>
 				
 				
 			</div>
@@ -311,12 +311,17 @@
 
 	<!-- Partie contenant le footer -->
 
+	<?php
+		include 'footer.php';
+	?>
+
 	<script src="dist/js/vue.js"></script>
 	<script src="dist/js/jquery.js"></script>
 	<script src="dist/js/materialize.js"></script>
 	<script src="dist/owlcarousel/owl.carousel.js"></script>
-		<script src="dist/js/navfoot.js"></script>
-		<script src="dist/js/swipe.js"></script>
+	<script src="dist/js/navfoot.js"></script>
+	<script src="dist/js/swipe.js"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
 	<script src="dist/js/main.js"></script>
 </body>
 </html>

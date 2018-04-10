@@ -24,6 +24,6 @@ $('.owl-carousel').owlCarousel({
 
 // initialisation modale
 $(document).ready(function(){
-    $('.modal').modal();
+    $('#modal_desabo').modal();
   });
       
