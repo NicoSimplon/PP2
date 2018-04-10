@@ -167,7 +167,7 @@
 					if(isset($_POST['newsletter2'])){
 						if(filter_var($mail_news2, FILTER_VALIDATE_EMAIL)){
 							$deco = pg_query("DELETE FROM news WHERE mail_news = '".$mail_news2."';") or die ('Erreur : '.pg_last_error());
-							echo "<p>Vous avez été correctment désabonné.</p>";
+							echo "<p>Vous avez été correctement désabonné.</p>";
 						}
 						 else{
 						 	echo "<p>Une erreur est survenue, veuillez réessayer plus tard.</p>";
