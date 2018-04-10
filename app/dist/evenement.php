@@ -15,6 +15,7 @@
 </head>
 <i class="fab fa-facebook"></i>
 <i class="fab fa-facebook-square"></i>
+
 <body>
     <nav>
         <navmenu></navmenu>
@@ -22,7 +23,6 @@
 
 
     <div class="containerCenterWrap">
-
         <div class="card sizeCard">
             <div class="headerCard">
                 <span class="TitleDate card-title grey-text text-darken-4">Card Title </span>
@@ -32,10 +32,10 @@
             </div>
             <div class="card-content ResumeCard">
                 <div class="containerInfosView">
-                    <p class="NameEvent">Evenements</p>
+                    <p class="NameEvent">Evenements <?php  ?></p>
                 </div>
                 <div class="containerInfosView">
-                    <p class="InfosView">Heure</p>
+                    <p class="InfosView">Heure<?php  ?></p>
                 </div>
                 <div class="footerCard">
                     <a class="plus activator">En Savoir Plus</a>
@@ -53,10 +53,9 @@
 
 
 
-
-
     </div>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
+        crossorigin="anonymous"></script>
     <script src="js/vue.js"></script>
     <script src="js/jquery.js"></script>
     <script src="js/navfoot.js"></script>

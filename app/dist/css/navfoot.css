@@ -65,7 +65,7 @@ nav #containerElnav {
         transform: translateY(-10%); }
       60% {
         transform: translateY(-5%); } }
-nav #containerElnav .imgAngre {
+/* nav #containerElnav .imgAngre {
   /* background: chartreuse; */
   width: 100%;
   height: auto;
@@ -75,7 +75,7 @@ nav #containerElnav .imgAngre {
   justify-content: center;
   position: relative;
   top: -4.5rem;
-}
+} */
 nav #containerElnav .imgAngre #GrosAngre {
   font-size: 10rem;
   opacity: 0.7;
