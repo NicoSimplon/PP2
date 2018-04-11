@@ -33,7 +33,11 @@
 	<div id="slide_event">
 		
 		<div class="owl-carousel owl-theme">
-		    <div class="item size"><img src="piscine.jpg"></div>
+		    <div class="item size">
+		    	<p class="commentEvent">Party à la piscine le 40/10/2018</p>
+		    	<img src="piscine.jpg">
+		    	
+		    </div>
 		    <div class="item size"><img src="piscine.jpg"></div>
 		    <div class="item size"><img src="piscine.jpg"></div>
 		    <div class="item size"><img src="piscine.jpg"></div>

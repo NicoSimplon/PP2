@@ -65,4 +65,3 @@ $(".ajaxBtn").click(function(){
 
     })
 })
-
