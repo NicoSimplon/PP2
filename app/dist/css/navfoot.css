@@ -16,9 +16,7 @@ a:focus {
 a:link {
   text-decoration: none;
 }
-header {
-  background-color: red;
-}
+
 nav {
   width: 100%;
   /* background: blue; */

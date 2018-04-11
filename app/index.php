@@ -1,7 +1,3 @@
-<?php
-	include 'dist/connexion_bdd.php';
-?>
-
 <!DOCTYPE html>
 
 <html>
@@ -23,9 +19,9 @@
 </head>
 <body>
 	<!-- Partie contenant le bandeau -->
-	<header>
-		<p>Photo</p>
-	</header>
+
+    	<img class="bandeau"  src="dist/img/bandeau.jpg" width="100%" height="auto">
+		
 	<!-- Partie contenant la navbar -->
 		
 	<nav>
@@ -85,9 +81,13 @@
 				</div>
 				<div class="col s12 m6">
 					Labore aute irure elit fugiat dolor aute aute esse ullamco excepteur incididunt officia duis magna adipisicing magna ut magna amet ut ut proident nostrud veniam amet eu id id incididunt laboris id tempor proident deserunt labore voluptate ea dolor in magna magna dolor adipisicing nisi cillum eu mollit reprehenderit aliqua pariatur ut consequat sit pariatur tempor tempor anim laboris ullamco non officia proident sit proident sint qui labore ut a ut.
+					Labore aute irure elit fugiat dolor aute aute esse ullamco excepteur incididunt officia duis magna adipisicing magna ut magna amet ut ut proident nostrud veniam amet eu id id incididunt laboris id tempor proident deserunt labore voluptate ea dolor in magna magna dolor adipisicing nisi cillum eu mollit reprehenderit aliqua pariatur ut consequat sit pariatur tempor tempor anim laboris ullamco non officia proident sit proident sint qui labore ut a ut.
 				</div>
+			</div>
+			<div class="row">
 				<div class="col s12 m6">
-					Labore aute irure elit fugiat dolor aute aute esse ullamco excepteur incididunt officia duis magna adipisicing magna ut magna amet ut ut proident nostrud veniam amet eu id id incididunt laboris id tempor proident deserunt labore voluptate ea dolor in magna magna dolor adipisicing nisi cillum eu mollit reprehenderit aliqua pariatur ut consequat sit pariatur tempor tempor anim laboris ullamco non officia proident sit proident sint qui labore ut 
+					Labore aute irure elit fugiat dolor aute aute esse ullamco excepteur incididunt officia duis magna adipisicing magna ut magna amet ut ut proident nostrud veniam amet eu id id incididunt laboris id tempor proident deserunt labore voluptate ea dolor in magna magna dolor adipisicing nisi cillum eu mollit reprehenderit aliqua pariatur ut consequat sit pariatur tempor tempor anim laboris ullamco non officia proident sit proident sint qui labore ut.
+					Labore aute irure elit fugiat dolor aute aute esse ullamco excepteur incididunt officia duis magna adipisicing magna ut magna amet ut ut proident nostrud veniam amet eu id id incididunt laboris id tempor proident deserunt labore voluptate ea dolor in magna magna dolor adipisicing nisi cillum eu mollit reprehenderit aliqua pariatur ut consequat sit pariatur tempor tempor anim laboris ullamco non officia proident sit proident sint qui labore ut a ut.
 				</div>
 				<div class="col s12 m6">
 					<img src="piscine.jpg" width="100%">
@@ -100,60 +100,32 @@
 			<div>
 				<i class="fab fa-facebook"></i>
 				
-				
-			</div>
 			
-			<br>
+				<br>
+
+			</div>
 
 		<!-- Abonnement newsletter -->
 			<div>
 				
 				<h2>S'abonner à la newsletter</h2>
 
-				<form method="post">
-				  	<div class="input-field">
-			          	<input id="email" type="email" name="newsletter" required class="validate">
-			          	<label for="email">E-mail</label>
-			        </div>
-				  	<button class="btn waves-effect waves-light" type="submit">S'abonner</button>
-				</form>
-				
-				<div>
-				<?php
-
-					$mail_news = $_POST['newsletter'];
-
-					if(isset($mail_news)){
-						if(filter_var($mail_news, FILTER_VALIDATE_EMAIL)){
-							$verif_mail = pg_query("SELECT mail_news FROM news WHERE mail_news = '".$mail_news."';")  or die ('Erreur : '.pg_last_error());
-							
-							$result = pg_fetch_array($verif_mail);
-
-							if($result[0] == $mail_news){
-								echo "<p>Cet email est déjà abonné.</p>";
-							}
-							
-							else{
-								$inscription = pg_query("INSERT INTO news (mail_news) VALUES('".$mail_news."');")  or die ('Erreur : '.pg_last_error());
-								echo "<p>Votre abonnement a bien été pris en compte.</p>";
-							}
-						}
-						else{
-							echo "<p>Veuillez vérifier que l'adresse renseignée est bien un email.</p>";
-						}
-					}
-				?>
-
-				 <!-- Modal -->
-				<div id="modal_desabo" class="modal modal-fixed-footer">
+				<!-- Modal -->
+				<div id="modal_abo" class="modal modal-fixed-footer">
 			        <div class="modal-content">
-			            <h4>Se désabonner</h4>
+			            <h4><strong><span id=modal_titre></span></strong></h4>
 			            <form method="post">
 							<div class="input-field">
-					          	<input id="email" type="email" name="newsletter2" required class="validate">
+					          	<input id="email" type="email" name="newsletter" required class="validate">
 					          	<label for="email">E-mail</label>
 					        </div>
-							<button class="btn waves-effect waves-light" name="desabonnement" type="submit">Se désabonner</button>
+					        <div>
+					        	<br>
+								<button id="desabo" class="btn waves-effect waves-light boutonColor ajaxBtn modal-action modal-close" name="desabonnement" type="button" data-news="desabonner">Se désabonner</button>
+							</div>
+							<div>
+								<button id="abo" class="btn waves-effect waves-light boutonColor ajaxBtn modal-action modal-close" type="button" name="abonnement" data-news="abonner">S'abonner</button>
+							</div>
 						</form>
 			        </div>
 			        <div class="modal-footer">
@@ -161,24 +133,15 @@
 			        </div>
 			        
 				</div>
-				<?php
-					$mail_news2 = $_POST['newsletter2'];
-
-					if(isset($_POST['newsletter2'])){
-						if(filter_var($mail_news2, FILTER_VALIDATE_EMAIL)){
-							$deco = pg_query("DELETE FROM news WHERE mail_news = '".$mail_news2."';") or die ('Erreur : '.pg_last_error());
-							echo "<p>Vous avez été correctment désabonné.</p>";
-						}
-						 else{
-						 	echo "<p>Une erreur est survenue, veuillez réessayer plus tard.</p>";
-						 };
-					}
-					
-				?>
-			    </div>
-
-				<br>
-				<a class="waves-effect waves-light btn modal-trigger" href="#modal_desabo">Se désabonner</a>
+			    
+			    <div>
+			    	<br>
+					<a id="sabonner" class="waves-effect waves-light btn modal-trigger boutonColor" href="#modal_abo">S'abonner</a>
+				</div>
+				<div>
+					<br>
+					<a id="sedesabonner" class="waves-effect waves-light btn modal-trigger boutonColor" href="#modal_abo">Se désabonner</a>
+				</div>
 			</div>
 
 		</div>
