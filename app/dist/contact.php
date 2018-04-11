@@ -55,7 +55,7 @@
           <i class="material-icons right"></i>
         </button>
       </form>
-      <div class="card col s12 m6 valign-wrapper flow-text  amber lighten-2 z-depth-3">
+      <div class="card col s12 m6 valign-wrapper flow-text z-depth-3 urf">
         <div class="card-content white-text">
           <p>La canal, St. Jérome
             Castelnau-De-Montmiral, Midi-Pyrenees, France

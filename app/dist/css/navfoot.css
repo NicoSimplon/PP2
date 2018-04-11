@@ -1,0 +1,210 @@
+html body {
+  margin: 0;
+  display: inline-flex;
+  flex-flow: column;
+  width: 100%;
+}
+.ImgLogo {
+  width: 5rem;
+  height: 4.5rem;
+  cursor: pointer;
+}
+
+a:focus {
+  outline: 0;
+}
+a:link {
+  text-decoration: none;
+}
+/* header {
+  background-color: red;
+} */
+nav {
+  width: 100%;
+  /* background: blue; */
+  height: 4.5em !important;
+  position: sticky;
+  top: -1px;
+  z-index: 10;
+
+}
+
+nav #containerElnav {
+  width: 100%;
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: black;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+/* .bounceActive{
+  -moz-animation: bounce 2s  infinite;
+  -webkit-animation: bounce 2s  infinite;
+  animation: bounce 2s  infinite; 
+} */
+@keyframes bounce {
+  100% {
+    transform: translateY(0); }
+  40% {
+    transform: translateY(-2vh); }
+  60% {
+    transform: translateY(-1vh); } }
+    @keyframes bounce {
+      0%,
+      20%,
+      50%,
+      80%,
+      100% {
+        transform: translateY(0); }
+      40% {
+        transform: translateY(-10%); }
+      60% {
+        transform: translateY(-5%); } }
+nav #containerElnav .imgAngre {
+  /* background: chartreuse; */
+  width: 100%;
+  height: auto;
+  display: flex;
+  z-index: -1;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: -4.5rem;
+}
+nav #containerElnav .imgAngre #GrosAngre {
+  font-size: 8rem;
+  opacity: 0.7;
+  color:black;
+
+}
+/* .rotate{
+  -webkit-animation: rotate 15s linear 0s infinite normal;
+  animation: rotate 15s linear 0s infinite normal;
+
+} */
+@-webkit-keyframes rotate {
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+} 
+nav #containerElnav #menuptgauche {
+  align-items: center;
+  justify-content: center;
+  width: 10%;
+  height: 100%;
+  float: left;
+}
+nav #containerElnav #menuptdroit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  height: 100%;
+  float: right;
+  /* background: ; */
+}
+nav #containerElnav #menuptdroit .containerBtnTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10%;
+  height: 100%;
+  font-size: 1rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  color:white;
+}
+
+nav #containerElnav #menuptdroit .containerBtnTitle a{
+  color:white;
+}
+nav #containerElnav #menuptdroit .petitsAngre {
+  height: 100%;
+  display: flex;
+  transform: rotate(-45deg);
+}
+.petitAngre1 {
+  position: absolute;
+  font-size: 10px;
+  top: 3rem;
+}
+
+.activeRotate{
+  -webkit-animation: rotate 3s linear 0s infinite normal;
+  animation: rotate 3s linear 0s infinite normal;
+}
+
+@-webkit-keyframes rotate {
+                 100%{
+                 -webkit-transform: rotate(360deg);
+                 transform: rotate(360deg);
+                 }
+                } 
+                
+                @keyframes rotate {
+                 100%{
+                 transform: rotate(360deg);
+                 }
+                }
+.petitAngre2 {
+  position: absolute;
+  font-size: 10px;
+  top: 2.4rem;
+
+}
+
+@-webkit-keyframes rotate {
+                 100%{
+                 -webkit-transform: rotate(-360deg);
+                 transform: rotate(-360deg);
+                 }
+                } 
+                
+                @keyframes rotate {
+                 100%{
+                 transform: rotate(-360deg);
+                 }
+                }
+
+@media all and (max-width: 860px) {
+  nav #containerElnav .imgAngre #GrosAngre {
+    cursor: pointer;
+  }
+
+  nav #containerElnav #menuptgauche {
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+  nav #containerElnav #menuptdroit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    height: 60vh;
+    background: black;
+  }
+  nav #containerElnav #menuptdroit .containerBtnTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 2.5rem ;
+    font-size: 1rem;
+    margin:0;
+  }
+}
