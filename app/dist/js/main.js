@@ -25,6 +25,9 @@ $('.owl-carousel').owlCarousel({
 // initialisation modale
 $(document).ready(function(){
     $('#modal_abo').modal();
+
+    $('#modal_desabo').modal();
+
   });
 
 $("#sabonner").click(function(){

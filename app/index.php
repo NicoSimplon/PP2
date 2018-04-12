@@ -146,7 +146,10 @@
 					<br>
 					<a id="sedesabonner" class="waves-effect waves-light btn modal-trigger boutonColor" href="#modal_abo">Se désabonner</a>
 				</div>
-			</div>
+
+
+			    </div>
+
 
 		</div>
 		

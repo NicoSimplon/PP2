@@ -1,3 +1,4 @@
+
 /* style commun */
 
 html body {
@@ -52,18 +53,36 @@ height:90vh;
 	flex-wrap: wrap;
 	border: solid 1px black;
 	/* width: 22rem !important; */
-
-
 	
 }
 .h100 img{
 	width: 100%	;
 
 }
-
 .commentEvent {
 	color: white;
 	background-color: black;
 	position: absolute;
 	z-index: 10;
 }
+
+.niark{
+  background-color: pink;
+  z-index:0;
+}
+.niark2{
+  background-color: blue;
+  z-index: 0;
+  text-align: center;
+  display:flex !important ;
+  align-items: center;
+  justify-content: center;
+}
+#carte{
+  z-index: 0;
+}
+/* réseau social: */
+.fab{
+  font-size: 45em;
+}
+
