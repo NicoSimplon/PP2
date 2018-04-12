@@ -5,43 +5,136 @@ html body {
   display: inline-flex;
   flex-flow: column;
   width: 100%;
+  background-image: linear-gradient(to top, #d1ad55, #a6a457, #82985e, #678964, #577866);
 }
 
 .barre_alert {
-  background: red;
-  width: 99vw;
-  height: 30em;
+  width: 100%;
+  height: auto;
   display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  
 }
 
-.event_alert{
-width:auto;
-height:100%;
-border: solid 2px black;
-position: relative;
+.gridContainer {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 74rem;
+  height: auto;
+  float: left;
+
+}
+
+.styletext{
+  padding-right: 10em;
+  padding-left: 10em;
+  z-index:10;
+  position: absolute;
+  top:50%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7 );
+
+  /* background: aqua; */
+}
+
+
+.fb{
+  height: 70%;
+  width:100%;
+
+}
+
+h5{
+  width: 100%;
+  display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.boutonNew{
+width:100%;
+display:inline-flex;
+align-items: end;
+justify-content: center;
+
+}
+.size{
+  width:100%; 
+
+}
+.testImg{
+height: 100%;
+}
+
+p{
+  text-align: center;
+}
+.news{
+  display:inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* height: 10rem; */
+}
+
+.cell {
+  width: 35em;
+  height: 20em;
+  display:inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding:1rem;
+  background: beige;
+  border-radius: 2px; 
+  margin:0.5rem;
+}
+
+
+
+.bandeau {
+  height: 10vh;
+  width: 99vw;
+}
+
+.event_alert {
+  background: beige;
+  border-radius: 2px;
+  width: 28em;
+  margin:1em;
+  height: 6em;
+
+  /* border: solid 2px black; */
+  position: relative;
 }
 
 section {
-  width: 100%;
-  height: 90vh;
-  background: blue;
-  border: solid 2px black;
+margin-bottom: 2rem;
+  /* width: 100%; */
+  height: auto;
+
+  display: inline-flex;
+  flex-wrap: wrap;
 }
 
-.owl-dots {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  color: bisque;
-  background: rgba(0, 0, 0, 0.801);
-  height: 6vh;
-  bottom: 0;
+.rightContainer {
+  /* border: solid 2px black; */
+  float: right;
+  width: 16em;
+  height: auto;
+  
 }
 
+.toast{
+  background-color: #d4c541;  
+}
 .boutonColor {
   background-color: #d4c541;
+  /* margin:0.5rem;  */
 }
 .boutonColor:hover {
   background-color: #bda76e;
@@ -54,7 +147,7 @@ section {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: solid 1px black;
+  /* border: solid 1px black; */
   flex-wrap: wrap;
   width: 100%;
 }
