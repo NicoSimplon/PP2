@@ -49,11 +49,11 @@ while ($createCard = pg_fetch_assoc($requete)) {
                 </div>
                 <div class="footerCard">
                     <div id="cardFleft">
-                        <a class="modal-trigger" href="#modalReservation" data-recupval="click">
-                            <label >réserver</label>
+                        <a data-recupval="click" data-date="'.$createCard['to_char'] .'" class="modal-trigger" href="#modalReservation">
+                            <label>réserver</label>
                         </a>
-                    <a class="modal-trigger" href="#modalReservation" data-recupval="dejareserver">
-                    <label>deja reserver</label>
+                    <a data-date="'.$createCard['to_char'] .'" data-recupVal="dejareserver" class="modal-trigger" href="#modalReservation" >
+                    <label >deja reserver</label>
                     </a>
                     </div>
                     <div id="cardFright">
@@ -97,7 +97,7 @@ echo $dynamicCard;
                         <a class="modal-trigger" href="#modalReservation" data-recupval="click">
                             <label >réserver</label>
                         </a>
-                    <a class="modal-trigger" href="#modalReservation" data-recupval="dejareserver">
+                    <a class="modal-trigger" href="#modalReservation" data-reserved="dejareserve">
                     <label>deja reserver</label>
                     </a>
                     </div>
