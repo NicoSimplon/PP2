@@ -1,4 +1,3 @@
-
 /* style commun */
 
 html body {
@@ -6,6 +5,27 @@ html body {
   display: inline-flex;
   flex-flow: column;
   width: 100%;
+}
+
+.barre_alert {
+  background: red;
+  width: 99vw;
+  height: 30em;
+  display: inline-flex;
+}
+
+.event_alert{
+width:auto;
+height:100%;
+border: solid 2px black;
+position: relative;
+}
+
+section {
+  width: 100%;
+  height: 90vh;
+  background: blue;
+  border: solid 2px black;
 }
 
 .owl-dots {
@@ -17,72 +37,63 @@ html body {
   color: bisque;
   background: rgba(0, 0, 0, 0.801);
   height: 6vh;
-  bottom:0;
+  bottom: 0;
 }
 
-.size{
-width : 100%;
-height:90vh;
+.boutonColor {
+  background-color: #d4c541;
+}
+.boutonColor:hover {
+  background-color: #bda76e;
 }
 
-.boutonColor{
-	background-color: #d4c541;
-}
-.boutonColor:hover{
-	background-color:#bda76e;
-}
-
-#alert_bar{
-	/* width : 100%;
+#alert_bar {
+  /* width : 100%;
 	height: 25vh;
 	position: relative; */
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	border: solid 1px black;
-	flex-wrap: wrap;
-	width:100%;
-
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: solid 1px black;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
-.h100{
-	position: relative;
-	display: inline-flex;
-	align-items: flex-start;
-	justify-content: center;
-	flex-wrap: wrap;
-	border: solid 1px black;
-	/* width: 22rem !important; */
-	
+.h100 {
+  position: relative;
+  display: inline-flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  border: solid 1px black;
+  /* width: 22rem !important; */
 }
-.h100 img{
-	width: 100%	;
-
+.h100 img {
+  width: 100%;
 }
 .commentEvent {
-	color: white;
-	background-color: black;
-	position: absolute;
-	z-index: 10;
+  color: white;
+  background-color: black;
+  position: absolute;
+  z-index: 10;
 }
 
-.niark{
+.niark {
   background-color: pink;
-  z-index:0;
+  z-index: 0;
 }
-.niark2{
+.niark2 {
   background-color: blue;
   z-index: 0;
   text-align: center;
-  display:flex !important ;
+  display: flex !important ;
   align-items: center;
   justify-content: center;
 }
-#carte{
+#carte {
   z-index: 0;
 }
 /* réseau social: */
-.fab{
+.fab {
   font-size: 45em;
 }
-
