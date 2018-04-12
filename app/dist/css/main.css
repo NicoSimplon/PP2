@@ -4,6 +4,25 @@
   margin: 1rem;
 }
 
+a:focus {
+  outline: 0 !important;
+}
+input:-moz-focusring  {
+  outline: 0px !important;
+}
+
+.centerend{
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.centerstart{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
 .cardImg {
   width: 100% !important;
   height: 50% !important;
@@ -32,6 +51,28 @@
   font-size: 1.4rem;
 }
 
+#cardFleft{
+  width:34%;
+  float:left;
+  display: flex;
+justify-content: center;
+align-items: center;  
+  justify-content: flex-start;
+  flex-direction: column;
+}
+#cardFright{
+  width:66%;
+  float:right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.ticketIcone{
+  transform: rotate(90deg);
+  font-size:2rem;
+}
+
 .ResumeCard {
   width: 100%;
   align-items: center;
@@ -46,9 +87,9 @@ i {
   color: black;
 }
 .footerCard {
-  height: 2rem;
+  height: 3rem;
   width: 100%;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
 }
