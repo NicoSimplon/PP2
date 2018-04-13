@@ -114,10 +114,11 @@ p{
 
 section {
 margin-bottom: 2rem;
-  /* width: 100%; */
+  width: 100%;
   height: auto;
-
   display: inline-flex;
+  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
