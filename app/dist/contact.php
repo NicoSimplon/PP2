@@ -59,7 +59,7 @@
         <div class="card-content white-text">
           <p>La canal, St. Jérome
             Castelnau-De-Montmiral, Midi-Pyrenees, France
-            @colo.co.81
+            contact.colo.co@gmail.com
             Appeler 05 63 57 42 33</p>
           </div>
         </div>

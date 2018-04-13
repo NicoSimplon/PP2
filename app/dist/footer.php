@@ -1,29 +1,41 @@
 <footer class="page-footer blue-grey lighten-1">
 
-        <div class="container  ">
-          <div class="row">
-          
+        <div class="container-fluid foot">
+          <div class="row ">
+          <div class="col l3 s12 center-align">
+          <img id= "logocolo"src="img/Colo_Co.png">
+          </div>
            
-            <div class="col l6 s12 ">
-            <img id= "logocolo"src="logocolo.jpg">
-              <h5 class="white-text">Partenaires:</h5>
-              
-              <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+            <div class="col l6 s12 text-lighten-4e-text ">
+            
+            <table>
+            <tr>
+            <td><a href="">Accueil</a>
+            </td>
+              <td><a href="">Agenda</a>
+            </td>
+              <td><a href="">à propos</a>
+            </td> 
+            </tr>
+            </table>
             </div>
-            <div class="col l4 offset-l2 s12">
-              <h5 class="white-text">Réseaux sociaux:</h5>
-              <ul>
-                <li><a  href="https://www.facebook.com/colo.co.81/"><i class="fab fa-facebook"></i></a></li>
-                <li><a  href="https://twitter.com/" class="grey-text text-lighten-3" ><i class="fab fa-twitter-square "></i></a></li>
-                <!-- <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li> -->
-              </ul>
+            <div class="col l3 s12 reseaux">
+              <table>
+              <tr>
+              <td>  
+              <a  href="https://www.facebook.com/colo.co.81/"><i class="fab fa-facebook"></i></a>
+              </td>
+              <td>
+              <a  href="https://twitter.com/" class="grey-text text-lighten-3" ><i class="fab fa-twitter-square"></i></a>
+              </td>
+              </tr> 
+             </table>
             </div>
           </div>
         </div>
         <div class="footer-copyright">
           <div class="container">
-          © 2018 Copyright
+          <p>COLO&CO  © 2018 | www.coloco.fr | Réalisation : Simplon</p>
           <a class="grey-text text-lighten-4 right" href="#!">Plus de lien</a>
           </div>
         </div>
