@@ -1,5 +1,7 @@
 // Carousel de la page d'accueil
-
+// $(document).ready(function(){
+//     $('.slider').slider();
+//   });
 // initialisation modale
 $(document).ready(function(){
   $('.carousel.carousel-slider').carousel({
@@ -54,3 +56,15 @@ $(".ajaxBtn").click(function(){
 
     })
 })
+
+var caca=(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.12&appId=198863107382803&autoLogAppEvents=1';
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+// $(window).load(function() {
+
+// })
