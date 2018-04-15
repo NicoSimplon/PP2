@@ -1,0 +1,39 @@
+html body {
+    margin: 0;
+    display: inline-flex;
+    width: 100%;
+  }
+#containerMenu{
+    float:right;
+    width:80%;
+}
+.sousMenuContainer{
+    float:left;
+    width:20%;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+}
+.collapsible{
+    box-shadow:none !important;
+    margin:0;
+}
+.mySwipe{
+    height:80vh;
+}
+
+.indicators{
+    display:none;
+}
+
+#myImg{
+    border-radius:50px;
+    width:5em   ;
+}
+.enTête{
+margin:0.5em;
+display: inline-flex;
+flex-direction: column;
+align-items: center;
+}

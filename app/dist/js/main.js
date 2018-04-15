@@ -1,26 +1,28 @@
-// Carousel de la page d'accueil
-// $(document).ready(function(){
-//     $('.slider').slider();
-//   });
+
 // initialisation modale
 $(document).ready(function(){
+    if ($('#tabs-swipe').length) {
+        $('#tabs-swipe').tabs();
+      }
+  
   $('.carousel.carousel-slider').carousel({
     fullWidth: true,
     indicators: true
   });
   function autoplay() {
-    $('.carousel').carousel('next')
+    $('.sliderPerso').carousel('next')
 }
 setTimeout(autoplay, 10000);
+
+
     $('#modal_abo').modal();
 
     $('#modal_desabo').modal();
 
-  });
-
-$("#sabonner").click(function(){
-    $("#abo").show();
-    $("#desabo").hide();
+    
+    $("#sabonner").click(function(){
+        $("#abo").show();
+        $("#desabo").hide();
     $("#modal_titre").text("S'abonner");
 });
 
@@ -30,6 +32,7 @@ $("#sedesabonner").click(function(){
     $("#modal_titre").text("Se désabonner");
 });
 
+});œ
 
 // $("#modal_abo").click(function(){
     

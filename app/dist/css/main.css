@@ -60,7 +60,9 @@ fill:#577866;
   text-align: start !important; 
   padding:1em !important;
   text-orientation: initial !important;
-  margin: 3em;
+  margin-top: 3em;
+  margin-right:2rem;
+  margin-left:2rem;
 }
 .emailAccueil{
  float:left;
