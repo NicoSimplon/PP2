@@ -24,8 +24,12 @@ $(".validFirstResa").click(function(){
     			town: ville,
     			code: cp,
     			nbResa: range1,
-    			id_eve: id
+    			id_eve: id,
+    			bouton: bouton
     		},
+    		success : function(arg){
+              M.toast({html: arg, inDuration: 8000});
+          	}
 
 		});
 
@@ -38,11 +42,16 @@ $(".validFirstResa").click(function(){
 		$.ajax({
 			url: "modalinfo.php",
     		method: "POST",
+    		dataType: 'html',
     		data:{
     			mail2: mail2,
     			nbResa2: range2,
-    			id_eve2: id2
+    			id_eve2: id2,
+    			bouton: bouton
     		},
+    		success : function(arg){
+              M.toast({html: arg, inDuration: 8000});
+          	}
 		});
 	}
 

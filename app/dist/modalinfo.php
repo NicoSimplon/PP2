@@ -41,7 +41,7 @@ function modalDynamique(){
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
-                                <textarea id="textarea1" class="materialize-textarea"></textarea>
+                                <textarea id="textarea1" class="materialize-textarea" maxlength="10"></textarea>
                                 <label for="textarea1">Numero de telephone</label>
                             </div>
                         </div>
@@ -53,7 +53,7 @@ function modalDynamique(){
                                         <label for="first_name">Ville</label>
                                     </div>
                                     <div class="input-field col s6">
-                                        <input id="cp" type="text" class="validate">
+                                        <input id="cp" type="text" class="validate" maxlength="5">
                                         <label for="last_name">Code Postal</label>
                                     </div>
                                 </div>
@@ -73,7 +73,7 @@ function modalDynamique(){
                                     </div>
                                     <div class="input-field col s4"></div>
                                     <div class="input-field col s4 centerstart">
-                                        <button class="btn waves-effect waves-light validFirstResa" type="button" name="action" data-first="btn1">valider</button>
+                                        <button class="btn waves-effect waves-light validFirstResa modal-close" type="button" name="action" data-first="btn1">valider</button>
                                     </div>
                                 </div>
                             </form>
@@ -124,7 +124,7 @@ function modalDynamiqueInscrit(){
                             </div>
                             <div class="input-field col s4"></div>
                             <div class="input-field col s4 centerstart">
-                                <button class="btn waves-effect waves-light validFirstResa" type="button" name="action" data-first="btn2">valider</button>
+                                <button class="btn waves-effect waves-light validFirstResa modal-close" type="button" name="action" data-first="btn2">valider</button>
                             </div>
                         </div>
                     </form>
@@ -134,9 +134,6 @@ function modalDynamiqueInscrit(){
     }
     echo $contentModal; 
 }
-
-// modalDynamique();
-// echo $var;
 
 if (isset($_POST['modalCreate'])) {
     $pageEvenement = $_POST['modalCreate'];
@@ -162,12 +159,15 @@ if (isset($_POST['modalCreate'])) {
     $cp = $_POST['code'];
     $resa = $_POST['nbResa'];
     $id = $_POST['id_eve'];
+    
     // données formulaire 2
     $email2 = $_POST['mail2'];
     $resa2 = $_POST['nbResa2'];
     $id2 = $_POST['id_eve2'];
 
-    //function firstResa(){
+    $pattern = "#^[a-z0-9]+$#i";
+
+    function firstResa(){
     if(isset($email)){
         $var = $id;
         if(filter_var($email, FILTER_VALIDATE_EMAIL)){
@@ -180,15 +180,64 @@ if (isset($_POST['modalCreate'])) {
             }
             else{
                 //inscription nouvelle personne
-                $inscription = pg_query("INSERT INTO personne (nom, prenom, courriel, num_tel, nom_ville, id_cp) VALUES('".$nom."', '".$prenom."', '".$email."', '".$tel."', '".$ville."', (SELECT id_cp FROM code_postal WHERE cp = '".$cp."'));")  or die ('Erreur : '.pg_last_error());
+                if (preg_match($pattern , $nom)){
+                    if(preg_match($pattern , $prenom)){
+                        if(preg_match($pattern , $tel)){
+                            if(strlen($tel) == 10){
+                                if($ville == ''){
+                                    $inscription = pg_query("INSERT INTO personne (nom, prenom, courriel, num_tel) VALUES('".$nom."', '".$prenom."', '".$email."', '".$tel."');")  or die ('Erreur : '.pg_last_error());
 
-                   
-                $reservation = pg_query("INSERT INTO pers_even (id_pers, id_event, nb_personne) VALUES((SELECT id_pers FROM personne WHERE courriel = '".$email."'), ".$var.", ".$resa.");") or die ('Erreur : '.pg_last_error());
+                               
+                                        $reservation = pg_query("INSERT INTO pers_even (id_pers, id_event, nb_personne) VALUES((SELECT id_pers FROM personne WHERE courriel = '".$email."'), ".$var.", ".$resa.");") or die ('Erreur : '.pg_last_error());
+
+                                        echo "<p>Votre réservation a bien été prise en compte.</p>";
+                                }
+                                else{
+                                    if($cp == ''){
+                                        echo "<p>Si vous souhaitez renseigner votre ville, merci de renseigner également votre code postal.</p>";
+                                    }
+                                    else{
+                                        if(strlen($cp) == 5){
+                                            if(preg_match($pattern , $cp)){
+                                                $inscription = pg_query("INSERT INTO personne (nom, prenom, courriel, num_tel, nom_ville, id_cp) VALUES('".$nom."', '".$prenom."', '".$email."', '".$tel."', '".$ville."', (SELECT id_cp FROM code_postal WHERE cp = '".$cp."'));")  or die ('Erreur : '.pg_last_error());
+
+                               
+                                                $reservation = pg_query("INSERT INTO pers_even (id_pers, id_event, nb_personne) VALUES((SELECT id_pers FROM personne WHERE courriel = '".$email."'), ".$var.", ".$resa.");") or die ('Erreur : '.pg_last_error());
+
+                                                echo "<p>Votre réservation a bien été prise en compte.</p>";
+                                            }
+                                            else{
+                                                echo "<p>Le code postal ne doit contenir que des chiffres.</p>";
+                                            }
+                                        }
+                                        else{
+                                            echo "<p>Le code postal renseigné n'est pas valide.</p>";
+                                        }
+                                    }
+                                }
+                            }
+                            else{
+                                echo "<p>Merci de renseigner un numéro de téléphone valide (10 caractères maximums).</p>";
+                            }
+                        }
+                        else{
+                            echo "<p>Le numéro de téléphone ne doit contenir aucun caractère spécial.</p>";
+                        }
+                    }
+                    else{
+                        echo "<p>Le prénom ne doit contenir aucun caractère spécial.</p>";
+                    }
+                }
+                else{
+                    echo "<p>Le nom ne doit contenir aucun caractère spécial.</p>";
+                }
             }
         }
     }
+    }
     
-    // réservation par une personne déjà inscrite    
+    // réservation par une personne déjà inscrite  
+    function dejaResa(){  
     if(isset($email2)){
         $var2 = $id2;
         if(filter_var($email2, FILTER_VALIDATE_EMAIL)){
@@ -196,22 +245,39 @@ if (isset($_POST['modalCreate'])) {
             $result2 = pg_fetch_array($verif_mail2);
             if($result2[0] == $email2){
 
-                $verifResa = pg_query("SELECT id_pers FROM pers_even WHERE id_pers = (SELECT id_pers FROM personne WHERE courriel = '".$email2."');") or die ('Erreur : '.pg_last_error());
+                // $verifResa = pg_fetch_array(pg_query("SELECT pers_even.id_pers, pers_even.id_event FROM pers_even WHERE pers_even.id_pers = (SELECT personne.id_pers FROM personne WHERE courriel = '".$email2."');"));
 
-                //CA MARCHE PO
-                if($verifResa == true){
-                   echo "<p>Vous avez déjà effectué une réservation pour cet événement. Si vous souhaitez la modifier, merci de nous contacter par téléphone.</p>"; 
-                }
-                else{
+
+                // $verifResa2 = pg_fetch_array(pg_query("SELECT pers_even.id_event FROM pers_even WHERE pers_even.id_event = ".$var.";"));
+
+                // if($verifResa[1] == $verifResa2[0]){
+                   //echo "<p>Vous avez déjà effectué une réservation pour cet événement. Si vous souhaitez la modifier, merci de nous contacter par téléphone.</p>"; 
+                //}
+                //else{
                     $reservation = pg_query("INSERT INTO pers_even (id_pers, id_event, nb_personne) VALUES((SELECT id_pers FROM personne WHERE courriel = '".$email2."'), ".$var2.", ".$resa2.");") or die ('Erreur : '.pg_last_error());
                     echo "<p>Votre réservation a bien été prise en compte.</p>";
-                }
+                //}
             }
             else{
                 echo "<p>Votre adresse mail n'est pas enregistrée. Merci d'utiliser l'autre formulaire.</p>";
             }
         }
     }
+    }
+
+if(isset($_POST['bouton'])){
+    $bouton = $_POST['bouton'];
+    switch ($bouton)) {
+        case 'btn1':
+            firstResa();
+            break;
+    
+        case 'btn2':
+            dejaResa();
+            break;
+    }
+}
+    
 
 ?>
 
