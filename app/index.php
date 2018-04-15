@@ -289,9 +289,6 @@ include 'dist/php/nav.php';
 	<!-- Partie contenant la slide des évènements -->
 
 	<section>
-
-      
-
 		<div class="carousel carousel-slider  sliderPerso">
 			<div class="carousel-item red white-text" href="#one!">
 				<div class="styletext">

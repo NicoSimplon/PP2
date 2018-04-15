@@ -1,73 +1,81 @@
+(function(d, s, id) {
+  var js,
+    fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s);
+  js.id = id;
+  js.src =
+    "https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.12&appId=198863107382803&autoLogAppEvents=1";
+  fjs.parentNode.insertBefore(js, fjs);
+})(document, "script", "facebook-jssdk"); // initialisation modale
 
-// initialisation modale
-$(document).ready(function(){
-    if ($('#tabs-swipe').length) {
-        $('#tabs-swipe').tabs();
-      }
-  
-  $('.carousel.carousel-slider').carousel({
+$(document).ready(function() {
+  $("#tabs-swipe").tabs();
+
+  $(".carousel.carousel-slider").carousel({
     fullWidth: true,
     indicators: true
   });
   function autoplay() {
-    $('.sliderPerso').carousel('next')
-}
-setTimeout(autoplay, 10000);
+    $(".sliderPerso").carousel("next");
+  }
+  setTimeout(autoplay, 10000);
 
+  $("#modal_abo").modal();
 
-    $('#modal_abo').modal();
+  $("#modal_desabo").modal();
 
-    $('#modal_desabo').modal();
-
-    
-    $("#sabonner").click(function(){
-        $("#abo").show();
-        $("#desabo").hide();
+  $("#sabonner").click(function() {
+    $("#abo").show();
+    $("#desabo").hide();
     $("#modal_titre").text("S'abonner");
-});
+  });
 
-$("#sedesabonner").click(function(){
+  $("#sedesabonner").click(function() {
     $("#abo").hide();
     $("#desabo").show();
     $("#modal_titre").text("Se désabonner");
+  });
 });
 
-});œ
+$(".ajaxBtn").click(function() {
+  var idclick = $(this).data("news");
+  var recupMail = $("#email").val();
+  console.log(recupMail);
 
-// $("#modal_abo").click(function(){
-    
-// })
+  $.ajax({
+    url: "dist/validation_newsletter.php",
+    method: "post",
+    dataType: "html",
+    data: {
+      clickRecup: idclick,
+      mailRecup: recupMail
+    },
+    success: function(arg) {
+      M.toast({ html: arg, inDuration: 8000 });
+      $("#email").val("");
+    }
+  });
+});
 
+$(document).ready(function() {
+  function heure() {
+    moment.locale("fr");
+    var myheure = $("#insertDate").text(moment().format("LTS"));
+  }
+  heure();
+  setInterval(heure, 1000);
 
-$(".ajaxBtn").click(function(){
-    var idclick = $(this).data("news");
-    var recupMail = $("#email").val();
-    console.log(recupMail);
-    
-    $.ajax({
-        url: 'dist/validation_newsletter.php',
-        method: 'post',
-        dataType: 'html',
-        data:{
-            clickRecup: idclick,
-            mailRecup: recupMail 
-        },
-        success : function(arg){
-            M.toast({html: arg, inDuration: 8000});
-            $("#email").val("");
-        }
-
-    })
-})
-
-var caca=(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = 'https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.12&appId=198863107382803&autoLogAppEvents=1';
-    fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-
-// $(window).load(function() {
-
-// })
+  function saluTime() {
+    moment.locale("fr");
+    var myheure = $("#insertDate").text(moment().format("LTS"));
+    var heure = moment("18:00:00").format("LTS");
+    if (myheure > heure) {
+      $("#variente").html("Bonsoir,"+"&nbsp");
+      // alert("bonsoir");
+    } else {
+      $("#variente").html("Bonjour,"+"&nbsp");
+    }
+  }
+  saluTime();
+});
