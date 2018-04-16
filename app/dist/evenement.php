@@ -23,7 +23,7 @@
 
     <div class="containerCenterWrap">
     <?php 
-        $requete = pg_query("SELECT to_char(date_event, 'dd/mm/YYYY') , event,nom_artiste,lib_genre,descriptif
+        $requete = pg_query("SELECT to_char(date_event, 'dd/mm/YYYY') , event, nom_artiste, lib_genre, descriptif
             FROM artiste
             INNER JOIN art_genre ON artiste.id_artiste=art_genre.id_artiste
             INNER JOIN genre ON genre.id_genre=art_genre.id_genre
@@ -68,9 +68,8 @@
                     <p>'.$createCard['descriptif']. '</p>
                 </div>
             </div>';
-
-            echo $dynamicCard;
         }
+        echo $dynamicCard;
     ?>
 
     <div id="modalReservation" class="modal"></div>

@@ -7,6 +7,7 @@ $(document).ready(function() {
   $(".modal-trigger" ).click(function() {
     var date = $(this).data("date"); 
     var dataRecup = $(this).data("recupval"); 
+    
     // console.log(date);
     // console.log(dataRecup);
     var recupMyDate = $(".TitleDate",this).text();    

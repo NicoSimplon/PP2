@@ -1,6 +1,7 @@
 $(".validFirstResa").click(function(){
 
 	var bouton = $(this).data("first");
+    console.log(bouton);
 	// console.log(bouton);
 	
 	if(bouton=="btn1"){
