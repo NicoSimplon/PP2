@@ -3,6 +3,10 @@ html body {
   display: inline-flex;
   flex-flow: column;
   width: 100%;
+  justify-content: center;
+  align-items: center;
+  /* height: 100rem; */
+
 }
 .ImgLogo {
   width: 5rem;
@@ -62,7 +66,7 @@ nav #containerElnav {
         transform: translateY(-10%); }
       60% {
         transform: translateY(-5%); } }
-nav #containerElnav .imgAngre {
+/* nav #containerElnav .imgAngre {
   /* background: chartreuse; */
   width: 100%;
   height: auto;
@@ -72,7 +76,7 @@ nav #containerElnav .imgAngre {
   justify-content: center;
   position: relative;
   top: -4.5rem;
-}
+} */
 nav #containerElnav .imgAngre #GrosAngre {
   font-size: 8rem;
   opacity: 0.7;
@@ -175,6 +179,11 @@ nav #containerElnav #menuptdroit .petitsAngre {
                  transform: rotate(-360deg);
                  }
                 }
+
+
+
+
+
 
 @media all and (max-width: 860px) {
   nav #containerElnav .imgAngre #GrosAngre {
