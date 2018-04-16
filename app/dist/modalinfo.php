@@ -61,7 +61,7 @@ function modalDynamique(){
                                     <div class="input-field col s12">
                                         <form action="#">
                                             <p class="range-field">
-                                                <input id="start" type="range" min="0" max="20"/>
+                                                <input id="start" type="range" min="1" max="20"/>
                                             </p>
                                         </form>
                                         <label>Selectionnez le nombre de personne</label>
@@ -113,7 +113,7 @@ function modalDynamiqueInscrit(){
                         <div class="row">
                             <div class="input-field col s12">
                                 <form action="#">
-                                    <p class="range-field"><input id="start2"  type="range" min="0" max="20"/></p>
+                                    <p class="range-field"><input id="start2"  type="range" min="1" max="20"/></p>
                                 </form>
                                 <label>Selectionnez le nombre de personne</label>
                             </div>
@@ -149,25 +149,25 @@ if (isset($_POST['modalCreate'])) {
 } 
 
 // récupération des données des formulaires 
-    // données formulaire 1:
+
+// données formulaire 1:
    
-    $nom = $_POST['name'];
-    $prenom = $_POST['lname'];
-    $email = $_POST['mail'];
-    $tel = $_POST['tel'];
-    $ville = $_POST['town'];
-    $cp = $_POST['code'];
-    $resa = $_POST['nbResa'];
-    $id = $_POST['id_eve'];
+$nom = $_POST['name'];
+$prenom = $_POST['lname'];
+$email = $_POST['mail'];
+$tel = $_POST['tel'];
+$ville = $_POST['town'];
+$cp = $_POST['code'];
+$resa = $_POST['nbResa'];
+$id = $_POST['id_eve'];
     
-    // données formulaire 2
-    $email2 = $_POST['mail2'];
-    $resa2 = $_POST['nbResa2'];
-    $id2 = $_POST['id_eve2'];
+// données formulaire 2
+$email2 = $_POST['mail2'];
+$resa2 = $_POST['nbResa2'];
+$id2 = $_POST['id_eve2'];
 
-    $pattern = "#^[a-z0-9]+$#i";
+$pattern = "#^[a-z0-9]+$#i";
 
-    function firstResa(){
     if(isset($email)){
         $var = $id;
         if(filter_var($email, FILTER_VALIDATE_EMAIL)){
@@ -180,8 +180,8 @@ if (isset($_POST['modalCreate'])) {
             }
             else{
                 //inscription nouvelle personne
-                if (preg_match($pattern , $nom)){
-                    if(preg_match($pattern , $prenom)){
+                //if (preg_match($pattern , $nom)){
+                    //if(preg_match($pattern , $prenom)){
                         if(preg_match($pattern , $tel)){
                             if(strlen($tel) == 10){
                                 if($ville == ''){
@@ -223,21 +223,19 @@ if (isset($_POST['modalCreate'])) {
                         else{
                             echo "<p>Le numéro de téléphone ne doit contenir aucun caractère spécial.</p>";
                         }
-                    }
-                    else{
-                        echo "<p>Le prénom ne doit contenir aucun caractère spécial.</p>";
-                    }
-                }
-                else{
-                    echo "<p>Le nom ne doit contenir aucun caractère spécial.</p>";
-                }
+                    //}
+                    //else{
+                        //echo "<p>Le prénom ne doit contenir aucun caractère spécial.</p>";
+                    //}
+                //}
+                //else{
+                    //echo "<p>Le nom ne doit contenir aucun caractère spécial.</p>";
+                //}
             }
         }
     }
-    }
     
-    // réservation par une personne déjà inscrite  
-    function dejaResa(){  
+    // réservation par une personne déjà inscrite    
     if(isset($email2)){
         $var2 = $id2;
         if(filter_var($email2, FILTER_VALIDATE_EMAIL)){
@@ -263,20 +261,6 @@ if (isset($_POST['modalCreate'])) {
             }
         }
     }
-    }
-
-if(isset($_POST['bouton'])){
-    $bouton = $_POST['bouton'];
-    switch ($bouton)) {
-        case 'btn1':
-            firstResa();
-            break;
-    
-        case 'btn2':
-            dejaResa();
-            break;
-    }
-}
     
 
 ?>
