@@ -12,7 +12,6 @@
 $(document).ready(function () {
   $('.tooltipped').tooltip();
   $('#modalReservation').modal();
-  $("#modal_desabo").modal();
   $("#modal1").modal();
 
 

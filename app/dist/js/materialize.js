@@ -12168,7 +12168,7 @@ $jscomp.polyfill = function (e, r, p, m) {
       value: function _setupThumb() {
         this.thumb = document.createElement('span');
         this.value = document.createElement('span');
-        $(this.thumb).addClass('thumb');
+        $(this.thumb).addClass('thumb colorChart');
         $(this.value).addClass('value');
         $(this.thumb).append(this.value);
         this.$el.after(this.thumb);

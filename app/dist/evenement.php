@@ -25,7 +25,7 @@
 
     <div class="containerCenterWrap">
         <?php 
-        $requete = pg_query("SELECT to_char(date_event, 'dd/mm/YYYY') , event, nom_artiste, lib_genre, descriptif
+        $requete = pg_query("SELECT to_char(date_fin, 'dd/mm/YYYY')as fin , to_char(date_event, 'dd/mm/YYYY') as debut , event, nom_artiste, lib_genre, descriptif, nom_artiste
             FROM artiste
             INNER JOIN art_genre ON artiste.id_artiste=art_genre.id_artiste
             INNER JOIN genre ON genre.id_genre=art_genre.id_genre
@@ -33,48 +33,62 @@
             INNER JOIN evenement ON eve_art.id_event=evenement.id_event");
 
         while ($createCard = pg_fetch_assoc($requete)) {
-
+            // $artistes='';
+            $fin='';
+            // $aristes=$createCard['nom_artiste'];
+			$debut='';
+			if ($createCard['fin']) {
+				$fin .= "&nbsp;"."au" . " " . $createCard['fin'];
+				$debut .= "Du " . "&nbsp;" . $createCard["debut"];
+            } 
+            else {
+				$fin = '';
+				$debut = "Le " . $createCard["debut"];
+			}
         $dynamicCard .= '
         <div class="card sizeCard">
                 <div class="headerCard">
-                    <span class="TitleDate card-title grey-text text-darken-4" data-recupval="Val">' . $createCard['to_char'] . ' </span>
+                    <span class="TitleDate card-title grey-text text-darken-4" data-recupval="Val">' . $debut . " " . $fin . '</span>
                 </div>
-                <div class="card-image waves-effect waves-block waves-light">
+                <div class="card-image waves-effect waves-block waves-light containerImgCard">
                     <img class="activator cardImg" src="logocolo.jpg">
+
                 </div>
                 <div class="card-content ResumeCard">
                     <div class="containerInfosView">
                         <p class="NameEvent">'.$createCard['event'].'</p>
                     </div>
                     <div class="containerInfosView">
-        
-                        <div class="chip modal-trigger tooltipped" data-position="top" data-tooltip="Si vous n\'avez jamais réservé sur ce site avant, cliquez ici." data-recupval="click" data-date="'.$createCard['to_char'].'" href="#modalReservation">
+                    <div class="demi">
+                        <div class="chip labPoint modal-trigger tooltipped" data-position="top" data-tooltip="Si vous n\'avez jamais réservé sur ce site avant." data-recupval="click" data-date="'.$createCard['debut'].'" href="#modalReservation">
                             <i class="fas fa-ticket-alt returnImg"></i>
-                            <label>Réserver</label>
+                            <label class="labPoint">Réserver</label>
                         </div>
-                        <div class="chip modal-trigger tooltipped" data-position="top" data-tooltip="Si vous avez déjà réservé sur ce site, cliquez ici." data-date="'.$createCard['to_char'].'" data-recupVal="dejareserver" href="#modalReservation">
+                        </div>
+                        <div class="demi">
+                        <div class="chip labPoint modal-trigger tooltipped" data-position="top" data-tooltip="Si vous avez déjà réservé sur ce site." data-date="'.$createCard['debut'].'" data-recupVal="dejareserver" href="#modalReservation">
                             <i class="fas fa-ticket-alt returnImg"></i>
-                            <label>Dejà Reservé?</label>
+                            <label class="labPoint">Dejà Reservé?</label>
+                        </div>
                         </div>
                     </div>
                     <div class="footerCard">
-                        <div id="cardFleft">
-        
-                        </div>
-                        <div id="cardFright">
                             <a class="plus activator">En Savoir Plus</a>
-                        </div>
                     </div>
                 </div>
                 <div class="card-reveal">
-                    <span class="card-title grey-text text-darken-4">'.$createCard['event'].' '.$createCard['to_char'].'
+                    <span class="card-title grey-text text-darken-4">
                         <i class="material-icons right">close</i>
                     </span>
-                    <p>'.$createCard['descriptif']. '</p>
+                    <span class="TitleDateHide card-title grey-text text-darken-4" data-recupval="Val">'.$createCard['event'].'</span>
+                    <span class="TitleDateHide card-title grey-text text-darken-4" data-recupval="Val">' . $debut . " " . $fin . '</span>
+                    <p>Atiste(s): '.$createCard['nom_artiste'].'</p>
+                    <p class="description">'.$createCard['descriptif']. '</p>
+                    </div>
                 </div>
             </div>';
+            echo $dynamicCard;
         }
-        echo $dynamicCard;
     ?>
 
         <div id="modalReservation" class="modal"></div>

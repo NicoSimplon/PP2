@@ -347,9 +347,9 @@ include 'dist/php/nav.php';
 					<p class="infoalert">
 						' . $debut . " " . $fin . '
 					</p>
-					<h5 class="infoalert">
+					<h6 class="infoalert">
 						' . $recupInfoAlert["event"] . '
-					</h5>
+					</h6>
 					<div class="redirAlert">
 						<a href="dist/evenement.php">
 							Interessé ?
@@ -394,7 +394,7 @@ include 'dist/php/nav.php';
 			<div class="faceb">
 				<div id="fb-root"></div>
 				<div class="fb-page" data-href="https://www.facebook.com/colo.co.81/" data-tabs="comments,timeline" data-small-header="false"
-				    data-height="458" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="false" data-height="80">
+				   	 data-height="458" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="false" data-height="80">
 					<blockquote cite="https://www.facebook.com/colo.co.81/" class="fb-xfbml-parse-ignore">
 						<a href="https://www.facebook.com/colo.co.81/">Colo &amp; Co</a>
 					</blockquote>
@@ -403,7 +403,7 @@ include 'dist/php/nav.php';
 			<div class="news">
 				<h5>Newsletters</h5>
 				<div class="input-field size">
-					<input id="email" type="email" name="newsletter" required class="validate">
+					<input id="Coloremail" type="email" name="newsletter" required class="validate">
 					<label class="size" for="email">E-mail</label>
 				</div>
 				<div class="boutonNew">

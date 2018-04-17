@@ -19,7 +19,7 @@ function modalDynamique(){
         $contentModal .= '
             <div class="modal-content">
                 <h4>' . $recupInfoModal['event'] . '</h4>
-                <p>' .$stockdate.'</p>
+                <p class="description">' .$stockdate.'</p>
                 <input id="cache" value="'.$recupInfoModal['id_event'].'" type="hidden" style="display: none;">
                 <div class="row">
                     <form class="col s12">
@@ -100,7 +100,7 @@ function modalDynamiqueInscrit(){
         $contentModal .= '
             <div class="modal-content">
                 <h4>' . $recupInfoModal['event'] . '</h4>
-                <p>' .$stockdate.'</p>
+                <p class="description">' .$stockdate.'</p>
                 <input id="cache2" value="'.$recupInfoModal['id_event'].'" type="hidden" style="display: none;">
                 <div class="row">
                     <form class="col s12">
