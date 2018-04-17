@@ -73,7 +73,7 @@ $(".ajaxBtn").click(function () {
   //console.log(recupMail);
 
   $.ajax({
-    url: "dist/validation_newsletter.php",
+    url: "validation_newsletter.php",
     method: "post",
     dataType: "html",
     data: {

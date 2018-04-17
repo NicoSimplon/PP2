@@ -1,15 +1,15 @@
 <div id="containerElnav">
     <div id="menuptgauche">
-        <img src="dist/img/logocolo.jpg" class="ImgLogo">
+        <img src="logocolo.jpg" class="ImgLogo">
     </div>
     <div id="menuptdroit">
         <div class="containerBtnTitle">
-            <a href="" class="">
+            <a href="index.php" class="">
                 <i style="font-size:2rem" class="fas fa-home"></i>
             </a>
         </div>
         <div class="containerBtnTitle">
-            <a href="" class="">Agenda</a>
+            <a href="evenement.php" class="">Agenda</a>
             <div class="petitsAngre">
                 <i class="fas fa-cog petitAngre1"></i>
                 <i class="fas fa-cog petitAngre2"></i>

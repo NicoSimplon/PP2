@@ -11,11 +11,11 @@
 	    crossorigin="anonymous">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P"
 	    crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="dist/css/navfoot.css"></link>
-	<link rel="stylesheet" type="text/css" href="dist/css/materialize.css">
-	<link rel="stylesheet" type="text/css" href="dist/css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/navfoot.css"></link>
+	<link rel="stylesheet" type="text/css" href="css/materialize.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<?php
-include 'dist/connexion_bdd.php';
+include 'connexion_bdd.php';
 ?>
 </head>
 
@@ -26,10 +26,10 @@ include 'dist/connexion_bdd.php';
 	<header>
 		<div class="bandOleft">
 			<div class="imageHgauche">
-				<img class="sizeImgBando" src="dist/images/steampunkachien/haut_gauche.png">
+				<img class="sizeImgBando" src="images/steampunkachien/haut_gauche.png">
 			</div>
 			<div class="imageBdroit">
-				<img class="sizeImgBando" src="dist/images/steampunkachien/bas_gauche.png">
+				<img class="sizeImgBando" src="images/steampunkachien/bas_gauche.png">
 			</div>
 		</div>
 		<div class="bandOmi">
@@ -267,10 +267,10 @@ c4 -222 10 -787 14 -1257z m-417 29 l1 -325 -28 55 c-80 154 -131 373 -138
 		</div>
 		<div class="bandOright">
 			<div class="imageHgauche">
-				<img class="sizeImgBando" src="dist/images/steampunkachien/haut_droite.png">
+				<img class="sizeImgBando" src="images/steampunkachien/haut_droite.png">
 			</div>
 			<div class="imageBdroit">
-				<img class="sizeImgBando" src="dist/images/steampunkachien/bas_droite.png">
+				<img class="sizeImgBando" src="images/steampunkachien/bas_droite.png">
 			</div>
 		</div>
 	</header>
@@ -279,7 +279,7 @@ c4 -222 10 -787 14 -1257z m-417 29 l1 -325 -28 55 c-80 154 -131 373 -138
 
 	<div class="nav">
 	<?php 
-include 'dist/php/nav.php';
+include 'php/nav.php';
 ?>
 	</div>
 
@@ -351,7 +351,7 @@ include 'dist/php/nav.php';
 						' . $recupInfoAlert["event"] . '
 					</h6>
 					<div class="redirAlert">
-						<a href="dist/evenement.php">
+						<a href="evenement.php">
 							Interessé ?
 						</a>
 					</div>
@@ -378,11 +378,11 @@ include 'dist/php/nav.php';
 					nulla sequi explicabo!</p>
 			</div>
 			<div class="cell flipInX">
-				<img src="piscine.jpg" class="testImg">
+				<img src="foule.png" class="testImg">
 			</div>
 			<div class="cell flipInX">
 
-				<img src="piscine.jpg" class="testImg">
+				<img src="foule.png" class="testImg">
 			</div>
 			<div class="cell flipInX">
 				<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam vel atque debitis quia provident ab obcaecati mollitia
@@ -448,13 +448,13 @@ include 'dist/php/nav.php';
 
 
 	<?php
-include 'dist/footer.php';
+// include 'footer.php';
 ?>
-		<script src="dist/js/jquery.js"></script>
-		<script src="dist/js/materialize.js"></script>
-		<script src="dist/js/navfoot.js"></script>
-		<script src="dist/js/main.js"></script>
-		<script src="dist/js/swipe.js"></script>
+		<script src="js/jquery.js"></script>
+		<script src="js/materialize.js"></script>
+		<script src="js/navfoot.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/swipe.js"></script>
 		<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
 		    crossorigin="anonymous"></script>
 </body>
