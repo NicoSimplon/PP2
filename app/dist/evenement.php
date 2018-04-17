@@ -85,16 +85,21 @@
                     <p>Atiste(s): '.$createCard['nom_artiste'].'</p>
                     <p class="description">'.$createCard['descriptif']. '</p>
                     </div>
-                </div>
-            </div>';
-            echo $dynamicCard;
+                </div>';
         }
+        echo $dynamicCard;
     ?>
 
-        <div id="modalReservation" class="modal"></div>
-        
-    </div>
 
+
+
+
+
+
+
+    </div>
+    
+    <div id="modalReservation" class="modal"></div>
 
 
 
