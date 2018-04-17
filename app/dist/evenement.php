@@ -24,7 +24,7 @@
     </div>
 
     <div class="containerCenterWrap">
-    <?php 
+        <?php 
         $requete = pg_query("SELECT to_char(date_event, 'dd/mm/YYYY') , event, nom_artiste, lib_genre, descriptif
             FROM artiste
             INNER JOIN art_genre ON artiste.id_artiste=art_genre.id_artiste
@@ -35,7 +35,7 @@
         while ($createCard = pg_fetch_assoc($requete)) {
 
         $dynamicCard .= '
-            <div class="card sizeCard">
+        <div class="card sizeCard">
                 <div class="headerCard">
                     <span class="TitleDate card-title grey-text text-darken-4" data-recupval="Val">' . $createCard['to_char'] . ' </span>
                 </div>
@@ -47,16 +47,19 @@
                         <p class="NameEvent">'.$createCard['event'].'</p>
                     </div>
                     <div class="containerInfosView">
-                        <p class="InfosView">Heure</p>
+        
+                        <div class="chip modal-trigger tooltipped" data-position="top" data-tooltip="Si vous n\'avez jamais réservé sur ce site avant, cliquez ici." data-recupval="click" data-date="'.$createCard['to_char'].'" href="#modalReservation">
+                            <i class="fas fa-ticket-alt returnImg"></i>
+                            <label>Réserver</label>
+                        </div>
+                        <div class="chip modal-trigger tooltipped" data-position="top" data-tooltip="Si vous avez déjà réservé sur ce site, cliquez ici." data-date="'.$createCard['to_char'].'" data-recupVal="dejareserver" href="#modalReservation">
+                            <i class="fas fa-ticket-alt returnImg"></i>
+                            <label>Deja Reserver</label>
+                        </div>
                     </div>
                     <div class="footerCard">
                         <div id="cardFleft">
-                            <a data-recupval="click" data-date="'.$createCard['to_char'].'" class="modal-trigger" href="#modalReservation">
-                                <label>réserver</label>
-                            </a>
-                        <a data-date="'.$createCard['to_char'].'" data-recupVal="dejareserver" class="modal-trigger" href="#modalReservation" >
-                        <label >deja reserver</label>
-                        </a>
+        
                         </div>
                         <div id="cardFright">
                             <a class="plus activator">En Savoir Plus</a>
@@ -74,22 +77,28 @@
         echo $dynamicCard;
     ?>
 
-    <div id="modalReservation" class="modal"></div>
-</div>
+        <div id="modalReservation" class="modal"></div>
+        
+    </div>
 
-<?php 
+
+
+
+
+
+    <?php 
     include 'footer.php';
 ?>
 
-<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
-    crossorigin="anonymous"></script>
-<script src="js/vue.js"></script>
-<script src="js/jquery.js"></script>
-<script src="js/navfoot.js"></script>
-<script src="js/materialize.js"></script>
-<script src="js/main.js"></script>
-<script src="js/resa.js"></script>
-<script src="js/swipe.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
+        crossorigin="anonymous"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/navfoot.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/resa.js"></script>
+    <script src="js/swipe.js"></script>
 </body>
 
 </html>

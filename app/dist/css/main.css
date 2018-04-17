@@ -342,7 +342,9 @@ padding:0.5rem;
   } 
 
 
-
+.returnImg{
+  transform: rotate(90deg);
+}
 
 
 header {
