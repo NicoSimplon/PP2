@@ -54,7 +54,7 @@
                         </div>
                         <div class="chip modal-trigger tooltipped" data-position="top" data-tooltip="Si vous avez déjà réservé sur ce site, cliquez ici." data-date="'.$createCard['to_char'].'" data-recupVal="dejareserver" href="#modalReservation">
                             <i class="fas fa-ticket-alt returnImg"></i>
-                            <label>Deja Reserver</label>
+                            <label>Dejà Reservé?</label>
                         </div>
                     </div>
                     <div class="footerCard">
