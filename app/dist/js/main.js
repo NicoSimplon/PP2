@@ -49,27 +49,11 @@ $(document).ready(function () {
     $(".sliderPerso").carousel("next");
   }
   setTimeout(autoplay, 10000);
-
-  $("#modal_abo").modal();
-
-  $("#modal_desabo").modal();
-
-  $("#sabonner").click(function () {
-    $("#abo").show();
-    $("#desabo").hide();
-    $("#modal_titre").text("S'abonner");
-  });
-
-  $("#sedesabonner").click(function () {
-    $("#abo").hide();
-    $("#desabo").show();
-    $("#modal_titre").text("Se désabonner");
-  });
 });
 
 $(".ajaxBtn").click(function () {
   var idclick = $(this).data("news");
-  var recupMail = $("#email").val();
+  var recupMail = $("#Coloremail").val();
   //console.log(recupMail);
 
   $.ajax({
@@ -82,7 +66,7 @@ $(".ajaxBtn").click(function () {
     },
     success: function (arg) {
       M.toast({ html: arg, inDuration: 8000 });
-      $("#email").val("");
+      $("#Coloremail").val("");
     }
   });
 });
