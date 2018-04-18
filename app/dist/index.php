@@ -351,7 +351,7 @@ include 'php/nav.php';
 						' . $recupInfoAlert["event"] . '
 					</h6>
 					<div class="redirAlert">
-						<a href="evenement.php">
+						<a class= "plus"href="evenement.php">
 							Interessé ?
 						</a>
 					</div>

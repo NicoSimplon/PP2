@@ -50,11 +50,11 @@ function modalDynamique(){
                                 <div class="row">
                                     <div class="input-field col s6">
                                         <input id="ville" type="text" class="validate">
-                                        <label for="first_name">Ville</label>
+                                        <label for="first_name">Ville (facultatif)</label>
                                     </div>
                                     <div class="input-field col s6">
                                         <input id="cp" type="text" class="validate" maxlength="5">
-                                        <label for="last_name">Code Postal</label>
+                                        <label for="last_name">Code Postal (facultatif)</label>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -238,6 +238,9 @@ if(isset($_POST['bouton'])&& $_POST['bouton']=="btn1"){
                     }
                 }
             }
+            else{
+                echo "<p>Merci de mettre un email valide.</p>";
+            }
         }
     }
 }   
@@ -277,6 +280,9 @@ else if(isset($_POST['bouton']) && $_POST['bouton']=="btn2"){
                 else{
                     echo "Votre adresse mail n'est pas enregistrée. Merci d'utiliser l'autre formulaire.";
                 }
+            }
+            else{
+                echo "<p>Merci de mettre un email valide.</p>";
             }    
         }
     }
