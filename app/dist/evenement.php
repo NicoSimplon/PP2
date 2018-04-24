@@ -60,15 +60,9 @@
                     </div>
                     <div class="containerInfosView">
                     <div class="demi">
-                        <div class="chip labPoint modal-trigger tooltipped" data-position="top" data-tooltip="Si vous n\'avez jamais réservé sur ce site avant." data-recupval="click" data-date="'.$createCard['debut'].'" href="#modalReservation">
+                        <div class="chip labPoint modal-trigger tooltipped" data-position="top" data-tooltip="Cliquez pour ouvrir le formulaire de réservation." data-recupval="click" data-date="'.$createCard['debut'].'" href="#modalReservation">
                             <i class="fas fa-ticket-alt returnImg"></i>
                             <label class="labPoint">Réserver</label>
-                        </div>
-                        </div>
-                        <div class="demi">
-                        <div class="chip labPoint modal-trigger tooltipped" data-position="top" data-tooltip="Si vous avez déjà réservé sur ce site." data-date="'.$createCard['debut'].'" data-recupVal="dejareserver" href="#modalReservation">
-                            <i class="fas fa-ticket-alt returnImg"></i>
-                            <label class="labPoint">Dejà Reservé?</label>
                         </div>
                         </div>
                     </div>
