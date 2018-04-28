@@ -22,33 +22,7 @@ if(isset($_POST['modalCreate']) && $_POST['modalCreate'] == 'click'){
                 <p class="description">' .$stockdate.'</p>
                 <input id="cache" value="'.$recupInfoModal['id_event'].'" type="hidden" style="display: none;">
                 <div class="row">
-                    <form class="col s12">
-                        <h5 style="color: black;">Déjà résevé sur ce site?</h5>
-                        <form class="col s12">
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <input id="email2" type="email" class="validate">
-                                <label for="email">Email</label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <form action="#">
-                                    <p class="range-field"><input id="start2"  type="range" min="1" max="20" value="1"></p>
-                                </form>
-                                <label>Selectionnez le nombre de personne</label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="input-field col s4 centerend modal-action modal-close">
-                                <button class="btn waves-effect waves-light" type="button" name="action">Annuler</button>
-                            </div>
-                            <div class="input-field col s4"></div>
-                            <div class="input-field col s4 centerstart">
-                                <button class="btn waves-effect waves-light validFirstResa" type="button" name="action" data-first="btn2">valider</button>
-                            </div>
-                        </div>
-                    </form>
+                    <form class="col s12 m6">
                         <h5 style="color: black;">Première réservation sur le site?</h5>
                         <div class="row">
                             <div class="input-field col s6">
@@ -105,7 +79,30 @@ if(isset($_POST['modalCreate']) && $_POST['modalCreate'] == 'click'){
                                 </div>
                             </form>
                         </div>
-                    </form>';
+                    </form>
+                    <form class="col s12 m6">
+                        <h5 style="color: black;">Déjà résevé sur ce site?</h5>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="email2" type="email" class="validate">
+                                <label for="email">Email</label>
+                            </div>
+                            <div class="input-field col s12">
+                                <form action="#">
+                                    <p class="range-field"><input id="start2"  type="range" min="1" max="20" value="1"></p>
+                                </form>
+                                <label>Selectionnez le nombre de personne</label>
+                            </div>
+                            <div class="input-field col s4 centerend modal-action modal-close">
+                                <button class="btn waves-effect waves-light" type="button" name="action">Annuler</button>
+                            </div>
+                            <div class="input-field col s4"></div>
+                            <div class="input-field col s4 centerstart">
+                                <button class="btn waves-effect waves-light validFirstResa" type="button" name="action" data-first="btn2">valider</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>';
 
         $var .= $recupInfoModal['id_event'];
     }
