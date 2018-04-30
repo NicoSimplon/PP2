@@ -25,10 +25,10 @@ include 'connexion_bdd.php';
 
 	<header>
 		<div class="bandOleft">
-			<div class="imageHgauche">
+			<div>
 				<img class="sizeImgBando" src="images/steampunkachien/haut_gauche.png">
 			</div>
-			<div class="imageBdroit">
+			<div>
 				<img class="sizeImgBando" src="images/steampunkachien/bas_gauche.png">
 			</div>
 		</div>
@@ -266,10 +266,10 @@ c4 -222 10 -787 14 -1257z m-417 29 l1 -325 -28 55 c-80 154 -131 373 -138
 
 		</div>
 		<div class="bandOright">
-			<div class="imageHgauche">
+			<div>
 				<img class="sizeImgBando" src="images/steampunkachien/haut_droite.png">
 			</div>
-			<div class="imageBdroit">
+			<div>
 				<img class="sizeImgBando" src="images/steampunkachien/bas_droite.png">
 			</div>
 		</div>
@@ -278,9 +278,9 @@ c4 -222 10 -787 14 -1257z m-417 29 l1 -325 -28 55 c-80 154 -131 373 -138
 
 
 	<div class="nav">
-	<?php 
-include 'php/nav.php';
-?>
+		<?php 
+	include 'php/nav.php';
+	?>
 	</div>
 
 	<!-- Partie contenant la slide des évènements -->
@@ -289,8 +289,8 @@ include 'php/nav.php';
 		<div class="carousel carousel-slider  sliderPerso">
 			<div class="carousel-item red white-text" href="#one!">
 				<div class="styletext">
-					<h2 class="infoActua">First Panel</h2>
-					<p class="white-text infoActua">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam sit fugiat eos ipsam veniam, aliquam perspiciatis
+					<h2>First Panel</h2>
+					<p class="white-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam sit fugiat eos ipsam veniam, aliquam perspiciatis
 						voluptatem consectetur expedita, cupiditate dignissimos beatae architecto fuga id molestiae nulla at? Accusamus, sed!</p>
 				</div>
 				<img src="concert.png " class="testImg">
@@ -323,55 +323,47 @@ include 'php/nav.php';
 
 		<div class="barre_alert ">
 			<?php
-		$alertDyn = pg_query("SELECT event, TO_CHAR(date_event, 'DD/MM/YYYY') as debut, TO_CHAR(date_fin, 'DD/MM/YYYY') as fin
-			FROM evenement
-			ORDER BY date_event asc
-			limit 3;");
+				$alertDyn = pg_query("SELECT event, TO_CHAR(date_event, 'DD/MM/YYYY') as debut, TO_CHAR(date_fin, 'DD/MM/YYYY') as fin
+					FROM evenement
+					ORDER BY date_event asc
+					limit 3;");
 
 
-		while ($recupInfoAlert = pg_fetch_array($alertDyn)) {
-			$fin='';
-			$debut='';
-			if ($recupInfoAlert['fin']) {
-				$fin .= "&nbsp;"."au" . " " . $recupInfoAlert['fin'];
-				$debut .= "Du " . "&nbsp;" . $recupInfoAlert["debut"];
-			} else {
-				$fin = '';
-				$debut = "Le " . $recupInfoAlert["debut"];
-			}
-			$stockAlert .= '<div class="event_alert lightSpeedIn">
-				<div class="partleft">
-					<img src="concert.png" class="testImg">
-				</div>
-				<div class="partright">
-					<p class="infoalert">
-						' . $debut . " " . $fin . '
-					</p>
-					<h6 class="infoalert">
-						' . $recupInfoAlert["event"] . '
-					</h6>
-					<div class="redirAlert">
-						<a class= "plus"href="evenement.php">
-							Interessé ?
-						</a>
-					</div>
-				</div>
-			</div>';
-
-
-		}
-		echo $stockAlert;
-
-		?>
-
-				
-
+				while ($recupInfoAlert = pg_fetch_array($alertDyn)) {
+					$fin = '';
+					$debut = '';
+					if ($recupInfoAlert['fin']) {
+						$fin .= "&nbsp;" . "au" . " " . $recupInfoAlert['fin'];
+						$debut .= "Du " . "&nbsp;" . $recupInfoAlert["debut"];
+					} else {
+						$fin = '';
+						$debut = "Le " . $recupInfoAlert["debut"];
+					}
+					$stockAlert .= '<div class="event_alert lightSpeedIn">
+										<div class="partleft">
+											<img src="concert.png" class="testImg">
+										</div>
+									<div class="partright">
+										<p class="infoalert">
+										' . $debut . " " . $fin . '
+										</p>
+										<h6 class="infoalert">
+											' . $recupInfoAlert["event"] . '
+										</h6>
+									<div class="redirAlert">
+										<a class= "plus"href="evenement.php">
+											Interessé ?
+										</a>
+									</div>
+								</div>
+							</div>';
+				}
+				echo $stockAlert;
+			?>
 		</div>
-
 	</section>
 
 	<section>
-
 		<div class="gridContainer">
 			<div class="cell flipInX">
 				<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam vel atque debitis quia provident ab obcaecati mollitia
@@ -389,17 +381,18 @@ include 'php/nav.php';
 					nulla sequi explicabo!</p>
 			</div>
 		</div>
-
+		<!-- Facebook -->
 		<div class="rightContainer">
 			<div class="faceb">
 				<div id="fb-root"></div>
 				<div class="fb-page" data-href="https://www.facebook.com/colo.co.81/" data-tabs="comments,timeline" data-small-header="false"
-				   	 data-height="458" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="false" data-height="80">
+				    data-height="458" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="false" data-height="80">
 					<blockquote cite="https://www.facebook.com/colo.co.81/" class="fb-xfbml-parse-ignore">
 						<a href="https://www.facebook.com/colo.co.81/">Colo &amp; Co</a>
 					</blockquote>
 				</div>
 			</div>
+			<!-- Abonnement newsletter -->
 			<div class="news">
 				<h5>Newsletters</h5>
 				<div class="input-field size">
@@ -416,47 +409,71 @@ include 'php/nav.php';
 				</div>
 			</div>
 		</div>
-		<!-- Abonnement newsletter -->
+
 	</section>
-<section class="centvh">
-	<div class="vuecommentaire ">
+	<section>
+		<div class="vuecommentaire ">
 			<h5 class="coms">Vos commentaires :</h5>
-		<div class="commentaire flipInX">
-		<p class="emailAccueil">mon@email.com</p><p class="infoMsg"> le12/12/2010 à 12:56</p>
-			<p class="comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum dignissimos doloribus pariatur dolores asperiores sunt cupiditate nobis! Recusandae adipisci ut rerum qui nisi ex, labore velit minus distinctio, rem aliquid? Libero voluptatem fugit omnis eaque, quod totam sed beatae explicabo provident quos ullam nostrum iusto, cupiditate reiciendis sit qui nam eos praesentium reprehenderit odit! Facere eaque, eum vitae, ratione aliquid inventore exercitationem ab iure officia sit quasi quibusdam sed. Repellendus quo adipisci nihil tempora enim animi rerum nostrum minima sapiente ipsam architecto maxime explicabo, temporibus quos commodi eos sunt, expedita vero esse eveniet? Quibusdam ea dolorem maiores, necessitatibus, magni quisquam voluptatum officiis aperiam assumenda culpa placeat nisi beatae libero porro, veniam deserunt ipsam neque nam incidunt. Quod eius aut, magni, omnis amet accusamus nulla reiciendis dolorum, inventore ipsum vero nostrum iure voluptatum beatae impedit molestias velit vitae accusantium reprehenderit nobis rerum repellendus dignissimos quisquam quae. Officiis facilis, voluptas saepe a repellat id, qui nobis autem quae illo aperiam, sapiente aliquam exercitationem atque est voluptatem dolor assumenda. Provident molestiae repudiandae quo cupiditate tempora expedita, ratione delectus illum veritatis sequi, adipisci at culpa et minima odit consectetur eos asperiores saepe, nam sunt laborum. Iure architecto praesentium tempore, consequuntur ab a sapiente magnam non quibusdam error ullam perspiciatis, facilis deleniti beatae, quas facere. Culpa atque minima eum nihil, quaerat magni minus architecto est aliquid modi mollitia excepturi odit repellat illum, iusto iure beatae voluptates reprehenderit consectetur delectus aperiam id eius! Ipsum fugit saepe minima sed qui tempore rerum culpa error debitis, magni incidunt repellendus earum rem quasi inventore.</p>
-			<div class="redirCom">
-			<a>voir plus</a>
-			</div>
+			<div class="commentaire flipInX">
+				<p class="emailAccueil">mon@email.com</p>
+				<p class="infoMsg"> le12/12/2010 à 12:56</p>
+				<p class="comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum dignissimos doloribus pariatur dolores asperiores sunt
+					cupiditate nobis! Recusandae adipisci ut rerum qui nisi ex, labore velit minus distinctio, rem aliquid? Libero voluptatem
+					fugit omnis eaque, quod totam sed beatae explicabo provident quos ullam nostrum iusto, cupiditate reiciendis sit qui
+					nam eos praesentium reprehenderit odit! Facere eaque, eum vitae, ratione aliquid inventore exercitationem ab iure officia
+					sit quasi quibusdam sed. Repellendus quo adipisci nihil tempora enim animi rerum nostrum minima sapiente ipsam architecto
+					maxime explicabo, temporibus quos commodi eos sunt, expedita vero esse eveniet? Quibusdam ea dolorem maiores, necessitatibus,
+					magni quisquam voluptatum officiis aperiam assumenda culpa placeat nisi beatae libero porro, veniam deserunt ipsam neque
+					nam incidunt. Quod eius aut, magni, omnis amet accusamus nulla reiciendis dolorum, inventore ipsum vero nostrum iure
+					voluptatum beatae impedit molestias velit vitae accusantium reprehenderit nobis rerum repellendus dignissimos quisquam
+					quae. Officiis facilis, voluptas saepe a repellat id, qui nobis autem quae illo aperiam, sapiente aliquam exercitationem
+					atque est voluptatem dolor assumenda. Provident molestiae repudiandae quo cupiditate tempora expedita, ratione delectus
+					illum veritatis sequi, adipisci at culpa et minima odit consectetur eos asperiores saepe, nam sunt laborum. Iure architecto
+					praesentium tempore, consequuntur ab a sapiente magnam non quibusdam error ullam perspiciatis, facilis deleniti beatae,
+					quas facere. Culpa atque minima eum nihil, quaerat magni minus architecto est aliquid modi mollitia excepturi odit repellat
+					illum, iusto iure beatae voluptates reprehenderit consectetur delectus aperiam id eius! Ipsum fugit saepe minima sed
+					qui tempore rerum culpa error debitis, magni incidunt repellendus earum rem quasi inventore.</p>
+				<div class="redirCom">
+					<a>voir plus</a>
+				</div>
 			</div>
 			<div class="commentaire flipInX">
-			<p class="emailAccueil">mon@email.com</p><p class="infoMsg"> le 12/12/2010 à 12:56</p>
-			<p class="comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet quos sit voluptas sed soluta illo sapiente fuga ipsum dolor libero voluptatem consequatur, aliquid qui quis eveniet aut minima nulla. Voluptas?</p>
-			<div class="redirCom">
-				<a>voir plus</a>
-			</div>
-				</div>
-				<div class="commentaire flipInX">
-				<p class="emailAccueil">mon@email.com</p><p class="infoMsg"> le12/12/2010 à 12:56</p>
-				<p class="comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis placeat, asperiores sunt accusamus odio est dignissimos, obcaecati dolor minima fuga rerum voluptatem ducimus alias dolorem laboriosam numquam eveniet qui totam vitae eos beatae tenetur. Corrupti provident minus quis perferendis ad mollitia deserunt impedit nemo fuga nesciunt optio vitae, ullam quaerat magni eum libero porro. Molestias at maiores iure aliquam, placeat ipsum dolorum saepe repellendus ratione! Consequuntur non illo corporis reiciendis. Dolore placeat nostrum tempore perspiciatis vel corporis eius quas aliquam similique, cumque illum sunt. Officiis ex impedit totam animi. Dolor in quaerat quod temporibus mollitia? In aliquid facere quo cum?</p>
+				<p class="emailAccueil">mon@email.com</p>
+				<p class="infoMsg"> le 12/12/2010 à 12:56</p>
+				<p class="comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet quos sit voluptas sed soluta illo sapiente fuga ipsum dolor
+					libero voluptatem consequatur, aliquid qui quis eveniet aut minima nulla. Voluptas?</p>
 				<div class="redirCom">
-					<a >voir plus</a>
-			</div>
-					</div>
+					<a>voir plus</a>
 				</div>
+			</div>
+			<div class="commentaire flipInX">
+				<p class="emailAccueil">mon@email.com</p>
+				<p class="infoMsg"> le12/12/2010 à 12:56</p>
+				<p class="comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis placeat, asperiores sunt accusamus odio est dignissimos,
+					obcaecati dolor minima fuga rerum voluptatem ducimus alias dolorem laboriosam numquam eveniet qui totam vitae eos beatae
+					tenetur. Corrupti provident minus quis perferendis ad mollitia deserunt impedit nemo fuga nesciunt optio vitae, ullam
+					quaerat magni eum libero porro. Molestias at maiores iure aliquam, placeat ipsum dolorum saepe repellendus ratione!
+					Consequuntur non illo corporis reiciendis. Dolore placeat nostrum tempore perspiciatis vel corporis eius quas aliquam
+					similique, cumque illum sunt. Officiis ex impedit totam animi. Dolor in quaerat quod temporibus mollitia? In aliquid
+					facere quo cum?</p>
+				<div class="redirCom">
+					<a>voir plus</a>
+				</div>
+			</div>
+		</div>
 
-</section>
-
+	</section>
 
 	<?php
-// include 'footer.php';
-?>
-		<script src="js/jquery.js"></script>
-		<script src="js/materialize.js"></script>
-		<script src="js/navfoot.js"></script>
-		<script src="js/main.js"></script>
-		<script src="js/swipe.js"></script>
-		<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
-		    crossorigin="anonymous"></script>
+		include 'footer.php';
+	?>
+
+	<script src="js/jquery.js"></script>
+	<script src="js/materialize.js"></script>
+	<script src="js/navfoot.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/swipe.js"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
 </body>
 
 </html>
