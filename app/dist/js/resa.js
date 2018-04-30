@@ -38,7 +38,7 @@ $(".validFirstResa").click(function(){
 	if(bouton=="btn2"){
 		var mail2 = $("#email2").val();
 		var range2 = $("#start").val();
-        var id = $("#cache").val();
+        var id2 = $("#cache").val();
 
 		$.ajax({
 			url: "modalinfo.php",
@@ -47,7 +47,7 @@ $(".validFirstResa").click(function(){
     		data:{
     			mail2: mail2,
     			nbResa2: range2,
-    			id_eve: id,
+    			id_eve: id2,
     			bouton: bouton
     		},
     		success : function(arg){
