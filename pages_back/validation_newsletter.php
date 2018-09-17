@@ -1,6 +1,6 @@
 <?php
 
-	include 'connexion_bdd.php';
+	include '../connexion/connexion_bdd.php';
 
 	// php permettant de gérer l'abonnement et le désabonnement à la newsletter	
 	$mail_news = $_POST['mailRecup'];

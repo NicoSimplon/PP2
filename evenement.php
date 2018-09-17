@@ -1,5 +1,5 @@
 <?php 
-    include 'connexion_bdd.php';
+    include 'connexion/connexion_bdd.php';
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +19,7 @@
 <body>
     <div class="nav">
         <?php 
-            include 'php/nav.php';
+            include 'nav_footer/nav.php';
         ?>
     </div>
 
@@ -49,7 +49,7 @@
                             <span class="TitleDate card-title grey-text text-darken-4" data-recupval="Val">' . $debut . " " . $fin . '</span>
                         </div>
                         <div class="card-image waves-effect waves-block waves-light containerImgCard">
-                            <img class="activator cardImg" src="logocolo.jpg">
+                            <img class="activator cardImg" src="img/logocolo.jpg">
 
                         </div>
                         <div class="card-content ResumeCard">
@@ -86,22 +86,18 @@
     <div id="modalReservation" class="modal"></div>
 
 
-
-
-
     <?php 
-    // include 'footer.php';
-?>
+        include 'nav_footer/footer.php';
+    ?>
 
     <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
         crossorigin="anonymous"></script>
-    <script src="js/vue.js"></script>
-    <script src="js/jquery.js"></script>
+    <script src="js/librairies/jquery.js"></script>
     <script src="js/navfoot.js"></script>
-    <script src="js/materialize.js"></script>
+    <script src="js/librairies/materialize.js"></script>
     <script src="js/main.js"></script>
     <script src="js/resa.js"></script>
-    <script src="js/swipe.js"></script>
+    <script src="js/librairies/swipe.js"></script>
 </body>
 
 </html>

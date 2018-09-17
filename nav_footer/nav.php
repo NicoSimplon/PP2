@@ -1,6 +1,6 @@
 <div id="containerElnav">
     <div id="menuptgauche">
-        <img src="logocolo.jpg" class="ImgLogo">
+        <img src="img/logocolo.jpg" class="ImgLogo">
     </div>
     <div id="menuptdroit">
         <div class="containerBtnTitle">

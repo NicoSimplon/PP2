@@ -15,7 +15,7 @@ $(".validFirstResa").click(function(){
         var id = $("#cache").val();
 
         $.ajax({
-            url: "modalinfo.php",
+            url: "../pages_back/modalinfo.php",
             method: "POST",
             data:{
                 name: nom,
@@ -41,7 +41,7 @@ $(".validFirstResa").click(function(){
         var id2 = $("#cache").val();
 
 		$.ajax({
-			url: "modalinfo.php",
+			url: "../pages_back/modalinfo.php",
     		method: "POST",
     		dataType: 'html',
     		data:{

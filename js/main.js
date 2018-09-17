@@ -23,7 +23,7 @@ $(document).ready(function () {
     // console.log(dataRecup);
     var recupMyDate = $(".TitleDate", this).text();
     $.ajax({
-      url: "modalinfo.php",
+      url: "pages_back/modalinfo.php",
       method: "POST",
       dataType: "html",
       data: {
@@ -57,7 +57,7 @@ $(".ajaxBtn").click(function () {
   //console.log(recupMail);
 
   $.ajax({
-    url: "validation_newsletter.php",
+    url: "pages_back/validation_newsletter.php",
     method: "post",
     dataType: "html",
     data: {

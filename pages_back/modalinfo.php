@@ -1,6 +1,6 @@
 
 <?php 
-include 'connexion_bdd.php';
+include '../connexion/connexion_bdd.php';
 
 $var = '';
 
@@ -282,6 +282,6 @@ else if(isset($_POST['bouton']) && $_POST['bouton']=="btn2"){
 ?>
 
 <!-- appel de materialize afin que les modales fonctionnent correctement -->
-<script src="js/jquery.js"></script>
-<script src="js/materialize.js"></script>
-<script src="js/resa.js"></script>
+<script src="../js/librairies/jquery.js"></script>
+<script src="../js/librairies/materialize.js"></script>
+<script src="../js/resa.js"></script>

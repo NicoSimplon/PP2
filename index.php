@@ -11,12 +11,12 @@
 	    crossorigin="anonymous">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P"
 	    crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="css/navfoot.css"></link>
+	<link rel="stylesheet" type="text/css" href="css/navfoot.css">
 	<link rel="stylesheet" type="text/css" href="css/materialize.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<?php
-include 'connexion_bdd.php';
-?>
+		include 'connexion/connexion_bdd.php';
+	?>
 </head>
 
 <body>
@@ -26,10 +26,10 @@ include 'connexion_bdd.php';
 	<header>
 		<div class="bandOleft">
 			<div>
-				<img class="sizeImgBando" src="images/steampunkachien/haut_gauche.png">
+				<img class="sizeImgBando" src="img/haut_gauche.png">
 			</div>
 			<div>
-				<img class="sizeImgBando" src="images/steampunkachien/bas_gauche.png">
+				<img class="sizeImgBando" src="img/bas_gauche.png">
 			</div>
 		</div>
 		<div class="bandOmi">
@@ -267,10 +267,10 @@ c4 -222 10 -787 14 -1257z m-417 29 l1 -325 -28 55 c-80 154 -131 373 -138
 		</div>
 		<div class="bandOright">
 			<div>
-				<img class="sizeImgBando" src="images/steampunkachien/haut_droite.png">
+				<img class="sizeImgBando" src="img/haut_droite.png">
 			</div>
 			<div>
-				<img class="sizeImgBando" src="images/steampunkachien/bas_droite.png">
+				<img class="sizeImgBando" src="img/bas_droite.png">
 			</div>
 		</div>
 	</header>
@@ -279,8 +279,8 @@ c4 -222 10 -787 14 -1257z m-417 29 l1 -325 -28 55 c-80 154 -131 373 -138
 
 	<div class="nav">
 		<?php 
-	include 'php/nav.php';
-	?>
+			include 'nav_footer/nav.php';
+		?>
 	</div>
 
 	<!-- Partie contenant la slide des évènements -->
@@ -293,7 +293,7 @@ c4 -222 10 -787 14 -1257z m-417 29 l1 -325 -28 55 c-80 154 -131 373 -138
 					<p class="white-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam sit fugiat eos ipsam veniam, aliquam perspiciatis
 						voluptatem consectetur expedita, cupiditate dignissimos beatae architecto fuga id molestiae nulla at? Accusamus, sed!</p>
 				</div>
-				<img src="concert.png " class="testImg">
+				<img src="img/concert.png " class="testImg">
 			</div>
 			<div class="carousel-item amber white-text" href="#two!">
 				<div class="styletext">
@@ -341,7 +341,7 @@ c4 -222 10 -787 14 -1257z m-417 29 l1 -325 -28 55 c-80 154 -131 373 -138
 					}
 					$stockAlert .= '<div class="event_alert lightSpeedIn">
 										<div class="partleft">
-											<img src="concert.png" class="testImg">
+											<img src="concert.png" class="img/testImg">
 										</div>
 									<div class="partright">
 										<p class="infoalert">
@@ -370,11 +370,11 @@ c4 -222 10 -787 14 -1257z m-417 29 l1 -325 -28 55 c-80 154 -131 373 -138
 					nulla sequi explicabo!</p>
 			</div>
 			<div class="cell flipInX">
-				<img src="foule.png" class="testImg">
+				<img src="img/foule.png" class="testImg">
 			</div>
 			<div class="cell flipInX">
 
-				<img src="foule.png" class="testImg">
+				<img src="img/foule.png" class="testImg">
 			</div>
 			<div class="cell flipInX">
 				<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam vel atque debitis quia provident ab obcaecati mollitia
@@ -465,14 +465,14 @@ c4 -222 10 -787 14 -1257z m-417 29 l1 -325 -28 55 c-80 154 -131 373 -138
 	</section>
 
 	<?php
-		include 'footer.php';
+		include 'nav_footer/footer.php';
 	?>
 
-	<script src="js/jquery.js"></script>
-	<script src="js/materialize.js"></script>
+	<script src="js/librairies/jquery.js"></script>
+	<script src="js/librairies/materialize.js"></script>
 	<script src="js/navfoot.js"></script>
 	<script src="js/main.js"></script>
-	<script src="js/swipe.js"></script>
+	<script src="js/librairies/swipe.js"></script>
 	<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
 </body>
 
