@@ -1,6 +1,6 @@
 <?php
 
-    include "connexion_bdd.php";
+    include "../connexion/connexion_bdd.php";
 
     $evenement = $_POST['nom_eve'];
     
@@ -19,7 +19,7 @@
                             WHERE event = '".$evenement."'");
         $resReqTotal = pg_fetch_array($reqTotal);
         
-        var_dump($resReqTotal);
+        //var_dump($resReqTotal);
         // On écrit le résultat sous forme de tableau
         $affichage="";
 

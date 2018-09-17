@@ -5,13 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="css/materialize.css"></link>
-    <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css"></link>
-    <link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css"></link>
-    <link rel="stylesheet" type="text/css" href="css/admin.css"></link>
+    <title>Admin</title>
+    <link rel="stylesheet" type="text/css" href="../css/materialize.css">
+    <link rel="stylesheet" type="text/css" href="../css/admin.css">
     <?php
-        include "connexion_bdd.php";
+        include "../connexion/connexion_bdd.php";
     ?>
 </head>
 
@@ -20,7 +18,7 @@
         <div class="sousMenuContainer">
             <div class="enTête">
                 <div class="image">
-                    <img id="myImg" src="logocolo.jpg">
+                    <img id="myImg" src="../img/logocolo.jpg">
                 </div>
                 <div class="myName">
                     <h6 id="variente"></h6>
@@ -117,16 +115,13 @@
         </div>
     </section>
 
-    <script src="js/vue.js"></script>
-    <script src="js/jquery.js"></script>
-    <script src="js/materialize.js"></script>
-    <script src="owlcarousel/owl.carousel.js"></script>
-    <script src="js/navfoot.js"></script>
-    <script src="js/swipe.js"></script>
+    <script src="../js/librairies/jquery.js"></script>
+    <script src="../js/librairies/materialize.js"></script>
+    <script src="../js/librairies/swipe.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
         crossorigin="anonymous"></script>
-    <script src="js/heure.js"></script>
-    <script src="js/admin.js"></script>
+    <script src="../js/librairies/heure.js"></script>
+    <script src="admin.js"></script>
     <!-- <script src="js/main.js"></script> -->
 </body>
 
