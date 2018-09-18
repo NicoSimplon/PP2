@@ -44,7 +44,7 @@
             </div>
         </div>
         <div class="containerBtnTitle">
-            <a href="" class="">Pro-presse</a>
+            <a href="propresse.php" class="">Pro-presse</a>
             <div class="petitsAngre">
                 <i class="fas fa-cog petitAngre1"></i>
                 <i class="fas fa-cog petitAngre2"></i>

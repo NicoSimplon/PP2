@@ -573,3 +573,15 @@
 /* page galerie */
 
 /* page commentaire */
+
+
+/* Ajouté depuis PP3*/
+.fullwidth
+{
+  width: 100%;
+}
+
+#propresse_container
+{
+  height: 24em;
+}
