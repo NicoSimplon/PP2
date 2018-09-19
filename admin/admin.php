@@ -124,11 +124,11 @@
 
                 
                  </ul>
-
+                <a class="btn-large modal-trigger waves-effect waves-light right" href="#modalAjoutUtil" name="action">Ajouter un utilisateur
+                    <i class="material-icons right">person_add</i>
+                </a>
             </div>
-            <a class="btn-large modal-trigger waves-effect waves-light right" href="#modalAjoutUtil" name="action">Ajouter un utilisateur
-                <i class="material-icons right">person_add</i>
-            </a>
+ 
 
         </div>
         <div id="modalAjoutUtil" class="modal">
