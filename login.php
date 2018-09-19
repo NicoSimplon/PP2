@@ -50,14 +50,17 @@
 				<button class="btn waves-effect waves-light" type="submit">Se connecter
 				</button>
 			</div>
+
 		</div>
-		<div class="row">
+		</form>
+		<div class="row" >
+			<a class="row" href="../index.php">
 			<div class="input-field col s12">
 				<button class="waves-effect waves-light btn"><i class="material-icons center">reply</i></button>
+				</a>
 			</div>
-		
 	</div>
-	</form>
+	
 	<!-- <script>
 		$(document).ready(function () {
 			M.updateTextFields();
