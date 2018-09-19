@@ -3,6 +3,7 @@ html body {
   display: inline-flex;
   width: 100%;
 }
+
 #containerMenu {
   float: right;
   width: 72.1em;
@@ -12,6 +13,7 @@ html body {
   border-radius: 2px;
   margin-left: 1em;
 }
+
 .sousMenuContainer {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
     0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
@@ -23,10 +25,12 @@ html body {
   align-items: center;
   /* justify-content: center; */
 }
+
 .collapsible {
   box-shadow: none !important;
   margin: 0;
 }
+
 section {
   display: inline-flex;
   width: 100vw;
@@ -36,7 +40,7 @@ section {
 
 #tabs-swipe {
   height: 3.5em;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 3px 1px -2px rgba(0,0,0,0.12),0 1px 5px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
 .mySwipe {
@@ -44,15 +48,18 @@ section {
   height: 40em;
   overflow: hidden;
 }
-.mySwipe:hover{
+
+.mySwipe:hover {
   overflow-y: auto !important;
 }
-.myName{
+
+.myName {
   width: 100%;
-display: inline-flex;
-align-items: center;
-justify-content: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
+
 .indicators {
   display: none;
 }
@@ -61,6 +68,7 @@ justify-content: center;
   border-radius: 50px;
   width: 5em;
 }
+
 .enTête {
   width: 100%;
   margin: 0.5em;
@@ -68,6 +76,7 @@ justify-content: center;
   flex-direction: column;
   align-items: center;
 }
+
 .heureDate {
   width: 100%;
   height: 31em;
@@ -77,6 +86,10 @@ justify-content: center;
   align-items: center;
 }
 
-.hPlus{
+.hPlus {
   height: 300px !important;
-}
+
+  h5 {
+    font-size: 18px !important;
+    font-weight: bold;
+  }

@@ -1,3 +1,15 @@
+<?php
+
+session_start();
+
+if(empty($_SESSION['co'])){
+
+    header('Location: ../login.php');     
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -11,7 +23,13 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <?php
+
         include "../connexion/connexion_bdd.php";
+
+        $mail = $_SESSION['user'];
+
+        $requeteNom = pg_fetch_array(pg_query("SELECT nom_admin FROM tab_admin WHERE mail_admin = '".$mail."';"));
+
     ?>
 </head>
 
@@ -24,13 +42,15 @@
                 </div>
                 <div class="myName">
                     <h6 id="variente"></h6>
-                    <h6>Admin</h6>
+                    <h6><?php echo "$requeteNom[0]";?></h6>
                 </div>
-                <div class="myName">
-                    <a>Deconnexion</a>
-                </div>
+            <div class="myName">
+                <a class="myName" href="../deconnexion.php" >
+                <button class="btn waves-effect waves-light"  type="button" name="deconnexion" id="bouton_deconnexion" value="Déconnexion"> DECONNEXION
+                </button> 
+                </a>
             </div>
-
+            </div>
             <div class="heureDate">
                 <div class="date">
                     <h5>
@@ -42,7 +62,6 @@
                 </div>
                 <div class="heure">
                     <h6 id="insertDate">
-
                     </h6>
                 </div>
             </div>
