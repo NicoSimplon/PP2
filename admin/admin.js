@@ -1,60 +1,130 @@
 $(document).ready(function() {
     $("select").formSelect();  
-  $("#tabs-swipe").tabs();
+    $("#tabs-swipe").tabs();
 
-  function heure() {
-    moment.locale("fr");
-    var myheure = $("#insertDate").text(moment().format("LTS"));
-  }
-  heure();
-  setInterval(heure, 1000);
+    function heure() {
+    	moment.locale("fr");
+    	var myheure = $("#insertDate").text(moment().format("LTS"));
+	}
+	
+    heure();
+    setInterval(heure, 1000);
 
-  function saluTime() {
-    moment.locale("fr");
-    var myheure = $("#insertDate").text(moment().format("LTS"));
-    var heure = moment("180000", "HHmmss");
+	function saluTime() {
+    	moment.locale("fr");
+    	var myheure = $("#insertDate").text(moment().format("LTS"));
+    	var heure = moment("180000", "HHmmss");
     
-    //console.log(heure);
-    if (myheure >= heure) {
-      $("#variente").html("Bonsoir," + "&nbsp");
-      
-    } 
-    else {
-      $("#variente").html("Bonjour," + "&nbsp");
-    }
-  }
+		if (myheure >= heure) {
+		$("#variente").html("Bonsoir," + "&nbsp"); 
+		} 
+		else {
+		$("#variente").html("Bonjour," + "&nbsp");
+		}
+  	}
 
-  saluTime();
-
-});
-
-$("#valider").click(function(){
-  // Récupère le nom de l'évènement
-  var evenement = $(".requete").val();
-
-  //On récupère la date de l'événement
-  $.ajax({
-    method: "post",
-    url: "date_req_admin.php",
-    data: {
-      eve: evenement,
-    },
-    success: function(dt){
-      $("#date_evenement").html('<p style="font-size:20pt;"><strong>'+dt+'</strong></p>');
-    }
-  });
-  
-  $.ajax({
-    method: "post",
-    url: "admin_req.php",
-    data: {
-      nom_eve: evenement,
-    },
-    success: function(arg){
-      // Affiche la date de l'évènement dans la page admin
-      $("#tableau_reservation").html(arg);
-    }
-  });
+	saluTime();
+	  
+	setSelectEvent();
 
 });
 
+function setSelectEvent(){
+
+	$("#eventList").html(
+		'<option value="" disabled selected>Sélectionner un évènement</option>'
+	);
+
+	$.ajax({
+
+		url: 'eventList.php',
+		
+		type: 'POST',
+
+		data: {case: 'eventList'},
+
+		success: function(data){
+			
+			var liste = JSON.parse(data);
+
+			for(var i = 0; i < liste.length; i++){
+
+				var nom = liste[i].event;
+
+				$("#eventList").append('<option value="'+ nom +'">'+ nom +'</option>');
+
+			}
+
+		}
+	});
+}
+
+$("#eventList").on('change', function(){
+
+	// Récupère le nom de l'évènement
+	var nomEvent = $("#eventList").val();
+
+	//On récupère la date de l'événement
+	getDate(nomEvent);
+
+	// On rempli le tableau
+	setEventTable(nomEvent);
+
+	// On renseigne le total de réservations
+	getTotalResa(nomEvent);
+
+});
+
+function getDate(evenement){
+
+	$.ajax({
+		type: "POST",
+		url: "date_req_admin.php",
+		data: {
+		    eve: evenement,
+		},
+		success: function(dt){
+		    $("#date_evenement").html('<p style="font-size:20pt;"><strong>'+ dt+'</strong></p>');
+		}
+	});
+
+}
+
+function setEventTable(evenement){
+
+	$.ajax({
+		type: "POST",
+		url: "admin_req.php",
+		data: {
+		  nom_eve: evenement,
+		},
+		success: function(arg){
+
+		  $("#tableau_reservation").html(arg);
+
+		}
+	});
+
+}
+
+function getTotalResa(evenement){
+
+	$.ajax({
+
+		type: 'POST',
+		url: 'totalResa.php',
+		data: {
+			nom_eve: evenement
+		},
+		success: function(data){
+			$("#total").html(data);
+		}
+
+	});
+
+}
+
+// Gestion des réservations
+function modifResa(perso, event){	
+	console.log(perso, event);
+}

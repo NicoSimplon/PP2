@@ -33,8 +33,8 @@
                 <div class="date">
                     <h5>
                         <?php
-                        setlocale(LC_TIME, 'fr_FR.utf8', 'fra');
-                        echo (strftime("%A %d %B"));
+                            setlocale(LC_TIME, 'fr_FR.utf8', 'fra');
+                            echo (strftime("%A %d %B"));
                         ?>
                     </h5>
                 </div>
@@ -65,48 +65,37 @@
                 <div class="containerTools">
                     <ul class="collection">
                         <li class="collection-item">
+                            <label>Séléctionner un Evenement</label>
                             <div class="input-field col s12">
-                                <select class="requete">
-                                    <option value="" disabled selected>Choisir un Evenement</option>
-                                    <?php
-
-                                        $NameEvent = pg_query("SELECT event FROM evenement");
-
-                                        while ($recupNameEvent = pg_fetch_array($NameEvent)) {
-                                            echo '<option>'.$recupNameEvent['event'].'</option>';
-                                        }
-                                    ?>
+                                <select id="eventList" class="requete browser-default">
+                                    
                                 </select>
-                                <label>Séléctionner un Evenement</label>
                             </div>
                             <p class="inline txt" id="date_evenement">
                                 
                             </p>
-                            <div class="inline">
-                            <a id="valider" class="waves-effect waves-light btn" data-req="reqTab">Valider</a>
-                            &nbsp
-                            &nbsp
-                            <a class="waves-effect waves-light btn">Modifier</a>
-                        </li>
-                        
+                        </li>    
                     </ul>
                 </div>
                 <div class="contentInfo">
-                <table class="striped">
-                    <thead>
-                    <tr>
-                        <th>Nom</th>
-                        <th>Prénom</th>
-                        <th>Nombre de Personnes</th>
-                        <th>E-mail</th>
-                        <th>Téléphone</th>
-                        <th>Total Réservations</th>
-                    </tr>
-                    </thead>
-
-                    <tbody id="tableau_reservation">
-                    </tbody>
-                </table>
+                    <table class="striped">
+                        <thead>
+                            <tr>
+                                <th>Nom</th>
+                                <th>Prénom</th>
+                                <th>Réservations</th>
+                                <th>E-mail</th>
+                                <th>Téléphone</th>
+                                <th>Modifier/Supprimer</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableau_reservation">
+                        </tbody>
+                    </table>
+                    <hr>
+                    <div id="total">
+                        
+                    </div>
                 </div>
             </div>
             <div id="modifier" class=" mySwipe">Test 3</div>
@@ -122,7 +111,6 @@
         crossorigin="anonymous"></script>
     <script src="../js/librairies/heure.js"></script>
     <script src="admin.js"></script>
-    <!-- <script src="js/main.js"></script> -->
 </body>
 
 </html>
