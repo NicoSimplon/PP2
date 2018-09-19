@@ -96,6 +96,8 @@
                     <div id="total">
                         
                     </div>
+                    <input type="hidden" name="id_perso" id="id_perso">
+                    <input type="hidden" name="id_event" id="id_event">
                 </div>
             </div>
             <div id="modifier" class=" mySwipe">Test 3</div>
@@ -103,6 +105,25 @@
             <div id="imageMod" class=" mySwipe">Test 2</div>
         </div>
     </section>
+
+    <!-- Modales Modi Resa -->
+    <div id="modalModifResa" class="modal hPlus">
+        <div class="modal-content">
+            <h4>Modifier le nombre de réservations</h4>
+            <form method="post">
+                <p class="range-field">
+                    <label for="nbPerso">Sélectionnez la nouvelle valeur :</label>
+                    <input type="number" id="nbPerso" min="1"/>
+                </p>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <p>
+                <a id="validerModif" href="#!" class="modal-close btn waves-effect waves-light" onclick="setModif()">Valider</a>
+                <a href="#!" class="modal-close btn waves-effect waves-light red">Annuler</a>
+            </p>
+        </div>
+    </div>
 
     <script src="../js/librairies/jquery.js"></script>
     <script src="../js/librairies/materialize.js"></script>

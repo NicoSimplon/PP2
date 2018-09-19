@@ -27,6 +27,9 @@ $(document).ready(function() {
 	  
 	setSelectEvent();
 
+	// chargement modale
+	$("#modalModifResa").modal();
+
 });
 
 function setSelectEvent(){
@@ -125,6 +128,32 @@ function getTotalResa(evenement){
 }
 
 // Gestion des réservations
-function modifResa(perso, event){	
-	console.log(perso, event);
+function modifResa(perso, event){
+	
+	$("#id_perso").val(perso);
+	$("#id_event").val(event);
+	
+}
+
+function setModif(){
+	
+	var id_perso = $("#id_perso").val();
+	var id_event = $("#id_event").val();
+	var nb_resa = $("#nbPerso").val();
+
+	$.ajax({
+
+		type: 'POST',
+		url: 'modifResa.php',
+		data:{
+			perso: id_perso,
+			event: id_event,
+			nb_resa: nb_resa
+		},
+		success:function(data){
+			M.toast({html:data});
+		}
+
+	});
+
 }
