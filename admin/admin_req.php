@@ -27,7 +27,7 @@
                     <td>".$reservation['num_tel']."</td>
                     <td><div class='inline'>
                     <a class='waves-effect waves-light btn modif modal-trigger' href='#modalModifResa' onclick='modifResa(".$reservation['perso'].", ".$reservation['soiree'].")'>Modifier</a>
-                    <a data-perso='".$reservation['perso']."' data-event='".$reservation['soiree']."' class='waves-effect waves-light btn red'>Supprimer</a>
+                    <a onclick='deleteResa(".$reservation['perso'].", ".$reservation['soiree'].")' class='waves-effect waves-light btn red'>Supprimer</a>
                     </div></td>
                 </tr>";
             

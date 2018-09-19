@@ -152,6 +152,30 @@ function setModif(){
 		},
 		success:function(data){
 			M.toast({html:data});
+			var nomEvent = $("#eventList").val();
+			setEventTable(nomEvent);
+			getTotalResa(nomEvent)
+		}
+
+	});
+
+}
+
+function deleteResa(perso, event){
+
+	$.ajax({
+
+		type: 'POST',
+		url: 'deleteResa.php',
+		data:{
+			perso: perso,
+			event: event
+		},
+		success:function(data){
+			M.toast({html:data});
+			var nomEvent = $("#eventList").val();
+			setEventTable(nomEvent);
+			getTotalResa(nomEvent);
 		}
 
 	});
