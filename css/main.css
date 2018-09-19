@@ -572,15 +572,38 @@
 
   .mapa {
     width: 100%;
-    height: 578px;
+    height: 548px;
     margin-top: 3%;
     border: 1px solid black;
 }
 
-  .card-content{
-    height: 117px;
-    font-size: 66%;
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .mapa {
+      width: 154%;
+      height: 532px;
+      margin-top: 7%;
+  }
+  .card-panel {
+    margin-top: 4%;
+    margin-left: 57%;
+    width: 150%;
+  }
 }
+
+  .card-panel {
+    margin-top: 7%;
+    background:rgb(212, 197, 65);
+    font-size: 200%;
+}
+
+  .conticone{
+    color: #577866;
+  }
+
+  .fleche{
+    color: white;
+  }
 
 /* page galerie */
 
