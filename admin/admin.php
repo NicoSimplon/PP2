@@ -115,11 +115,10 @@
 
                 
                  </ul>
-
+                <a class="btn-large modal-trigger waves-effect waves-light right" href="#modalAjoutUtil" name="action">Ajouter un utilisateur
+                    <i class="material-icons right">person_add</i>
+                </a>
             </div>
-            <a class="btn-large modal-trigger waves-effect waves-light right" href="#modalAjoutUtil" name="action">Ajouter un utilisateur
-                <i class="material-icons right">person_add</i>
-            </a>
 
         </div>
         <div id="modalAjoutUtil" class="modal">
@@ -156,7 +155,7 @@
             </form>
 
             <div class="modal-footer">
-                <a id="valideNewUser" type="submit" class="modal-close waves-effect waves-green btn-flat">Valider</a>
+                <a id="valideNewUser" type="submit" class="btn modal-close waves-effect waves-light">Valider</a>
             </div>
         </div>
     </section>
