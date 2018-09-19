@@ -570,6 +570,18 @@
 
 /* page contact */
 
+  .mapa {
+    width: 100%;
+    height: 578px;
+    margin-top: 3%;
+    border: 1px solid black;
+}
+
+  .card-content{
+    height: 117px;
+    font-size: 66%;
+}
+
 /* page galerie */
 
 /* page commentaire */

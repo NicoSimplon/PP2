@@ -23,7 +23,7 @@
             </div>
         </div>
         <div class="containerBtnTitle">
-            <a href="" class="">Contact</a>
+            <a href="contact.php" class="">Contact</a>
             <div class="petitsAngre">
                 <i class="fas fa-cog petitAngre1"></i>
                 <i class="fas fa-cog petitAngre2"></i>

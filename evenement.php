@@ -11,9 +11,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Agenda</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/materialize.css"></link>
-    <link rel="stylesheet" type="text/css" href="css/main.css"></link>
-    <link rel="stylesheet" type="text/css" href="css/navfoot.css"></link>
+    <link rel="stylesheet" type="text/css" href="css/materialize.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/navfoot.css">
 </head>
 
 <body>
