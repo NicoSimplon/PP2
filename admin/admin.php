@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -35,8 +35,8 @@
                 <div class="date">
                     <h5>
                         <?php
-                        setlocale(LC_TIME, 'fr_FR.utf8', 'fra');
-                        echo (strftime("%A %d %B"));
+                            setlocale(LC_TIME, 'fr_FR.utf8', 'fra');
+                            echo (strftime("%A %d %B"));
                         ?>
                     </h5>
                 </div>
@@ -70,48 +70,39 @@
                 <div class="containerTools">
                     <ul class="collection">
                         <li class="collection-item">
+                            <label>Séléctionner un Evenement</label>
                             <div class="input-field col s12">
-                                <select class="requete">
-                                    <option value="" disabled selected>Choisir un Evenement</option>
-                                    <?php
-
-                                        $NameEvent = pg_query("SELECT event FROM evenement");
-
-                                        while ($recupNameEvent = pg_fetch_array($NameEvent)) {
-                                            echo '<option>'.$recupNameEvent['event'].'</option>';
-                                        }
-                                    ?>
+                                <select id="eventList" class="requete browser-default">
+                                    
                                 </select>
-                                <label>Séléctionner un Evenement</label>
                             </div>
                             <p class="inline txt" id="date_evenement">
                                 
                             </p>
-                            <div class="inline">
-                            <a id="valider" class="waves-effect waves-light btn" data-req="reqTab">Valider</a>
-                            &nbsp
-                            &nbsp
-                            <a class="waves-effect waves-light btn">Modifier</a>
-                        </li>
-                        
+                        </li>    
                     </ul>
                 </div>
                 <div class="contentInfo">
-                <table class="striped">
-                    <thead>
-                    <tr>
-                        <th>Nom</th>
-                        <th>Prénom</th>
-                        <th>Nombre de Personnes</th>
-                        <th>E-mail</th>
-                        <th>Téléphone</th>
-                        <th>Total Réservations</th>
-                    </tr>
-                    </thead>
-
-                    <tbody id="tableau_reservation">
-                    </tbody>
-                </table>
+                    <table class="striped">
+                        <thead>
+                            <tr>
+                                <th>Nom</th>
+                                <th>Prénom</th>
+                                <th>Réservations</th>
+                                <th>E-mail</th>
+                                <th>Téléphone</th>
+                                <th>Modifier/Supprimer</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableau_reservation">
+                        </tbody>
+                    </table>
+                    <hr>
+                    <div id="total">
+                        
+                    </div>
+                    <input type="hidden" name="id_perso" id="id_perso">
+                    <input type="hidden" name="id_event" id="id_event">
                 </div>
             </div>
             <div id="modifier" class=" mySwipe">Test 3</div>
@@ -170,7 +161,24 @@
         </div>
     </section>
 
-
+    <!-- Modales Modi Resa -->
+    <div id="modalModifResa" class="modal hPlus">
+        <div class="modal-content">
+            <h4>Modifier le nombre de réservations</h4>
+            <form method="post">
+                <p class="range-field">
+                    <label for="nbPerso">Sélectionnez la nouvelle valeur :</label>
+                    <input type="number" id="nbPerso" min="1"/>
+                </p>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <p>
+                <a id="validerModif" href="#!" class="modal-close btn waves-effect waves-light" onclick="setModif()">Valider</a>
+                <a href="#!" class="modal-close btn waves-effect waves-light red">Annuler</a>
+            </p>
+        </div>
+    </div>
 
     <script src="../js/librairies/jquery.js"></script>
     <script src="../js/librairies/materialize.js"></script>
@@ -179,7 +187,6 @@
         crossorigin="anonymous"></script>
     <script src="../js/librairies/heure.js"></script>
     <script src="admin.js"></script>
-
 </body>
 
 </html>
