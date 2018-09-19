@@ -11,14 +11,15 @@ include 'connexion/connexion_bdd.php';
         $motdepasse = $_POST ['motdepasse'];
         
     
-        setcookie('e_mail',$mail,time()+365*24*3600,null,null,false,true);
-
         if (filter_var($mail, FILTER_VALIDATE_EMAIL)){ 
             
             $verif_mdp = pg_fetch_all(pg_query("SELECT password_admin FROM tab_admin WHERE mail_admin = '".$mail."';"));
             $hashe = $verif_mdp[0]['password_admin'];
             
                 if (password_verify($motdepasse, $hashe)){  
+
+                    $_SESSION['co'] = true;
+                    $_SESSION['user'] = $mail;
                         
                     header('Location: admin/admin.php');  
                 }  

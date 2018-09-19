@@ -1,3 +1,15 @@
+<?php
+
+session_start();
+
+if(empty($_SESSION['co'])){
+
+    header('Location: ../login.php');     
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,9 +24,9 @@
 
         include "../connexion/connexion_bdd.php";
 
-        $mail = $_POST['mail'];
+        $mail = $_SESSION['user'];
 
-        $requeteNom = pg_fetch_array(pg_query("SELECT nom_admin, prenom_admin FROM tab_admin WHERE mail_admin = '".$mail."';"));
+        $requeteNom = pg_fetch_array(pg_query("SELECT nom_admin FROM tab_admin WHERE mail_admin = '".$mail."';"));
 
     ?>
 </head>
@@ -28,7 +40,7 @@
                 </div>
                 <div class="myName">
                     <h6 id="variente"></h6>
-                    <h6><?php echo "$requeteNom[0]$requeteNom[1]";?></h6>
+                    <h6><?php echo "$requeteNom[0]";?></h6>
                 </div>
             <div class="myName">
                 <a class="myName" href="../deconnexion.php" >
