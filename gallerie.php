@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+
 <html>
 
 <head>
-    <title>Pro-presse</title>
+	<title>Accueil</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -13,6 +14,9 @@
 	<link rel="stylesheet" type="text/css" href="css/navfoot.css">
 	<link rel="stylesheet" type="text/css" href="css/materialize.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<?php
+		include 'connexion/connexion_bdd.php';
+	?>
 </head>
 
 <body>
@@ -20,14 +24,21 @@
 		<?php include 'nav_footer/nav.php'; ?>
 	</div>
 
-	<!-- Changer les liens une fois que les pages seront définies, peut être mettre une séparation entre les deux parties de la page -->
-	<div class="container valign-wrapper" id="propresse_container">
-		<div class="row fullwidth">
-			<div class="col s6 center-align">
-				<a href="pro.php">Pro</a>
+	<div class="container">
+		<div class="row">
+			<div class="col s12 center-align">
+				<h3 class="white-text">Gallerie :</h3>
 			</div>
-			<div class="col s6 center-align">
-			<a href="presse.php">Presse</a>
+		</div>
+		<div class="row">
+			<div class="col s12 m4">
+				<img class="materialboxed responsive-img" id="img1" src="img/spookyPumpkin.jpeg">
+			</div>
+			<div class="col s12 m4">
+			<img class="materialboxed responsive-img" src="img/spookyTrumpet.jpg">
+			</div>
+			<div class="col s12 m4">
+			<img class="materialboxed responsive-img" src="img/spookyWoody.jpg">
 			</div>
 		</div>
 	</div>
@@ -35,9 +46,12 @@
     <?php include 'nav_footer/footer.php'; ?>
 
     <script src="js/librairies/jquery.js"></script>
-    <script src="js/librairies/materialize.js"></script>
-    <script src="js/navfoot.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/librairies/swipe.js"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+	<script src="js/librairies/materialize.js"></script>
+	<script src="js/navfoot.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/gallerie.js"></script>
+	<script src="js/librairies/swipe.js"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
 </body>
+
+</html>
