@@ -8,6 +8,8 @@
     <title>Admin</title>
     <link rel="stylesheet" type="text/css" href="../css/materialize.css">
     <link rel="stylesheet" type="text/css" href="../css/admin.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <?php
         include "../connexion/connexion_bdd.php";
     ?>
@@ -48,17 +50,20 @@
 
         <div id="containerMenu">
             <ul id="tabs-swipe" class="tabs">
-                <li class="tab col s3 ">
+                <li class="tab col">
                     <a class="active" href="#renseigner">Evenements</a>
                 </li>
-                <li class="tab col s3">
+                <li class="tab col">
                     <a href="#modifier">Comentaires</a>
                 </li>
-                <li class="tab col s3">
+                <li class="tab col">
                     <a href="#renseignement">Clients</a>
                 </li>
-                <li class="tab col s3">
+                <li class="tab col">
                     <a href="#imageMod">Images</a>
+                </li>
+                <li class="tab col">
+                    <a href="#gestionUser">Gestion utilisateur</a>
                 </li>
             </ul>
             <div id="renseigner" class=" mySwipe active">
@@ -112,8 +117,60 @@
             <div id="modifier" class=" mySwipe">Test 3</div>
             <div id="renseignement" class=" mySwipe ">Test 3</div>
             <div id="imageMod" class=" mySwipe">Test 2</div>
+            <div id="gestionUser" class=" mySwipe">
+                <ul id="listeAdmin" class="collection">
+ 
+               
+
+                
+                 </ul>
+
+            </div>
+            <a class="btn-large modal-trigger waves-effect waves-light right" href="#modalAjoutUtil" name="action">Ajouter un utilisateur
+                <i class="material-icons right">person_add</i>
+            </a>
+
+        </div>
+        <div id="modalAjoutUtil" class="modal">
+            <form class="modal-content">
+                <h4>Ajouter un utilisateur</h4>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="nom" name="nom" type="text" class="validate">
+                        <label for="nom">Nom</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input id="mail" name="mail" type="email" class="validate">
+                        <label for="mail">Mail</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input id="password" name="password" type="password" class="validate">
+                        <label for="password">Mot de passe</label>
+                        <div action="#" id="role">
+                            <span>
+                                <label>
+                                    <input name="role" value="1" type="radio" checked/>
+                                    <span>Administrateur</span>
+                                </label>
+                            </span>
+                            <span>
+                                <label>
+                                    <input name="role" value="2" type="radio"/>
+                                    <span>Modérateur</span>
+                                </label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <div class="modal-footer">
+                <a id="valideNewUser" type="submit" class="modal-close waves-effect waves-green btn-flat">Valider</a>
+            </div>
         </div>
     </section>
+
+
 
     <script src="../js/librairies/jquery.js"></script>
     <script src="../js/librairies/materialize.js"></script>
@@ -122,7 +179,7 @@
         crossorigin="anonymous"></script>
     <script src="../js/librairies/heure.js"></script>
     <script src="admin.js"></script>
-    <!-- <script src="js/main.js"></script> -->
+
 </body>
 
 </html>
