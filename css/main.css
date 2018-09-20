@@ -577,19 +577,34 @@
     border: 1px solid black;
 }
 
+@media (min-width: 700px) and (max-width: 1024px)
+{
+  .card-panel{
+    font-size: 165% !important;
+  }
+  .responsive-img{
+    width: 100%;
+  }
 
-@media (min-width: 768px) and (max-width: 1024px) {
-  .mapa {
-      width: 154%;
-      height: 532px;
-      margin-top: 7%;
+  .mapa{
+    height: 437px;
   }
-  .card-panel {
-    margin-top: 4%;
-    margin-left: 57%;
-    width: 150%;
-  }
+
 }
+
+@media (max-width: 699px)
+{
+ 
+  .responsive-img{
+    width: 100%;
+  }
+
+    .card-panel{
+    font-size: 165% !important;
+  }
+
+}
+
 
   .card-panel {
     margin-top: 7%;
@@ -603,6 +618,16 @@
 
   .fleche{
     color: white;
+  }
+
+.texbo {
+    border-color: #577866 !important;
+    color:#577866 !important;
+  }
+
+  .botext{
+    border-bottom: 1px solid #577866 !important;
+    border: hidden;
   }
 
 /* page galerie */

@@ -27,11 +27,11 @@
 
 <div class="container">
     <div class="row">
-        <div class="col s12 m4 l8">
+        <div class="col s12 m12 l8">
             <iframe class="mapa" src="https://www.openstreetmap.org/export/embed.html?bbox=1.8257045745849612%2C43.934417643656786%2C1.8407034873962405%2C43.94308581326467&amp;layer=mapnik&amp;marker=43.93875961206273%2C1.8332147598266602" ></iframe>        
         </div>
 
-        <div class="col s12 m4 l4">
+        <div class="col s12 m12 l4">
             <div class="card-panel">
                 <span class="white-text">La Canal, St. Jérôme, 81140 Castelnau-de-Montmiral</span>
                 <p class="white-text">05 63 57 42 33</p>
@@ -51,36 +51,36 @@
         <div class="row">
             <div class="input-field col s12">
             <i class="material-icons prefix conticone">perm_identity</i>
-                <input id="nom" type="text" name="nom" class="validate" required>
-                <label for="nom">Nom</label>
+                <input id="nom" class="texbo" type="text" name="nom" class="validate" required>
+                <label for="nom" class="texbo">Nom</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
             <i class="material-icons prefix conticone">person</i>
-                <input  id="prenom" name="prenom" type="text" class="validate" required>
-                <label for="prenom">Prénom</label>
+                <input  id="prenom" class="texbo" name="prenom" type="text" class="validate" required>
+                <label for="prenom" class="texbo">Prénom</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
             <i class="material-icons prefix conticone">phone</i>
-                <input id="num" type="text" name="num" class="validate">
-                <label for="num">Téléphone</label>
+                <input id="num" class="texbo" type="text" name="num" class="validate">
+                <label for="num" class="texbo">Téléphone</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
             <i class="material-icons prefix conticone">email</i>
-                <input id="email" type="email" name="email" class="validate" required>
-                <label for="email">Email</label>
+                <input id="email" class="texbo" type="email" name="email" class="validate" required>
+                <label for="email" class="texbo">Email</label>
             </div>
         </div>
         <div class="row">
            <div class="input-field col s12">
            <i class="material-icons prefix conticone">mode_edit</i>
-                <textarea id="icon_prefix2" class="materialize-textarea" data-length="120" required></textarea>
-                <label for="icon_prefix2">Message</label>
+                <textarea id="icon_prefix2" class="botext" class="materialize-textarea" data-length="120" required></textarea>
+                <label for="icon_prefix2" class="texbo">Message</label>
             </div>
         </div>
         <div class="row">
