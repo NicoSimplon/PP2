@@ -41,8 +41,7 @@ if(empty($_SESSION['co'])){
                     <img id="myImg" src="../img/logocolo.jpg">
                 </div>
                 <div class="myName">
-                    <h6 id="variente"></h6>
-                    <h6><?php echo "$requeteNom[0]";?></h6>
+                    <h6>Bonjour, <?php echo "$requeteNom[0]";?></h6>
                 </div>
             <div class="myName">
                 <a class="myName" href="../deconnexion.php" >

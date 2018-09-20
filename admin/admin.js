@@ -11,23 +11,9 @@ $(document).ready(function() {
 		moment.locale("fr");
 		var myheure = $("#insertDate").text(moment().format("LTS"));
 	}
+	
 	heure();
 	setInterval(heure, 1000);
-
-	function saluTime() {
-    	moment.locale("fr");
-    	var myheure = $("#insertDate").text(moment().format("LTS"));
-    	var heure = moment("180000", "HHmmss");
-    
-		if (myheure >= heure) {
-		$("#variente").html("Bonsoir," + "&nbsp"); 
-		} 
-		else {
-		$("#variente").html("Bonjour," + "&nbsp");
-		}
-  	}
-
-	saluTime();
 	
 	// remplie la liste déroulante
 	setSelectEvent();
