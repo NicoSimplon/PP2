@@ -20,7 +20,6 @@
 		<?php include 'nav_footer/nav.php'; ?>
 	</div>
 
-	<!-- Changer les liens une fois que les pages seront définies, peut être mettre une séparation entre les deux parties de la page -->
 	<div class="container valign-wrapper" id="propresse_container">
 		<div class="row fullwidth">
 			<div class="col s6 center-align">
@@ -33,27 +32,146 @@
 	</div>
 
 	<div class="container" id="pro_container">
-		<div class=container>
-			<div class="row">
-				<div class="col s12 m6">
-					<h3>Les ESPACES</h3>
-					<div class="row">
-						<div class="col s12 m6">
-							
-						</div>
-					</div>
+
+		<div class="row">
+			<div class="col s12 m5">
+				<img class="responsive-img" src="img/bar.jpg">
+    			<img class="responsive-img" src="img/tireuse.jpg">
+    			<img class="responsive-img" src="img/piscine.jpg">
+    			<img class="responsive-img" src="img/piscine2.jpg">
+			</div>
+
+			<div class="col s12 m7">
+			<div class="section">
+					<h5>Les ESPACES</h5>
 				</div>
+				<div class="divider"></div>
+				<div class="section">
+					<p>Terrain 5 ha</p>
+				</div>
+				<div class="divider"></div>
+				<div class="section">
+					<p>Salle de réception</p>
+					<p>parquet bois 140m²</p>
+					<p>Capacité 100 personnes</p>
+				</div>
+				<div class="divider"></div>
+				<div class="section">
+					<p>Bar license IV</p>
+				</div>
+				<div class="divider"></div>
+				<div class="section">
+					<p>Cuisine professionnelle 70m²</p>
+				</div>
+				<div class="divider"></div>
+				<div class="section">
+					<p>Terrasse 100m²</p>
+					<p>& Piscine 70m²</p>
+				</div>
+				<div class="divider"></div>
+				<div class="section">
+					<p>Espaces Verts</p>
+				</div>
+				<div class="divider"></div>
+				<div class="section">
+					<p>Parking</p>
+				</div>
+
+				<div class="section">
+					<h5>Les INSTALLATIONS</h5>
+				</div>
+				<div class="divider"></div>
+				<div class="section">
+					<p>Scène 15m²</p>
+				</div>
+				<div class="divider"></div>
+				<div class="section">
+					<p>Sonorisation</p>
+					<p>et Table de Mixage</p>
+				</div>
+				<div class="divider"></div>
+				<div class="section">
+					<p>Rampe d'éclairages</p>
+					<p>monitorés par ordinateur</p>
+				</div>
+				<div class="divider"></div>
+				<div class="section">
+					<p>Éclairages lasers</p>
+					<p>et machines à fumée</p>
+				</div>
+				<div class="divider"></div>
+				<div class="section">
+					<p>Vidéoprojecteur</p>
+				</div>
+				<div class="divider"></div>
+				<div class="section">
+					<p>Capacité électrique</p>
+					<p>150 kW</p>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="container" id="presse_container">
+		<div class="row">
+			<div class="col s12 m3">
+				<img class="responsive-img materialboxed" src="img/presse/flyer9.jpg">
+			</div>
+			<div class="col s12 m3">
+			<img class="responsive-img materialboxed" src="img/presse/flyer10.jpg">
+			</div>
+			<div class="col s12 m3">
+			<img class="responsive-img materialboxed" src="img/presse/flyer11.jpg">	</div>
+			<div class="col s12 m3">
+				<img class="responsive-img materialboxed" src="img/presse/flyer12.jpg">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s12 m3">
+				<img class="responsive-img materialboxed" src="img/presse/flyer1.jpg">
+			</div>
+			<div class="col s12 m3">
+				<img class="responsive-img materialboxed" src="img/presse/flyer2.jpg">
+			</div>
+			<div class="col s12 m3">
+				<img class="responsive-img materialboxed" src="img/presse/flyer3.jpg">
+			</div>
+			<div class="col s12 m3">
+				<img class="responsive-img materialboxed" src="img/presse/flyer4.jpg">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s12 m3">
+				<img class="responsive-img materialboxed" src="img/presse/flyer5.jpg">
+			</div>
+			<div class="col s12 m3">
+				<img class="responsive-img materialboxed" src="img/presse/flyer6.jpg">
+			</div>
+			<div class="col s12 m3">
+				<img class="responsive-img materialboxed" src="img/presse/flyer7.jpg">
+			</div>
+			<div class="col s12 m3">
+				<img class="responsive-img materialboxed" src="img/presse/flyer8.jpg">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s12 m3">
+
+			</div>
+			<div class="col s12 m3">
+				
+			</div>
+			<div class="col s12 m3">
+				
+			</div>
+			<div class="col s12 m3">
+				
 			</div>
 		</div>
 	</div>
 
-	<div class="container" id="presse_container">
-		<div>
-			<p>Ajouter articles quand on les aura</p>
-		</div>
-	</div>
-
-	<div class="section" id="changement_section">
+	<div class="section center-align" id="changement_section">
 		<a id="btn_changement_section" class="white-text waves-effect waves-light btn">Changer de section</a>
 	</div>
 
