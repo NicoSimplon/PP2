@@ -55,7 +55,7 @@
 		</div>
 		</form>
 		<div class="row" >
-			<a class="row" href="../index.php">
+			<a class="row" href="index.php">
 			<div class="input-field col s12">
 				<button class="waves-effect waves-light btn"><i class="material-icons center">reply</i></button>
 				</a>
