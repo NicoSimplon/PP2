@@ -33,14 +33,23 @@
 	</div>
 
 	<div class="container" id="pro_container">
-		<div>
-			<p>Bienvenue chez les pros</p>
+		<div class=container>
+			<div class="row">
+				<div class="col s12 m6">
+					<h3>Les ESPACES</h3>
+					<div class="row">
+						<div class="col s12 m6">
+							
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 
 	<div class="container" id="presse_container">
 		<div>
-			<p>Bienvenue chez la pressse</p>
+			<p>Ajouter articles quand on les aura</p>
 		</div>
 	</div>
 
