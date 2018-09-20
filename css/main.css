@@ -588,6 +588,66 @@ header {
 
 /* page contact */
 
+  .mapa {
+    width: 100%;
+    height: 548px;
+    margin-top: 3%;
+    border: 1px solid black;
+}
+
+@media (min-width: 700px) and (max-width: 1024px)
+{
+  .card-panel{
+    font-size: 165% !important;
+  }
+  .responsive-img{
+    width: 100%;
+  }
+
+  .mapa{
+    height: 437px;
+  }
+
+}
+
+@media (max-width: 699px)
+{
+ 
+  .responsive-img{
+    width: 100%;
+  }
+
+    .card-panel{
+    font-size: 165% !important;
+  }
+
+}
+
+
+  .card-panel {
+    margin-top: 7%;
+    background:rgb(212, 197, 65);
+    font-size: 200%;
+}
+
+  .conticone{
+    color: #577866;
+  }
+
+  .fleche{
+    color: white;
+  }
+
+.texbo {
+    border-color: #577866 !important;
+    color:#577866 !important;
+  }
+
+  .botext{
+    border-bottom: 1px solid #577866 !important;
+    border: hidden;
+  }
+
 /* page galerie */
 
 /* page commentaire */
