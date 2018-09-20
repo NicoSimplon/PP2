@@ -37,7 +37,7 @@
             </div>
         </div>
         <div class="containerBtnTitle">
-            <a href="" class="">Galerie</a>
+            <a href="galerie.php" class="">Galerie</a>
             <div class="petitsAngre">
                 <i class="fas fa-cog petitAngre1"></i>
                 <i class="fas fa-cog petitAngre2"></i>

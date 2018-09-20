@@ -24,12 +24,28 @@
 	<div class="container valign-wrapper" id="propresse_container">
 		<div class="row fullwidth">
 			<div class="col s6 center-align">
-				<a href="pro.php">Pro</a>
+				<img class="responsive-img" id="pro" src="img/pro.jpg">
 			</div>
 			<div class="col s6 center-align">
-			<a href="presse.php">Presse</a>
+				<img class="responsive-img"  id="presse" src="img/spookyPumpkin.jpeg">
 			</div>
 		</div>
+	</div>
+
+	<div class="container" id="pro_container">
+		<div>
+			<p>Bienvenue chez les pros</p>
+		</div>
+	</div>
+
+	<div class="container" id="presse_container">
+		<div>
+			<p>Bienvenue chez la pressse</p>
+		</div>
+	</div>
+
+	<div class="section" id="changement_section">
+		<a id="btn_changement_section" class="white-text waves-effect waves-light btn">Changer de section</a>
 	</div>
 
     <?php include 'nav_footer/footer.php'; ?>
@@ -37,7 +53,8 @@
     <script src="js/librairies/jquery.js"></script>
     <script src="js/librairies/materialize.js"></script>
     <script src="js/navfoot.js"></script>
-    <script src="js/main.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/propresse.js"></script>
     <script src="js/librairies/swipe.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
 </body>
