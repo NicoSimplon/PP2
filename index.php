@@ -328,7 +328,7 @@ c4 -222 10 -787 14 -1257z m-417 29 l1 -325 -28 55 c-80 154 -131 373 -138
 					ORDER BY date_event asc
 					limit 3;");
 
-
+				$stockAlert = "";
 				while ($recupInfoAlert = pg_fetch_array($alertDyn)) {
 					$fin = '';
 					$debut = '';
