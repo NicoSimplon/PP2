@@ -1,6 +1,6 @@
-<footer class="page-footer blue-grey lighten-1">
+<footer class="page-footer blue-grey lighten-1 fullwidth">
 
-        <div class="container  ">
+        <div class="container">
           <div class="row">
 
             <div class="col l6 s12 ">
@@ -25,7 +25,7 @@
         <div class="footer-copyright">
           <div class="container">
           © 2018 Copyright Text
-          <a class="grey-text text-lighten-4 right" href="admin/admin.php">Admin</a>
+          <a class="right btn indigo" href="admin/admin.php">Admin</a>
           </div>
         </div>
       </footer>
