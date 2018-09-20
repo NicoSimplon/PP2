@@ -112,3 +112,7 @@ h5 {
 	margin-bottom: 0px;
 	text-align: center;
 }
+
+.btn:hover, .btn-large:hover, .btn-small:hover {
+	background-color: #bda76e;
+}

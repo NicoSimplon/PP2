@@ -54,9 +54,10 @@ label {
 	color: #bda76e;
 }
 
-.btn:hover {
-	background-color: #bda76e;
+.btn:hover, .btn-large:hover, .btn-small:hover{
+	background-color: #bda76e !important;
 }
+
 
 .thumb:focus {
 	background-color: #d4c541 !important;
