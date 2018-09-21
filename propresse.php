@@ -22,151 +22,129 @@
 
 	<div class="container valign-wrapper" id="propresse_container">
 		<div class="row fullwidth">
-			<div class="col s6 center-align">
-				<img class="responsive-img" id="pro" src="img/pro.jpg">
+			<div class="col s12 m6 center-align">
+				<div class="card">
+        			<div class="card-image">
+						<img class="responsive-img" id="pro" src="img/pro/pro.jpg">
+        			</div>
+				</div>
+				<div class="card-content">
+					<span class="card-title black-text">Vous souhaitez plus d'informations ?</span>
+				</div>
 			</div>
-			<div class="col s6 center-align">
-				<img class="responsive-img"  id="presse" src="img/spookyPumpkin.jpeg">
+			<div class="col s12 m6 center-align">
+				<div class="card">
+        			<div class="card-image">
+						<img class="responsive-img"  id="presse" src="img/presse/presse.jpg">
+        			</div>
+				</div>
+				<div class="card-content">
+					<span class="card-title">Ils ont parlés de nous</span>
+				</div>
 			</div>
 		</div>
 	</div>
-
+	
 	<div class="container" id="pro_container">
-
 		<div class="row">
 			<div class="col s12 m5">
-				<img class="responsive-img" src="img/bar.jpg">
-    			<img class="responsive-img" src="img/tireuse.jpg">
-    			<img class="responsive-img" src="img/piscine.jpg">
-    			<img class="responsive-img" src="img/piscine2.jpg">
+				<img class="responsive-img propresse-img materialboxed" src="img/pro/terrain.jpg">
+    			<img class="responsive-img propresse-img materialboxed" src="img/pro/salle.jpg">
+    			<img class="responsive-img propresse-img materialboxed" src="img/pro/bar.jpg">
 			</div>
-
 			<div class="col s12 m7">
 			<div class="section">
 					<h5>Les ESPACES</h5>
 				</div>
 				<div class="divider"></div>
 				<div class="section">
-					<p>Terrain 5 ha</p>
+					<p class="white-text">Terrain 5 ha</p>
 				</div>
 				<div class="divider"></div>
 				<div class="section">
-					<p>Salle de réception</p>
-					<p>parquet bois 140m²</p>
-					<p>Capacité 100 personnes</p>
+					<p class="white-text">Salle de réception</p>
+					<p class="white-text">parquet bois 140m²</p>
+					<p class="white-text">Capacité 100 personnes</p>
 				</div>
 				<div class="divider"></div>
 				<div class="section">
-					<p>Bar license IV</p>
+					<p class="white-text">Bar license IV</p>
 				</div>
 				<div class="divider"></div>
 				<div class="section">
-					<p>Cuisine professionnelle 70m²</p>
+					<p class="white-text">Cuisine professionnelle 70m²</p>
 				</div>
 				<div class="divider"></div>
 				<div class="section">
-					<p>Terrasse 100m²</p>
-					<p>& Piscine 70m²</p>
+					<p class="white-text">Terrasse 100m²</p>
+					<p class="white-text">& Piscine 70m²</p>
 				</div>
 				<div class="divider"></div>
 				<div class="section">
-					<p>Espaces Verts</p>
+					<p class="white-text">Espaces Verts</p>
 				</div>
 				<div class="divider"></div>
 				<div class="section">
-					<p>Parking</p>
+					<p class="white-text">Parking</p>
 				</div>
-
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s12 m5">
+				<img class="responsive-img propresse-img materialboxed" src="img/pro/piscine.jpg">
+				<img class="responsive-img propresse-img materialboxed" src="img/pro/parking.jpg">
+				<img class="responsive-img propresse-img materialboxed" src="img/pro/scènedj.jpg">
+			</div>
+			<div class="col s12 m7">
 				<div class="section">
 					<h5>Les INSTALLATIONS</h5>
 				</div>
 				<div class="divider"></div>
 				<div class="section">
-					<p>Scène 15m²</p>
+					<p class="white-text">Scène 15m²</p>
 				</div>
 				<div class="divider"></div>
 				<div class="section">
-					<p>Sonorisation</p>
-					<p>et Table de Mixage</p>
+					<p class="white-text">Sonorisation</p>
+					<p class="white-text">et Table de Mixage</p>
 				</div>
 				<div class="divider"></div>
 				<div class="section">
-					<p>Rampe d'éclairages</p>
-					<p>monitorés par ordinateur</p>
+					<p class="white-text">Rampe d'éclairages</p>
+					<p class="white-text">monitorés par ordinateur</p>
 				</div>
 				<div class="divider"></div>
 				<div class="section">
-					<p>Éclairages lasers</p>
-					<p>et machines à fumée</p>
+					<p class="white-text">Éclairages lasers</p>
+					<p class="white-text">et machines à fumée</p>
 				</div>
 				<div class="divider"></div>
 				<div class="section">
-					<p>Vidéoprojecteur</p>
+					<p class="white-text">Vidéoprojecteur</p>
 				</div>
 				<div class="divider"></div>
 				<div class="section">
-					<p>Capacité électrique</p>
-					<p>150 kW</p>
+					<p class="white-text">Capacité électrique</p>
+					<p class="white-text">150 kW</p>
 				</div>
 			</div>
 		</div>
-
 	</div>
 
-	<div class="container" id="presse_container">
-		<div class="row">
-			<div class="col s12 m3">
-				<img class="responsive-img materialboxed" src="img/presse/flyer9.jpg">
-			</div>
-			<div class="col s12 m3">
-			<img class="responsive-img materialboxed" src="img/presse/flyer10.jpg">
-			</div>
-			<div class="col s12 m3">
-			<img class="responsive-img materialboxed" src="img/presse/flyer11.jpg">	</div>
-			<div class="col s12 m3">
-				<img class="responsive-img materialboxed" src="img/presse/flyer12.jpg">
-			</div>
-		</div>
-		<div class="row">
-			<div class="col s12 m3">
-				<img class="responsive-img materialboxed" src="img/presse/flyer1.jpg">
-			</div>
-			<div class="col s12 m3">
-				<img class="responsive-img materialboxed" src="img/presse/flyer2.jpg">
-			</div>
-			<div class="col s12 m3">
-				<img class="responsive-img materialboxed" src="img/presse/flyer3.jpg">
-			</div>
-			<div class="col s12 m3">
-				<img class="responsive-img materialboxed" src="img/presse/flyer4.jpg">
-			</div>
-		</div>
-		<div class="row">
-			<div class="col s12 m3">
-				<img class="responsive-img materialboxed" src="img/presse/flyer5.jpg">
-			</div>
-			<div class="col s12 m3">
-				<img class="responsive-img materialboxed" src="img/presse/flyer6.jpg">
-			</div>
-			<div class="col s12 m3">
-				<img class="responsive-img materialboxed" src="img/presse/flyer7.jpg">
-			</div>
-			<div class="col s12 m3">
-				<img class="responsive-img materialboxed" src="img/presse/flyer8.jpg">
-			</div>
-		</div>
-		<div class="row">
-			<div class="col s12 m3">
+	
 
-			</div>
-			<div class="col s12 m3">
-				
-			</div>
-			<div class="col s12 m3">
-				
-			</div>
-			<div class="col s12 m3">
-				
+
+	<!-- CONTENU DE LA SECTION PRESSE A DEFINIR A SAVOIR SI ON GARDE LES FLYERS DE PROGRA AU RISQUE D ETRE REDONDANT OU SI ON GARDE JUSTE L ARTICLE NEWSBOX AU RISQUE DE FAIRE PARAITRE LA PAGE VIDE -->
+	<!-- POUR L INSTANT JE SUIS PARTI SUR JUSTE LARTICLE -->
+	<div class="container" id="presse_container">
+		<div class="section">
+			<div class="row center">
+				<div class="col s12 m3 no_margin_left">
+					<img class="responsive-img materialboxed" src="img/presse/newbox1.jpg">
+				</div>
+				<div class="col s12 m3 no_margin_left">
+					<img class="responsive-img materialboxed" src="img/presse/newbox2.jpg">
+				</div>
 			</div>
 		</div>
 	</div>

@@ -13,6 +13,7 @@ $(document).ready(function () {
   $('.tooltipped').tooltip();
   $('#modalReservation').modal();
   $("#modal1").modal();
+  $('.materialboxed').materialbox();
 
 
   $(".modal-trigger").click(function () {
@@ -92,4 +93,3 @@ $(document).ready(function () {
   }
   saluTime();
 });
-
