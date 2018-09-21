@@ -652,13 +652,39 @@ header {
 
 /* page commentaire */
 
-/* Ajouté depuis PP3*/
+
+/* CSS Thomas a trier*/
+/* Footer, propresse */
 .fullwidth
 {
   width: 100%;
 }
-
+/* propresse */
 #propresse_container
 {
   height: 24em;
+}
+
+.propresse-img
+{
+  height: 33vh;
+  width: 100%;
+  margin-top: 2em;
+}
+
+/* Utilisé sur la partie presse, supprime le margin-left auto de la classe row de materialize*/
+.no_margin_left
+{
+  margin-left: 0 !important;
+}
+
+.center 
+{
+  display: flex;
+  justify-content: center;
+}
+
+#pro, #presse 
+{
+  height: 20em;
 }
