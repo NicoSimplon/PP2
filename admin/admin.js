@@ -18,8 +18,12 @@ $(document).ready(function() {
 	// remplie la liste déroulante
 	setSelectEvent();
 
-	// chargement modale
+	// chargement modales
 	$("#modalModifResa").modal();
+	$("#modalAjoutEvent").modal();
+
+	// Ajout nouvel événement
+	getArtites();
 
 });
 
@@ -208,4 +212,35 @@ function affichageAdmin(){
 		}
 	});
   
+}
+
+// Ajout d'un événement
+function getArtites(){
+
+	$.ajax({
+		type: 'POST',
+		url: 'getArtistes.php',
+		success: function(json){
+			var jsonParse = JSON.parse(json);
+			var data = {};
+			var objt = {};
+
+			for(var i = 0; i < jsonParse.length; i++){
+
+				Object.defineProperty(data, jsonParse[i].nom_artiste, {
+					value: null
+				});
+
+			}
+
+			Object.defineProperty(obj, 'data', data);
+			console.log(data);
+			$('input.autocomplete').autocomplete({
+				data: data
+			});
+			
+			
+		}
+	});
+
 }

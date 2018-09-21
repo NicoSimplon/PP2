@@ -6,6 +6,13 @@ if(empty($_SESSION['co'])){
 
     header('Location: ../login.php');     
 }
+else {
+    include "../connexion/connexion_bdd.php";
+
+        $mail = $_SESSION['user'];
+
+        $requeteNom = pg_fetch_array(pg_query("SELECT nom_admin FROM tab_admin WHERE mail_admin = '".$mail."';"));
+}
 
 
 ?>
@@ -21,16 +28,6 @@ if(empty($_SESSION['co'])){
     <link rel="stylesheet" type="text/css" href="../css/materialize.css">
     <link rel="stylesheet" type="text/css" href="../css/admin.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <?php
-
-        include "../connexion/connexion_bdd.php";
-
-        $mail = $_SESSION['user'];
-
-        $requeteNom = pg_fetch_array(pg_query("SELECT nom_admin FROM tab_admin WHERE mail_admin = '".$mail."';"));
-
-    ?>
 </head>
 
 <body>
@@ -88,15 +85,29 @@ if(empty($_SESSION['co'])){
                 <div class="containerTools">
                     <ul class="collection">
                         <li class="collection-item">
-                            <label>Séléctionner un Evenement</label>
-                            <div class="input-field col s12">
-                                <select id="eventList" class="requete browser-default">
-                                    
-                                </select>
+                            <div class="row">
+                                <div class="col">
+                                    <label>Séléctionner un Evenement</label>
+                                    <div class="input-field col s12">
+                                        <select id="eventList" class="requete browser-default">
+                                            
+                                        </select>
+                                    </div>
+                                    <p class="inline txt" id="date_evenement">
+                                        
+                                    </p>
+                                </div>
+                                <div class="col offset-m2"></div>
+                                <div class="col">
+                                    <label>Pour ajouter un nouvel événement</label>
+                                    <div>
+                                        <button class="btn-large modal-trigger waves-effect waves-light centrerBouton" href="#modalAjoutEvent">
+                                            <i class="material-icons right">control_point</i>
+                                        Ajouter un événement</button>
+                                    </div>
+                                </div>
+                                <div class="col offset-m1"></div>
                             </div>
-                            <p class="inline txt" id="date_evenement">
-                                
-                            </p>
                         </li>    
                     </ul>
                 </div>
@@ -129,9 +140,6 @@ if(empty($_SESSION['co'])){
             <div id="gestionUser" class=" mySwipe">
                 <ul id="listeAdmin" class="collection">
  
-               
-
-                
                  </ul>
                 <a class="btn-large modal-trigger waves-effect waves-light right" href="#modalAjoutUtil" name="action">Ajouter un utilisateur
                     <i class="material-icons right">person_add</i>
@@ -139,6 +147,8 @@ if(empty($_SESSION['co'])){
             </div>
 
         </div>
+
+        <!-- Modale d'ajout d'un utilisateur -->
         <div id="modalAjoutUtil" class="modal">
             <form class="modal-content">
                 <h4>Ajouter un utilisateur</h4>
@@ -192,6 +202,32 @@ if(empty($_SESSION['co'])){
         <div class="modal-footer">
             <p>
                 <a id="validerModif" href="#!" class="modal-close btn waves-effect waves-light" onclick="setModif()">Valider</a>
+                <a href="#!" class="modal-close btn waves-effect waves-light red">Annuler</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Modales Ajout Event -->
+    <div id="modalAjoutEvent" class="modal">
+        <div class="modal-content">
+            <h4>Ajouter un nouvel événement</h4>
+            <form method="post">
+            <div class="row">
+                <div class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">textsms</i>
+                            <input type="text" id="autocomplete-input" class="autocomplete">
+                            <label for="autocomplete-input">Nom de l'artiste</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <p>
+                <a id="validerModif" href="#!" class="modal-close btn waves-effect waves-light">Ajouter</a>
                 <a href="#!" class="modal-close btn waves-effect waves-light red">Annuler</a>
             </p>
         </div>

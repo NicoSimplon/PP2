@@ -113,6 +113,8 @@ h5 {
 	text-align: center;
 }
 
-.btn:hover, .btn-large:hover, .btn-small:hover {
+.btn:hover,
+.btn-large:hover,
+.btn-small:hover {
 	background-color: #bda76e;
 }
