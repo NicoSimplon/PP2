@@ -342,16 +342,6 @@ header {
 /* fin animations */
 
 /* section facebook + newsletter */
-.gridContainer {
-	display: inline-flex;
-	flex-wrap: wrap;
-	align-items: center;
-	justify-content: center;
-	width: 74rem;
-	height: auto;
-	float: left;
-}
-
 .faceb {
 	height: 70%;
 	width: 100%;
