@@ -39,7 +39,7 @@
         			</div>
 				</div>
 				<div class="card-content">
-					<span class="card-title">Ils ont parlés de nous</span>
+					<span class="card-title">Ils ont parlé de nous</span>
 				</div>
 			</div>
 		</div>
@@ -92,7 +92,7 @@
 		<div class="row">
 			<div class="col s12 m5">
 				<img class="responsive-img propresse-img materialboxed" src="img/pro/piscine.jpg">
-				<img class="responsive-img propresse-img materialboxed" src="img/pro/parking.jpg">
+				<img class="responsive-img propresse-img materialboxed" src="img/pro/espace_vert.jpg">
 				<img class="responsive-img propresse-img materialboxed" src="img/pro/scènedj.jpg">
 			</div>
 			<div class="col s12 m7">

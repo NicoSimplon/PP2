@@ -678,3 +678,41 @@ header {
 {
   height: 20em;
 }
+
+/* Accueil */
+.accueil_img_container
+{
+  height:15em;
+}
+
+#accueil_img1
+{
+  background-image: url("/img/cabaret2.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 50%;
+}
+
+#accueil_img2
+{
+  background-image: url("/img/evenement3.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 50%;
+}
+
+#accueil_img3
+{
+  background-image: url("/img/piscine2.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 50%;
+}
+
+#accueil_img4
+{
+  background-image: url("/img/festival2.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 50%;
+}

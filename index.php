@@ -373,13 +373,13 @@ c4 -222 10 -787 14 -1257z m-417 29 l1 -325 -28 55 c-80 154 -131 373 -138
 					<p class="white-text">Restaurant - Tapas - Bar à vins & cocktails</p>
 					<p class="white-text">Apéro-concerts, Pool party, Activités champêtres</p>
 				</div>
-				<div class="col s12 m6">
-					<p>IMAGE</p>
+				<div class="col s12 m6 accueil_img_container" id="accueil_img1">
+					<!-- <img class="responsive-img materialboxed" src="img/cabaret3.jpg"> -->
 				</div>
 			</div>
 			<div class="row">
-				<div class="col s12 m6">
-					<p>IMAGE</p>
+				<div class="col s12 m6 accueil_img_container" id="accueil_img2">
+					<!-- <img class="responsive-img materialboxed" src="img/parking.jpg"> -->
 				</div>
 				<div class="col s12 m6 center-align">
 					<h4 class="white-text">ÉVÉNEMENTS PRIVÉS/PUBLICS</h4>
@@ -396,13 +396,13 @@ c4 -222 10 -787 14 -1257z m-417 29 l1 -325 -28 55 c-80 154 -131 373 -138
 					<p class="white-text">Stages & cours (dance, théâtre, peinture, etc.</p>
 					<p class="white-text">Ateliers culinaires & location cuisine professionnelle</p>
 				</div>
-				<div class="col s12 m6">
-				<p>IMAGE</p>
+				<div class="col s12 m6 accueil_img_container" id="accueil_img3">
+					<!-- <img class="responsive-img materialboxed" src="img/piscine2.jpg"> -->
 				</div>
 			</div>
 			<div class="row">
-				<div class="col s12 m6">
-					<p>IMAGE</p>
+				<div class="col s12 m6 accueil_img_container" id="accueil_img4">
+					<!-- <img class="responsive-img materialboxed" src="img/festival2.jpg"> -->
 				</div>
 				<div class="col s12 m6 center-align">
 					<h4 class="white-text">FESTIVALS</h4>
