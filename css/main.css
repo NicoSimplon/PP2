@@ -350,8 +350,8 @@ header {
 }
 
 .cell {
-	width: 35em;
-	height: 20em;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
@@ -682,7 +682,7 @@ header {
 /* Accueil */
 .accueil_img_container
 {
-  height:15em;
+  height:14em;
 }
 
 #accueil_img1
@@ -715,4 +715,10 @@ header {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 50% 50%;
+}
+
+/* Utilisé sur à propos */
+.no_margin
+{
+  margin: 0;
 }

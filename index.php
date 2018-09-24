@@ -365,50 +365,21 @@ c4 -222 10 -787 14 -1257z m-417 29 l1 -325 -28 55 c-80 154 -131 373 -138
 
 	<section>
 		<div class="container">
-			<div class="row">
-				<div class="col s12 m6 center-align">
-					<h4 class="white-text">CABARET SYLVESTRE</h4>
-					<p class="white-text">Concerts (acoustiques/électro/DJ)</p>
-					<p class="white-text">& Performances sceniques</p>
-					<p class="white-text">Restaurant - Tapas - Bar à vins & cocktails</p>
-					<p class="white-text">Apéro-concerts, Pool party, Activités champêtres</p>
+			<div class="row cell flipInX">
+				<div class="col s12 m6">
+					<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam vel atque debitis quia provident ab obcaecati mollitia nulla sequi explicabo!</p>
 				</div>
-				<div class="col s12 m6 accueil_img_container" id="accueil_img1">
-					<!-- <img class="responsive-img materialboxed" src="img/cabaret3.jpg"> -->
+				<div class="col s12 m6">
+					<img src="img/foule.png" class="testImg">
 				</div>
 			</div>
-			<div class="row">
-				<div class="col s12 m6 accueil_img_container" id="accueil_img2">
-					<!-- <img class="responsive-img materialboxed" src="img/parking.jpg"> -->
+			<div class="row cell flipInX">
+				<div class="col s12 m6">
+					<img src="img/foule.png" class="testImg">
 				</div>
-				<div class="col s12 m6 center-align">
-					<h4 class="white-text">ÉVÉNEMENTS PRIVÉS/PUBLICS</h4>
-					<p class="white-text">Réceptions (mariages, anniversaires, baptêmes, EVF/EVG</p>
-					<p class="white-text">Réunions & repas d'affaire, sorties CE, conférences</p>
-					<p class="white-text">Journées à thème & Animations</p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col s12 m6 center-align">
-					<h4 class="white-text">STAGES & RÉSIDENCES</h4>
-					<p class="white-text">Installations disponibles pour :</p>
-					<p class="white-text">Résidence d'artistes</p>
-					<p class="white-text">Stages & cours (dance, théâtre, peinture, etc.</p>
-					<p class="white-text">Ateliers culinaires & location cuisine professionnelle</p>
-				</div>
-				<div class="col s12 m6 accueil_img_container" id="accueil_img3">
-					<!-- <img class="responsive-img materialboxed" src="img/piscine2.jpg"> -->
-				</div>
-			</div>
-			<div class="row">
-				<div class="col s12 m6 accueil_img_container" id="accueil_img4">
-					<!-- <img class="responsive-img materialboxed" src="img/festival2.jpg"> -->
-				</div>
-				<div class="col s12 m6 center-align">
-					<h4 class="white-text">FESTIVALS</h4>
-					<p class="white-text">Accueil de festivals en scène extérieures & intérieures</p>
-					<p class="white-text">Aires de camping pour tentes & fourgons/caravanes</p>
-					<p class="white-text">Prestations traiteur & bar licence IV</p>
+				<div class="col s12 m6">
+					<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam vel atque debitis quia provident ab obcaecati mollitia
+					nulla sequi explicabo!</p>
 				</div>
 			</div>
 		</div>

@@ -16,7 +16,7 @@
             </div>
         </div>
         <div class="containerBtnTitle">
-            <a href="" class="">A propos</a>
+            <a href="qui_sommes_nous.php" class="">À propos</a>
             <div class="petitsAngre">
                 <i class="fas fa-cog petitAngre1"></i>
                 <i class="fas fa-cog petitAngre2"></i>
