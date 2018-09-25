@@ -35,7 +35,7 @@ else {
         <div class="sousMenuContainer">
             <div class="enTête">
                 <div class="image">
-                    <img id="myImg" src="../img/logocolo.jpg">
+                    <img id="myImg" src="../img/logocolo.jpg" alt="Logo de Colo&Co">
                 </div>
                 <div class="myName">
                     <h6>Bonjour, <?php echo "$requeteNom[0]";?></h6>
@@ -262,7 +262,7 @@ else {
                 <div class="col s12 m6">
                     <div>
                         <input class="cache" type="file" name="imgAgenda" id="imgAgenda">
-                        <img id="miniature" src="https://www.fing.edu.uy/inco/grupos/gsi/img/placeholder.png" width="100%">
+                        <img id="miniature" src="https://www.fing.edu.uy/inco/grupos/gsi/img/placeholder.png" alt="" width="100%">
                         <label for="imgAgenda" class="btn-floating waves-effect waves-light red right">
                             <i class="material-icons">photo_library</i>
                         </label>
@@ -322,7 +322,7 @@ else {
                 <div class="col s12 m6">
                     <div>
                         <input class="cache" type="file" name="modif_imgAgenda" id="modif_imgAgenda">
-                        <img id="modif_miniature" src="https://www.fing.edu.uy/inco/grupos/gsi/img/placeholder.png" width="100%">
+                        <img id="modif_miniature" src="https://www.fing.edu.uy/inco/grupos/gsi/img/placeholder.png" alt="" width="100%">
                         <label for="modif_imgAgenda" class="btn-floating waves-effect waves-light red right">
                             <i class="material-icons">photo_library</i>
                         </label>
