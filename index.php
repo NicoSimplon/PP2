@@ -16,6 +16,11 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<?php
 		include 'connexion/connexion_bdd.php';
+		$carrou1 = pg_fetch_array(pg_query("SELECT text_carrou, title_carrou FROM carrousel WHERE id_carrou = '1';"));
+		$carrou2 = pg_fetch_array(pg_query("SELECT text_carrou, title_carrou FROM carrousel WHERE id_carrou = '2';"));
+		$carrou3 = pg_fetch_array(pg_query("SELECT text_carrou, title_carrou FROM carrousel WHERE id_carrou = '3';"));
+		$carrou4 = pg_fetch_array(pg_query("SELECT text_carrou, title_carrou FROM carrousel WHERE id_carrou = '4';"));
+
 	?>
 </head>
 
@@ -289,32 +294,31 @@ c4 -222 10 -787 14 -1257z m-417 29 l1 -325 -28 55 c-80 154 -131 373 -138
 		<div class="carousel carousel-slider  sliderPerso">
 			<div class="carousel-item red white-text" href="#one!">
 				<div class="styletext">
-					<h2>First Panel</h2>
-					<p class="white-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam sit fugiat eos ipsam veniam, aliquam perspiciatis
-						voluptatem consectetur expedita, cupiditate dignissimos beatae architecto fuga id molestiae nulla at? Accusamus, sed!</p>
+					<h2><?php echo "$carrou1[1]";?></h2>
+					<p class="white-text"><?php echo "$carrou1[0]";?></p>
 				</div>
-				<img src="img/concert.png " class="testImg">
+				<img style="background-image:url(admin/img/carrou1.png)" class="testImg">
 			</div>
 			<div class="carousel-item amber white-text" href="#two!">
 				<div class="styletext">
-					<h2 class="infoActua">Second Panel</h2>
-					<p class="white-text infoActua">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde eum necessitatibus eius, accusamus ratione beatae ipsam
-						corrupti quia tempore nemo minima inventore omnis quaerat iure, harum neque nam amet iusto.</p>
+					<h2 class="infoActua"><?php echo "$carrou2[1]";?></h2>
+					<p class="white-text infoActua"><?php echo "$carrou2[0]";?></p>
 				</div>
+				<img style="background-image:url(admin/img/carrou2.png)" class="testImg">
 			</div>
 			<div class="carousel-item green white-text" href="#three!">
 				<div class="styletext">
-					<h2 class="infoActua">Third Panel</h2>
-					<p class="white-text infoActua">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint iure, voluptas sed ea culpa quisquam cupiditate. Possimus
-						aperiam non voluptatibus! Corporis error nesciunt autem dolore accusantium aliquid deleniti quibusdam libero.</p>
+					<h2 class="infoActua"><?php echo "$carrou3[1]";?></h2>
+					<p class="white-text infoActua"><?php echo "$carrou3[0]";?></p>
 				</div>
+				<img style="background-image:url(admin/img/carrou3.png)" class="testImg">
 			</div>
 			<div class="carousel-item blue white-text" href="#four!">
 				<div class="styletext">
-					<h2 class="infoActua">Fourth Panel</h2>
-					<p class="white-text infoActua">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni iure error asperiores expedita odit aut consequatur
-						excepturi dignissimos, tempora itaque nam culpa quasi possimus odio vitae voluptatibus sunt iusto maiores!</p>
+					<h2 class="infoActua"><?php echo "$carrou4[1]";?></h2>
+					<p class="white-text infoActua"><?php echo "$carrou4[0]";?></p>
 				</div>
+				<img style="background-image:url(admin/img/carrou4.png)" class="testImg">
 			</div>
 		</div>
 

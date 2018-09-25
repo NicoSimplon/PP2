@@ -116,3 +116,17 @@ h5 {
 .btn:hover, .btn-large:hover, .btn-small:hover {
 	background-color: #bda76e;
 }
+
+.titleCarrouInput{
+	background-color: rgba(0, 0, 0, 0.5) !important;
+	border: none !important;
+}
+
+.carrouTextChange{
+	width: 100%;
+}
+
+#previewing{
+	width: 100%;
+	height: auto;
+}
