@@ -8,13 +8,8 @@ include 'connexion/connexion_bdd.php';
 
 //requête d'identification de mail 
 $req =pg_query("SELECT * FROM personne WHERE courriel = '$mail' ");
-
 $resultat =pg_fetch_array($req);
 
-
-
-
-// echo $mail;
 
 //condition --> vérifie l'existence du mail dans la bdd 
 //Insérer des commentaires dans la bdd
@@ -27,17 +22,17 @@ else{
     echo 'erreur';
 }
 
-
-
 //Requête de récup les commentaire, les pseudo et la date 
-// SELECT commentaire, pseudo, date_com FROM commentaire 
 $reqq=pg_query("SELECT commentaire, pseudo, date_com FROM commentaire ");
 $resultat1 =pg_fetch_array($reqq);
 echo $resultat1 [3];
-//Requête de récup les 4 dernier commentaire avec la date 
-//SELECT commentaire, date_com FROM commentaire LIMIT 5 OFFSET 3;
- 
-// requête valider en fonctiion de la condition 
 
+//Requête de récup les 4 dernier commentaires avec la date 
+//$last_comment = pg_query("SELECT commentaire, date_com FROM commentaire LIMIT 5 OFFSET 3");
+ 
+// requête valider en fonction de la condition 
+// $valider =  pg_query("SELECT * FROM commentaire Where valide = true");
+// while($valider == true);
+//     echo ($resultat4);  
 
 ?>

@@ -19,7 +19,9 @@
 <body>
 <div class="nav">
 		<?php 
-			include 'nav_footer/nav.php';
+      include 'nav_footer/nav.php';
+      include 'connexion/connexion_bdd.php';
+
 		?>
     </div>
 <div class="formulaire">
@@ -67,8 +69,37 @@
 </form>
 </div>
 <div class="commentaire">
-  
+  <H2>Commentaires :</H2>
+  <?php
+  $valider = pg_query("SELECT * FROM commentaire");
+  // print_r($valider);
+   while ($req = pg_fetch_assoc($valider)){
+      
+    ?>
+    <div>
+      
+      <div class="row">
+    <div class="col s12 m6">
+      <div class="card lime darken-2">
+        <div class="card-content white-text">
+          <span class="card-title"><?= $req['pseudo'] ?></span>
+          <p><?= $req['commentaire'] ?></p>
+        </div>
+        <div class="card-action">
+          <p><?= $req['date_com'] ?></p>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+      
+      <span></span>
+   </br></br>
 
+    </div>
+    <?php
+    }
+    ?>
 </div>
 
 <div>
