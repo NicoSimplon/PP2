@@ -96,6 +96,9 @@ else {
                                     <p class="inline txt" id="date_evenement">
                                         
                                     </p>
+                                    <div id="modif_event">
+                                        <button id="modalModifEvent" class="btn waves-effect waves-light modal-trigger" href="#formModifEvent">Modifier l'événement</button>
+                                    </div>
                                 </div>
                                 <div class="col offset-m2"></div>
                                 <div class="col">
@@ -208,17 +211,69 @@ else {
     </div>
 
     <!-- Modales Ajout Event -->
-    <div id="modalAjoutEvent" class="modal">
+    <div id="modalAjoutEvent" class="modal modalAdmin">
         <div class="modal-content">
             <h4>Ajouter un nouvel événement</h4>
             <form method="post">
             <div class="row">
+                <div class="col s12 m6">
+                    <div class="row">
+                    <div class="col s12">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <i class="material-icons prefix">textsms</i>
+                                    <input type="text" id="autocomplete-input" class="autocomplete">
+                                    <label for="autocomplete-input">Nom de l'artiste (obligatoire)</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <i class="material-icons prefix">textsms</i>
+                                    <input type="text" required id="autocomplete-input2" class="autocomplete">
+                                    <label for="autocomplete-input2">Genre musical (obligatoire)</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <i class="material-icons prefix">textsms</i>
+                                    <input type="text" required id="autocomplete-input3" class="autocomplete">
+                                    <label for="autocomplete-input3">Nom de l'événement (obligatoire)</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <label for="date_event">Date de début de l'événement (obligatoire)</label>
+                                    <input id="date_event" class="datepicker" required type="text" >
+                                </div>
+                                <div class="input-field col s12">
+                                    <label for="date_fin">Date de fin de l'événement (facultatif)</label>
+                                    <input id="date_fin" class="datepicker" type="text" >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6">
+                    <div>
+                        <input class="cache" type="file" name="imgAgenda" id="imgAgenda">
+                        <img id="miniature" src="https://www.fing.edu.uy/inco/grupos/gsi/img/placeholder.png" width="100%">
+                        <label for="imgAgenda" class="btn-floating waves-effect waves-light red right">
+                            <i class="material-icons">photo_library</i>
+                        </label>
+                    </div>
+                </div>
                 <div class="col s12">
                     <div class="row">
                         <div class="input-field col s12">
                             <i class="material-icons prefix">textsms</i>
-                            <input type="text" id="autocomplete-input" class="autocomplete">
-                            <label for="autocomplete-input">Nom de l'artiste</label>
+                            <textarea id="textarea1" class="materialize-textarea" required></textarea>
+                            <label for="textarea1">Descriptif (obligatoire)</label>
                         </div>
                     </div>
                 </div>
@@ -227,7 +282,67 @@ else {
         </div>
         <div class="modal-footer">
             <p>
-                <a id="validerModif" href="#!" class="modal-close btn waves-effect waves-light">Ajouter</a>
+                <a id="validerAjout" href="#!" class="modal-close btn waves-effect waves-light">Ajouter</a>
+                <a href="#!" class="modal-close btn waves-effect waves-light red">Annuler</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Modale Modif Event -->
+    <div id="formModifEvent" class="modal modalAdmin">
+        <div class="modal-content">
+            <h4>Modifier un événement</h4>
+            <form method="post">
+            <div class="row">
+                <div class="col s12 m6">
+                    <div class="row">
+                        <div class="col s12">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <i class="material-icons prefix">textsms</i>
+                                    <input type="text" required id="nom_evenement" class="autocomplete">
+                                    <label for="nom_evenement">Nom de l'événement (obligatoire)</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <label for="modif_date_event">Date de début de l'événement (obligatoire)</label>
+                                    <input id="modif_date_event" class="datepicker" required type="text" >
+                                </div>
+                                <div class="input-field col s12">
+                                    <label for="modif_date_fin">Date de fin de l'événement (facultatif)</label>
+                                    <input id="modif_date_fin" class="datepicker" type="text" >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6">
+                    <div>
+                        <input class="cache" type="file" name="modif_imgAgenda" id="modif_imgAgenda">
+                        <img id="modif_miniature" src="https://www.fing.edu.uy/inco/grupos/gsi/img/placeholder.png" width="100%">
+                        <label for="modif_imgAgenda" class="btn-floating waves-effect waves-light red right">
+                            <i class="material-icons">photo_library</i>
+                        </label>
+                    </div>
+                </div>
+                <div class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">textsms</i>
+                            <textarea id="modif_descriptif" class="materialize-textarea" required></textarea>
+                            <label for="modif_descriptif">Descriptif (obligatoire)</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <p>
+                <a id="validerModifForm" href="#!" class="modal-close btn waves-effect waves-light">Modifier</a>
                 <a href="#!" class="modal-close btn waves-effect waves-light red">Annuler</a>
             </p>
         </div>

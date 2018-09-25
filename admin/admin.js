@@ -18,12 +18,18 @@ $(document).ready(function() {
 	// remplie la liste déroulante
 	setSelectEvent();
 
+	// Ajout nouvel événement
+	$('.datepicker').datepicker({
+		format: 'dd/mm/yyyy'
+	});
+	getArtites();
+	getGenres();
+	getEvents();
+
 	// chargement modales
 	$("#modalModifResa").modal();
 	$("#modalAjoutEvent").modal();
-
-	// Ajout nouvel événement
-	getArtites();
+	$("#formModifEvent").modal();
 
 });
 
@@ -134,7 +140,7 @@ function setModif(){
 			M.toast({html:data});
 			var nomEvent = $("#eventList").val();
 			setEventTable(nomEvent);
-			getTotalResa(nomEvent)
+			getTotalResa(nomEvent);
 		}
 
 	});
@@ -223,24 +229,162 @@ function getArtites(){
 		success: function(json){
 			var jsonParse = JSON.parse(json);
 			var data = {};
-			var objt = {};
+			var options = {
+				data: data,
+				limit: Infinity,
+				minLength: 1,
+			};
 
 			for(var i = 0; i < jsonParse.length; i++){
 
-				Object.defineProperty(data, jsonParse[i].nom_artiste, {
-					value: null
-				});
+				data[jsonParse[i].nom_artiste] = null;			
 
 			}
-
-			Object.defineProperty(obj, 'data', data);
-			console.log(data);
-			$('input.autocomplete').autocomplete({
-				data: data
-			});
 			
+			var elems = document.querySelectorAll('#autocomplete-input');
+			var instances = M.Autocomplete.init(elems, options);
+			var instance = M.Autocomplete.getInstance($('#autocomplete-input'));
+			instance.updateData(data);
 			
 		}
 	});
 
 }
+
+function getGenres(){
+
+	$.ajax({
+		type: 'POST',
+		url: 'getGenres.php',
+		success: function(json){
+			var jsonParse = JSON.parse(json);
+			var data = {};
+			var options = {
+				data: data,
+				limit: Infinity,
+				minLength: 1,
+			};
+
+			for(var i = 0; i < jsonParse.length; i++){
+
+				data[jsonParse[i].lib_genre] = null;			
+
+			}
+			
+			var elems = document.querySelectorAll('#autocomplete-input2');
+			var instances = M.Autocomplete.init(elems, options);
+			var instance = M.Autocomplete.getInstance($('#autocomplete-input2'));
+			instance.updateData(data);
+			
+		}
+	});
+
+}
+
+function getEvents(){
+
+	$.ajax({
+		type: 'POST',
+		url: 'getEvents.php',
+		success: function(json){
+			var jsonParse = JSON.parse(json);
+			var data = {};
+			var options = {
+				data: data,
+				limit: Infinity,
+				minLength: 1,
+			};
+
+			for(var i = 0; i < jsonParse.length; i++){
+
+				data[jsonParse[i].event] = null;			
+
+			}
+			
+			var elems = document.querySelectorAll('#autocomplete-input3');
+			var instances = M.Autocomplete.init(elems, options);
+			var instance = M.Autocomplete.getInstance($('#autocomplete-input3'));
+			instance.updateData(data);
+			
+		}
+	});
+
+}
+
+$("#validerAjout").click(function(){
+
+	var artiste = $("#autocomplete-input").val();
+	var genre = $("#autocomplete-input2").val();
+	var nomEvent = $("#autocomplete-input3").val();
+	var descriptif = $("#textarea1").val();
+	var datetime = $("#date_event").val();
+	var dateFin = $("#date_fin").val();
+	var img = $("#imgAgenda").val();
+
+	var tabData = [];
+
+	tabData.push(artiste, genre, nomEvent, descriptif, datetime, dateFin, img);
+
+	$.ajax({
+		type: 'POST',
+		url: 'newEvent.php',
+		data: {
+			array: tabData,
+		},
+		success: function(data){
+			M.toast({html:data});
+			setSelectEvent();
+		}
+	});
+
+});
+
+// Gestion Miniature image événement
+$("#imgAgenda").change(function(){
+
+	var file = this.files[0];
+	var imagefile = file.type;
+	var match = ["image/jpeg", "image/png", "image/jpg"];
+
+	if(!((imagefile==match[0]) || (imagefile==match[1]) || (imagefile==match[2]))){
+
+		$("#miniature").attr('src', 'https://www.southwelldentalcare.com/img/pictures/photo.png');
+
+		return false;
+	}
+	else{
+
+		var reader = new FileReader();
+		reader.onload = imageIsLoaded;
+		reader.readAsDataURL(this.files[0]);
+	}
+});
+function imageIsLoaded(e){
+	
+	$("#miniature").attr('src', e.target.result);
+
+}
+
+$("#modalModifEvent").click(function(){
+
+	var nomEvent = $("#eventList").val();
+
+	$.ajax({
+		type: 'POST',
+		url: 'modalModifEvent.php',
+		data:{
+			nomEvent: nomEvent
+		},
+		success: function(data){
+			
+			var json = JSON.parse(data);
+
+			$("#nom_evenement").val(json[0].event);
+			$("#modif_date_event").val(json[0].date_event);
+			$("#modif_date_fin").val(json[0].date_fin);
+			$("#modif_descriptif").val(json[0].descriptif);
+
+		}
+	});
+
+});

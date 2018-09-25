@@ -118,3 +118,12 @@ h5 {
 .btn-small:hover {
 	background-color: #bda76e;
 }
+
+.modalAdmin {
+	width: 80%;
+}
+
+.cache{
+	display: none;
+}
+
