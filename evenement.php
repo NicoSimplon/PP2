@@ -74,7 +74,7 @@
                             </span>
                             <span class="TitleDateHide card-title grey-text text-darken-4" data-recupval="Val">'.$createCard['event'].'</span>
                             <span class="TitleDateHide card-title grey-text text-darken-4" data-recupval="Val">' . $debut . " " . $fin . '</span>
-                            <p>Atiste(s): '.$createCard['nom_artiste'].'</p>
+                            <p>Artiste(s): '.$createCard['nom_artiste'].'</p>
                             <p class="description">'.$createCard['descriptif']. '</p>
                             </div>
                         </div>';
