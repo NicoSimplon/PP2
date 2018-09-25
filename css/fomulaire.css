@@ -1,0 +1,23 @@
+h2{
+color: #fefefe;
+}
+form{
+   
+    border-radius: 5px;
+    opacity: 0,3;
+    margin-top:15px;
+    height: 330px;
+    
+}
+
+#com{
+    width: 100%;
+    height: 8em;
+}
+
+a{
+    margin-bottom: 5px;
+}
+.formulaire{
+    margin-bottom: 100px;
+}

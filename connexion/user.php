@@ -1,3 +1,3 @@
 <?php
-	$user = "admin";
+	$user = "loraine";
 ?>

@@ -1,3 +1,3 @@
 <?php 
-	$pswd = "admin";
+	$pswd = "loraine";
 ?>
