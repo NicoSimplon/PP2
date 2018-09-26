@@ -28,6 +28,20 @@ else {
     <link rel="stylesheet" type="text/css" href="../css/materialize.css">
     <link rel="stylesheet" type="text/css" href="../css/admin.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <?php
+
+        include "../connexion/connexion_bdd.php";
+
+        $mail = $_SESSION['user'];
+
+        $requeteNom = pg_fetch_array(pg_query("SELECT nom_admin FROM tab_admin WHERE mail_admin = '".$mail."';"));
+        $carrou1 = pg_fetch_array(pg_query("SELECT text_carrou, title_carrou FROM carrousel WHERE id_carrou = '1';"));
+        $carrou2 = pg_fetch_array(pg_query("SELECT text_carrou, title_carrou FROM carrousel WHERE id_carrou = '2';"));
+        $carrou3 = pg_fetch_array(pg_query("SELECT text_carrou, title_carrou FROM carrousel WHERE id_carrou = '3';"));
+        $carrou4 = pg_fetch_array(pg_query("SELECT text_carrou, title_carrou FROM carrousel WHERE id_carrou = '4';"));
+
+    ?>
 </head>
 
 <body>
@@ -38,14 +52,17 @@ else {
                     <img id="myImg" src="../img/logocolo.jpg" alt="Logo de Colo&Co">
                 </div>
                 <div class="myName">
-                    <h6>Bonjour, <?php echo "$requeteNom[0]";?></h6>
+                    <h6>Bonjour,
+                        <?php echo "$requeteNom[0]";?>
+                    </h6>
                 </div>
-            <div class="myName">
-                <a class="myName" href="../deconnexion.php" >
-                <button class="btn waves-effect waves-light"  type="button" name="deconnexion" id="bouton_deconnexion" value="Déconnexion"> DECONNEXION
-                </button> 
-                </a>
-            </div>
+                <div class="myName">
+                    <a class="myName" href="../deconnexion.php">
+                        <button class="btn waves-effect waves-light" type="button" name="deconnexion" id="bouton_deconnexion"
+                            value="Déconnexion"> DECONNEXION
+                        </button>
+                    </a>
+                </div>
             </div>
             <div class="heureDate">
                 <div class="date">
@@ -76,6 +93,9 @@ else {
                 </li>
                 <li class="tab col">
                     <a href="#imageMod">Images</a>
+                </li>
+                <li class="tab col">
+                    <a href="#Carrousel">Carrousel</a>
                 </li>
                 <li class="tab col">
                     <a href="#gestionUser">Gestion utilisateur</a>
@@ -141,7 +161,7 @@ else {
                     </table>
                     <hr>
                     <div id="total">
-                        
+
                     </div>
                     <input type="hidden" name="id_perso" id="id_perso">
                     <input type="hidden" name="id_event" id="id_event">
@@ -150,6 +170,122 @@ else {
             <div id="modifier" class=" mySwipe">Test 3</div>
             <div id="renseignement" class=" mySwipe ">Test 3</div>
             <div id="imageMod" class=" mySwipe">Test 2</div>
+
+            <div id="Carrousel" class="mySwipe">
+                <div class="row">
+                <!--//////////_Slide 1_///////////-->
+                    <form action="" method="post" enctype="multipart/form-data" id="uploadimage">
+                        <div class="col s12 m6" id="photoCarrou" method="post" enctype="multipart/form-data">
+                            <div class="card">
+                                <div class="card-image">
+                                    <img id="previewing" src="img/carrou1.png">
+                                    <input type="texte" id="titleArea1" name="titleArea1" class="card-title titleCarrouInput" value="<?php echo "$carrou1[1]";?>">
+                                    <input name="file" id="file" type="file" style="display:none">
+                                    <label for="file" class="btn-floating halfway-fab waves-effect waves-light red">
+                                        <i class="material-icons">photo_library</i>
+                                    </label>
+                                    <input value="Upload" class="submit" id="CarrouValid" style="display:none" type="submit" name="submit" >
+                                </div>
+                                <div class="input-field card-content ">
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <textarea id="textarea1" name="textarea1" class="materialize-textarea" value=""><?php echo "$carrou1[0]";?></textarea>
+                                            <label for="textarea1">Description</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <label for="CarrouValid" class="btn-floating halfway-fab waves-effect waves-light red">
+                                    <i class="material-icons green">done</i>
+                                </label>
+                            </div>                   
+                        </div>
+                    </form>
+                    <!--//////////_Slide 2_///////////-->
+                    <form action="" method="post" enctype="multipart/form-data" id="uploadimage2">
+                        <div class="col s12 m6" id="photoCarrou2" method="post" enctype="multipart/form-data">
+                            <div class="card">
+                                <div class="card-image">
+                                    <img id="previewing2" src="img/carrou2.png">
+                                    <input type="texte" id="titleArea2" name="titleArea2" class="card-title titleCarrouInput" value="<?php echo "$carrou2[1]";?>">
+                                    <input name="file2" id="file2" type="file" style="display:none">
+                                    <label for="file2" class="btn-floating halfway-fab waves-effect waves-light red">
+                                        <i class="material-icons">photo_library</i>
+                                    </label>
+                                    <input value="Upload" class="submit" id="CarrouValid2" style="display:none" type="submit" name="submit" >
+                                </div>
+                                <div class="input-field card-content">
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <textarea id="textarea2" name="textarea2" class="materialize-textarea" value=""><?php echo "$carrou2[0]";?></textarea>
+                                            <label for="textarea2">Description</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <label for="CarrouValid2" class="btn-floating halfway-fab waves-effect waves-light red">
+                                    <i class="material-icons green">done</i>
+                                </label>
+                            </div>                   
+                        </div>
+                    </form>
+                    </div>
+                    <div class="row">
+                    <!--//////////_Slide 3_///////////-->
+                    <form action="" method="post" enctype="multipart/form-data" id="uploadimage3">
+                        <div class="col s12 m6" id="photoCarrou3" method="post" enctype="multipart/form-data">
+                            <div class="card">
+                                <div class="card-image">
+                                    <img id="previewing3" src="img/carrou3.png">
+                                    <input type="texte" id="titleArea3" name="titleArea3" class="card-title titleCarrouInput" value="<?php echo "$carrou3[1]";?>">
+                                    <input name="file3" id="file3" type="file" style="display:none">
+                                    <label for="file3" class="btn-floating halfway-fab waves-effect waves-light red">
+                                        <i class="material-icons">photo_library</i>
+                                    </label>
+                                    <input value="Upload" class="submit" id="CarrouValid3" style="display:none" type="submit" name="submit" >
+                                </div>
+                                <div class="input-field card-content">
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <textarea id="textarea3" name="textarea3" class="materialize-textarea" value=""><?php echo "$carrou3[0]";?></textarea>
+                                            <label for="textarea3">Description</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <label for="CarrouValid3" class="btn-floating halfway-fab waves-effect waves-light red">
+                                    <i class="material-icons green">done</i>
+                                </label>
+                            </div>                   
+                        </div>
+                    </form>
+                    <!--//////////_Slide 4_///////////-->
+                    <form action="" method="post" enctype="multipart/form-data" id="uploadimage4">
+                        <div class="col s12 m6" id="photoCarrou4" method="post" enctype="multipart/form-data">
+                            <div class="card">
+                                <div class="card-image">
+                                    <img id="previewing4" src="img/carrou4.png">
+                                    <input type="texte" id="titleArea4" name="titleArea4" class="card-title titleCarrouInput" value="<?php echo "$carrou4[1]";?>">
+                                    <input name="file4" id="file4" type="file" style="display:none">
+                                    <label for="file4" class="btn-floating halfway-fab waves-effect waves-light red">
+                                        <i class="material-icons">photo_library</i>
+                                    </label>
+                                    <input value="Upload" class="submit" id="CarrouValid4" style="display:none" type="submit" name="submit" >
+                                </div>
+                                <div class="input-field card-content">
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <textarea id="textarea4" name="textarea4" class="materialize-textarea" value=""><?php echo "$carrou4[0]";?></textarea>
+                                            <label for="textarea4">Description</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <label for="CarrouValid4" class="btn-floating halfway-fab waves-effect waves-light red">
+                                    <i class="material-icons green">done</i>
+                                </label>
+                            </div>                   
+                        </div>
+                    </form>
+                </div>
+            </div>
+
             <div id="gestionUser" class=" mySwipe">
                 <ul id="listeAdmin" class="collection">
  
@@ -180,13 +316,13 @@ else {
                         <div action="#" id="role">
                             <span>
                                 <label>
-                                    <input name="role" value="1" type="radio" checked/>
+                                    <input name="role" value="1" type="radio" checked />
                                     <span>Administrateur</span>
                                 </label>
                             </span>
                             <span>
                                 <label>
-                                    <input name="role" value="2" type="radio"/>
+                                    <input name="role" value="2" type="radio" />
                                     <span>Modérateur</span>
                                 </label>
                             </span>
@@ -208,7 +344,7 @@ else {
             <form method="post">
                 <p class="range-field">
                     <label for="nbPerso">Sélectionnez la nouvelle valeur :</label>
-                    <input type="number" id="nbPerso" min="1"/>
+                    <input type="number" id="nbPerso" min="1" />
                 </p>
             </form>
         </div>
@@ -366,6 +502,12 @@ else {
         crossorigin="anonymous"></script>
     <script src="../js/librairies/heure.js"></script>
     <script src="admin.js"></script>
+    <script src="carrousel.js"></script>
+    <script src="carrousel2.js"></script>
+    <script src="carrousel3.js"></script>
+    <script src="carrousel4.js"></script>
+
+
 </body>
 
 </html>

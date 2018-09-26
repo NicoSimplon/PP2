@@ -127,3 +127,16 @@ h5 {
 	display: none;
 }
 
+.titleCarrouInput{
+	background-color: rgba(0, 0, 0, 0.5) !important;
+	border: none !important;
+}
+
+.carrouTextChange{
+	width: 100%;
+}
+
+#previewing{
+	width: 100%;
+	height: auto;
+}
