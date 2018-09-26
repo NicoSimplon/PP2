@@ -30,25 +30,15 @@ function setSelectEvent(){
 	);
 
 	$.ajax({
-
 		url: 'eventList.php',
-		
 		type: 'POST',
-
 		data: {case: 'eventList'},
-
 		success: function(data){
-			
 			var liste = JSON.parse(data);
-
 			for(var i = 0; i < liste.length; i++){
-
 				var nom = liste[i].event;
-
 				$("#eventList").append('<option value="'+ nom +'">'+ nom +'</option>');
-
 			}
-
 		}
 	});
 }
