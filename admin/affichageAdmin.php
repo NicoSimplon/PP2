@@ -1,5 +1,6 @@
 <?php
 include "../connexion/connexion_bdd.php";
+
 $UserCard = pg_query("SELECT nom_admin, droit_admin FROM tab_admin");
 
 while ($recupUserCard = pg_fetch_array($UserCard)) {

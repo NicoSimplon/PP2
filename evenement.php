@@ -26,7 +26,9 @@
     <section>
         <?php 
             $requete = pg_query("SELECT id_event, to_char(date_fin, 'dd/mm/YYYY')as fin , to_char(date_event, 'dd/mm/YYYY') as debut , event, descriptif, url_img
-            FROM evenement");
+            FROM evenement 
+            WHERE date_event >= now()
+            ORDER BY date_event ASC");
 
             while ($createCard = pg_fetch_assoc($requete)) {
                 $fin = '';

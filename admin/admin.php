@@ -97,7 +97,17 @@ else {
                                         
                                     </p>
                                     <div id="modif_event">
-                                        <button id="modalModifEvent" class="btn waves-effect waves-light modal-trigger" href="#formModifEvent">Modifier l'événement</button>
+                                        <p>
+                                            <button id="modalModifEvent" class="btn waves-effect waves-light modal-trigger" href="#formModifEvent">Modifier l'événement</button>
+                                            <a class="waves-effect waves-light btn secondary-content dropdown-trigger" data-target="btnDeleteEvent">
+                                                <i class="material-icons right" href="#">highlight_off</i>
+                                                Supprimer l'événement
+                                            </a>
+                                            <ul id="btnDeleteEvent" class="dropdown-content row">
+                                                <a class="btn red col s6" href="#!" id="btnDelete">Supprimer</a>
+                                                <a class="btn col s6" href="#!">Annuler</a>
+                                            </ul> 
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="col offset-m2"></div>
@@ -292,7 +302,7 @@ else {
     <div id="formModifEvent" class="modal modalAdmin">
         <div class="modal-content">
             <h4>Modifier un événement</h4>
-            <form method="post">
+            <form method="post" id="formM">
             <div class="row">
                 <div class="col s12 m6">
                     <div class="row">
@@ -300,7 +310,7 @@ else {
                             <div class="row">
                                 <div class="input-field col s12">
                                     <i class="material-icons prefix">textsms</i>
-                                    <input type="text" required id="nom_evenement" class="autocomplete">
+                                    <input type="text" id="nom_evenement" value=" ">
                                     <label for="nom_evenement">Nom de l'événement (obligatoire)</label>
                                 </div>
                             </div>
@@ -309,11 +319,11 @@ else {
                             <div class="row">
                                 <div class="input-field col s12">
                                     <label for="modif_date_event">Date de début de l'événement (obligatoire)</label>
-                                    <input id="modif_date_event" class="datepicker" required type="text" >
+                                    <input id="modif_date_event" class="datepicker" type="text" value=" ">
                                 </div>
                                 <div class="input-field col s12">
                                     <label for="modif_date_fin">Date de fin de l'événement (facultatif)</label>
-                                    <input id="modif_date_fin" class="datepicker" type="text" >
+                                    <input id="modif_date_fin" class="datepicker" type="text" value=" ">
                                 </div>
                             </div>
                         </div>
@@ -322,17 +332,18 @@ else {
                 <div class="col s12 m6">
                     <div>
                         <input class="cache" type="file" name="modif_imgAgenda" id="modif_imgAgenda">
-                        <img id="modif_miniature" src="https://www.fing.edu.uy/inco/grupos/gsi/img/placeholder.png" alt="" width="100%">
+                        <img id="modif_miniature" src="../img_event/photo.png" alt="" width="100%" data-url="../img_event/photo.png">
                         <label for="modif_imgAgenda" class="btn-floating waves-effect waves-light red right">
                             <i class="material-icons">photo_library</i>
                         </label>
+                        <input type="hidden" name="url_image" id="url_img">
                     </div>
                 </div>
                 <div class="col s12">
                     <div class="row">
                         <div class="input-field col s12">
                             <i class="material-icons prefix">textsms</i>
-                            <textarea id="modif_descriptif" class="materialize-textarea" required></textarea>
+                            <textarea id="modif_descriptif" class="materialize-textarea">Descriptif</textarea>
                             <label for="modif_descriptif">Descriptif (obligatoire)</label>
                         </div>
                     </div>

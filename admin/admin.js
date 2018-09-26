@@ -17,6 +17,7 @@ $(document).ready(function() {
 	
 	// remplie la liste déroulante
 	setSelectEvent();
+	$("#modif_event").hide();
 
 	// Ajout nouvel événement
 	$('.datepicker').datepicker({
@@ -77,6 +78,9 @@ $("#eventList").on('change', function(){
 	// On renseigne le total de réservations
 	getTotalResa(nomEvent);
 
+	// On affiche les boutons
+	$("#modif_event").show();
+
 });
 
 function setEventTable(evenement){
@@ -89,7 +93,7 @@ function setEventTable(evenement){
 		},
 		success: function(arg){
 
-		  $("#tableau_reservation").html(arg);
+			$("#tableau_reservation").html(arg); 
 
 		}
 	});
@@ -334,6 +338,7 @@ $("#validerAjout").click(function(){
 		success: function(data){
 			M.toast({html:data});
 			setSelectEvent();
+			$("#modif_event").hide();
 		}
 	});
 
@@ -383,7 +388,93 @@ $("#modalModifEvent").click(function(){
 			$("#modif_date_event").val(json[0].date_event);
 			$("#modif_date_fin").val(json[0].date_fin);
 			$("#modif_descriptif").val(json[0].descriptif);
+			$("#modif_miniature").attr('src', "../img_event/" + json[0].url_img);
+			$("#modif_miniature").data('url', "../img_event/" + json[0].url_img);
+			
+			if($("#modif_miniature").attr('src') == '../img_event/null'){
+				$("#modif_miniature").attr('src', '../img_event/photo.png');
+				$("#modif_miniature").data('url', "../img_event/photo.png");
+			}
 
+		}
+	});
+
+});
+
+$("#modif_imgAgenda").change(function(){
+
+	var file = this.files[0];
+	var imagefile = file.type;
+	var match = ["image/jpeg", "image/png", "image/jpg"];
+
+	if(!((imagefile==match[0]) || (imagefile==match[1]) || (imagefile==match[2]))){
+
+		$("#modif_miniature").attr('src', '../img_event/photo.png');
+
+		return false;
+	}
+	else{
+
+		var reader = new FileReader();
+		reader.onload = imageIsLoadedModif;
+		reader.readAsDataURL(this.files[0]);
+	}
+});
+function imageIsLoadedModif(e){
+	
+	$("#modif_miniature").attr('src', e.target.result);
+
+}
+
+$("#validerModifForm").click(function(){
+
+	var tabData = [];
+
+	var event = $("#nom_evenement").val();
+	var date_event = $("#modif_date_event").val();
+	var date_fin = $("#modif_date_fin").val();
+	var descriptif = $("#modif_descriptif").val();
+	var url = $("#modif_imgAgenda").val();
+	var data = $("#modif_miniature").data('url'); 
+	
+	
+	if( url ){
+		
+		data = url; 
+		
+	}
+
+	tabData.push(event, date_event, date_fin, descriptif, data);
+
+	$.ajax({
+		type: 'POST',
+		url: 'modifEvent.php',
+		data:{
+			tabData: tabData
+		},
+		success:function(data){
+			M.toast({html:data});
+			setSelectEvent();
+			$("#modif_event").hide();
+		}
+	});
+	
+});
+
+$("#btnDelete").click(function(){
+
+	var event = $("#eventList").val();
+
+	$.ajax({
+		type: 'POST',
+		url: 'deleteEvent.php',
+		data:{
+			event: event
+		},
+		success: function(data){
+			M.toast({html:data});
+			setSelectEvent();
+			$("#modif_event").hide();
 		}
 	});
 
