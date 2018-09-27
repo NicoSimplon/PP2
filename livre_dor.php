@@ -73,7 +73,7 @@
     <H2>Commentaires :</H2>
       <?php
           $valider = pg_query("SELECT * FROM commentaire");
-          // print_r($valider);
+         
           while ($req = pg_fetch_assoc($valider)){
        ?>
   
