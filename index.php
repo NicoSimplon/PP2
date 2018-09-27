@@ -328,7 +328,7 @@ c4 -222 10 -787 14 -1257z m-417 29 l1 -325 -28 55 c-80 154 -131 373 -138
 					ORDER BY date_event asc
 					limit 3;");
 
-
+				$stockAlert = '';
 				while ($recupInfoAlert = pg_fetch_array($alertDyn)) {
 					$fin = '';
 					$debut = '';
@@ -364,21 +364,23 @@ c4 -222 10 -787 14 -1257z m-417 29 l1 -325 -28 55 c-80 154 -131 373 -138
 	</section>
 
 	<section>
-		<div class="gridContainer">
-			<div class="cell flipInX">
-				<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam vel atque debitis quia provident ab obcaecati mollitia
+		<div class="container">
+			<div class="row cell flipInX">
+				<div class="col s12 m6">
+					<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam vel atque debitis quia provident ab obcaecati mollitia nulla sequi explicabo!</p>
+				</div>
+				<div class="col s12 m6">
+					<img src="img/foule.png" class="testImg">
+				</div>
+			</div>
+			<div class="row cell flipInX">
+				<div class="col s12 m6">
+					<img src="img/foule.png" class="testImg">
+				</div>
+				<div class="col s12 m6">
+					<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam vel atque debitis quia provident ab obcaecati mollitia
 					nulla sequi explicabo!</p>
-			</div>
-			<div class="cell flipInX">
-				<img src="img/foule.png" class="testImg">
-			</div>
-			<div class="cell flipInX">
-
-				<img src="img/foule.png" class="testImg">
-			</div>
-			<div class="cell flipInX">
-				<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam vel atque debitis quia provident ab obcaecati mollitia
-					nulla sequi explicabo!</p>
+				</div>
 			</div>
 		</div>
 		<!-- Facebook -->

@@ -1,80 +1,209 @@
+<?php
+
+session_start();
+
+if(empty($_SESSION['co'])){
+
+    header('Location: ../login.php');     
+}
+
+
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Administration</title>
+    <title>Admin</title>
     <link rel="stylesheet" type="text/css" href="../css/materialize.css">
     <link rel="stylesheet" type="text/css" href="../css/admin.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <?php
+
+        include "../connexion/connexion_bdd.php";
+
+        $mail = $_SESSION['user'];
+
+        $requeteNom = pg_fetch_array(pg_query("SELECT nom_admin FROM tab_admin WHERE mail_admin = '".$mail."';"));
+
+    ?>
 </head>
 
 <body>
-<section>
-    <div class="sousMenuContainer">
-        <div class="enTête">
-            <div class="image">
-                <img id="myImg" src="../img/logocolo.jpg">
-            </div>
+    <section>
+        <div class="sousMenuContainer">
+            <div class="enTête">
+                <div class="image">
+                    <img id="myImg" src="../img/logocolo.jpg">
+                </div>
+                <div class="myName">
+                    <h6>Bonjour, <?php echo "$requeteNom[0]";?></h6>
+                </div>
             <div class="myName">
-                <h6 id="variente"></h6>
-                <h6>Admin</h6>
+                <a class="myName" href="../deconnexion.php" >
+                <button class="btn waves-effect waves-light"  type="button" name="deconnexion" id="bouton_deconnexion" value="Déconnexion"> DECONNEXION
+                </button> 
+                </a>
             </div>
-            <div class="myName"><a>Deconnexion</a></div>
+            </div>
+            <div class="heureDate">
+                <div class="date">
+                    <h5>
+                        <?php
+                            setlocale(LC_TIME, 'fr_FR.utf8', 'fra');
+                            echo (strftime("%A %d %B"));
+                        ?>
+                    </h5>
+                </div>
+                <div class="heure">
+                    <h6 id="insertDate">
+                    </h6>
+                </div>
+            </div>
         </div>
 
-        <div class="heureDate">
-            <div class="date">
-                <h5>
-                <?php
-                    setlocale(LC_TIME, 'fr_FR.utf8', 'fra');
-                    echo (strftime("%A %d %B"));
-                ?>
-            </h5>
+        <div id="containerMenu">
+            <ul id="tabs-swipe" class="tabs">
+                <li class="tab col">
+                    <a class="active" href="#renseigner">Evenements</a>
+                </li>
+                <li class="tab col">
+                    <a href="#modifier">Comentaires</a>
+                </li>
+                <li class="tab col">
+                    <a href="#renseignement">Clients</a>
+                </li>
+                <li class="tab col">
+                    <a href="#imageMod">Images</a>
+                </li>
+                <li class="tab col">
+                    <a href="#gestionUser">Gestion utilisateur</a>
+                </li>
+            </ul>
+            <div id="renseigner" class=" mySwipe active">
+                <div class="containerTools">
+                    <ul class="collection">
+                        <li class="collection-item">
+                            <label>Séléctionner un Evenement</label>
+                            <div class="input-field col s12">
+                                <select id="eventList" class="requete browser-default">
+                                    
+                                </select>
+                            </div>
+                            <p class="inline txt" id="date_evenement">
+                                
+                            </p>
+                        </li>    
+                    </ul>
+                </div>
+                <div class="contentInfo">
+                    <table class="striped">
+                        <thead>
+                            <tr>
+                                <th>Nom</th>
+                                <th>Prénom</th>
+                                <th>Réservations</th>
+                                <th>E-mail</th>
+                                <th>Téléphone</th>
+                                <th>Modifier/Supprimer</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableau_reservation">
+                        </tbody>
+                    </table>
+                    <hr>
+                    <div id="total">
+                        
+                    </div>
+                    <input type="hidden" name="id_perso" id="id_perso">
+                    <input type="hidden" name="id_event" id="id_event">
+                </div>
             </div>
-            <div class="heure">
-                <h6 id="insertDate">
+            <div id="modifier" class=" mySwipe">Test 3</div>
+            <div id="renseignement" class=" mySwipe ">Test 3</div>
+            <div id="imageMod" class=" mySwipe">Test 2</div>
+            <div id="gestionUser" class=" mySwipe">
+                <ul id="listeAdmin" class="collection">
+ 
+               
 
-                </h6>
+                
+                 </ul>
+                <a class="btn-large modal-trigger waves-effect waves-light right" href="#modalAjoutUtil" name="action">Ajouter un utilisateur
+                    <i class="material-icons right">person_add</i>
+                </a>
+            </div>
+
+        </div>
+        <div id="modalAjoutUtil" class="modal">
+            <form class="modal-content">
+                <h4>Ajouter un utilisateur</h4>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="nom" name="nom" type="text" class="validate">
+                        <label for="nom">Nom</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input id="mail" name="mail" type="email" class="validate">
+                        <label for="mail">Mail</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input id="password" name="password" type="password" class="validate">
+                        <label for="password">Mot de passe</label>
+                        <div action="#" id="role">
+                            <span>
+                                <label>
+                                    <input name="role" value="1" type="radio" checked/>
+                                    <span>Administrateur</span>
+                                </label>
+                            </span>
+                            <span>
+                                <label>
+                                    <input name="role" value="2" type="radio"/>
+                                    <span>Modérateur</span>
+                                </label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <div class="modal-footer">
+                <a id="valideNewUser" type="submit" class="btn modal-close waves-effect waves-light">Valider</a>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div id="containerMenu">
-        <ul id="tabs-swipe" class="tabs">
-        <li class="tab col s3">
-                <a href="#renseigner">Renseigner</a>
-            </li>
-            <li class="tab col s3">
-                <a href="#ajouter">Ajouter</a>
-            </li>
-            <li class="tab col s3">
-                <a href="#modifier">Modifier</a>
-            </li>
-            <li class="tab col s3">
-                <a href="#supprimer">Supprimer</a>
-            </li>
-            <li class="tab col s3">
-                <a href="#images">Images</a>
-            </li>
-        </ul>
-        <div id="renseigner" class=" mySwipe red ">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis, suscipit quasi nam esse repellat eaque? Ad sit, fugit debitis tempora a reprehenderit soluta veniam iste alias laborum ducimus illum ex, facere iure id. Nihil non, delectus totam incidunt modi perspiciatis vel deleniti quae officia doloribus nulla a, tempora laboriosam expedita quod voluptates harum. Aut amet illo eligendi unde. Corporis id voluptatem quisquam obcaecati, ea ipsum culpa dignissimos libero ad quaerat dolorum facere quia quae vitae ducimus omnis consequatur quibusdam et fugit beatae soluta! Adipisci eaque beatae quidem ad amet quia. Voluptatibus veniam, nostrum suscipit quidem ut eveniet sequi magni incidunt doloremque similique reprehenderit temporibus laudantium doloribus libero consequatur quaerat quo assumenda expedita dolorem veritatis non neque debitis officia nam. Mollitia nesciunt pariatur quae maxime illo dolore repellendus aspernatur quasi sequi asperiores, exercitationem cumque est excepturi, aperiam officiis praesentium assumenda neque fuga ipsa ab fugiat laborum. Ipsam mollitia eveniet ut quidem vero temporibus, necessitatibus sed autem quae possimus, impedit aperiam corrupti hic fuga? Dolore itaque vero, ut accusantium officia debitis perferendis aspernatur voluptatem voluptas nostrum. Rem repellendus earum perferendis aperiam nemo adipisci, quos nulla totam autem delectus non facere inventore placeat ratione expedita? Pariatur porro et sunt facilis reprehenderit non, omnis ipsum illo molestiae velit distinctio sapiente, quidem vel nisi totam laudantium maxime sit aliquid reiciendis. Saepe dolore, tempora laborum tempore nam soluta possimus ab in sint laboriosam, veniam totam? Quae in deserunt veritatis quibusdam temporibus repudiandae, ullam assumenda perspiciatis ad accusamus mollitia dicta molestiae quia amet! Modi iure error odit atque optio eaque sunt est nemo, vel tempora natus consequuntur totam cum praesentium perferendis. Repellat deserunt impedit ipsa et voluptatibus consequuntur non perspiciatis voluptatem fuga dolorum numquam magnam fugit velit nostrum nam est voluptas illum quas vitae, adipisci illo, soluta accusamus eveniet culpa! Deserunt at dignissimos iusto nulla id dolore dolores nostrum amet possimus, nam omnis ullam ipsa saepe assumenda accusantium quae est quam harum quod inventore aut pariatur nisi placeat cumque. Odit ea ipsam ullam veniam rerum quis earum ex eveniet provident quidem nobis voluptatem cupiditate, quas fuga. Voluptas deleniti at facere rerum officiis excepturi minima, pariatur repellat ipsa placeat vel neque dolores architecto, nisi quos accusamus distinctio animi deserunt voluptates hic? Error quam nostrum quos iste magni, dolor eum maxime saepe eveniet officiis! Id impedit natus quam molestias odio culpa nostrum sapiente provident saepe assumenda distinctio non nobis suscipit nulla nam earum labore sint delectus explicabo, quasi autem consequatur! Adipisci sint deserunt nobis. Quia blanditiis quam nemo quasi libero mollitia explicabo perspiciatis maiores, saepe enim velit minus dicta consequatur minima eaque laudantium, magni sit voluptates aliquam asperiores ullam. Voluptatibus rem, perspiciatis omnis in minus illo id provident debitis modi, neque voluptatem est unde excepturi odit. Ipsam culpa velit excepturi illum exercitationem rem vel assumenda consectetur quas neque repudiandae magni, quisquam cum ullam eius perspiciatis inventore dolorum, enim praesentium nulla et mollitia. Temporibus id earum non molestias eius ex, officia vero aspernatur quo assumenda eos ut laboriosam sunt nostrum reiciendis sed neque pariatur voluptas, adipisci facilis a distinctio suscipit. Dolore consequatur odit deleniti nesciunt totam sint illum facilis dignissimos vel assumenda. Nemo libero sit sunt unde qui officiis nihil amet repellendus iure eius, laborum neque pariatur molestiae possimus alias vel esse ratione eveniet suscipit corporis. Facere explicabo earum, voluptas vel iste sunt voluptatum, iusto obcaecati deleniti quibusdam magni repellat, nulla tenetur ullam. Reiciendis quos aperiam vel ea, corrupti vitae ipsa eaque. Exercitationem tenetur dolor soluta officia aspernatur odit. Necessitatibus, quidem voluptatibus. Eius error laboriosam atque id, perspiciatis inventore quisquam molestiae nisi, maiores, autem recusandae ullam laudantium quidem commodi ipsam minima veniam est? Sunt iusto impedit optio neque dicta modi.</div>
-        <div id="ajouter" class=" mySwipe green ">Test 2</div>
-        <div id="modifier" class=" mySwipe yellow ">Test 3</div>
-        <div id="supprimer" class=" mySwipe blue ">Test 4</div>
-        <div id="images" class=" mySwipe grey  "></div>
+    <!-- Modales Modi Resa -->
+    <div id="modalModifResa" class="modal hPlus">
+        <div class="modal-content">
+            <h4>Modifier le nombre de réservations</h4>
+            <form method="post">
+                <p class="range-field">
+                    <label for="nbPerso">Sélectionnez la nouvelle valeur :</label>
+                    <input type="number" id="nbPerso" min="1"/>
+                </p>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <p>
+                <a id="validerModif" href="#!" class="modal-close btn waves-effect waves-light" onclick="setModif()">Valider</a>
+                <a href="#!" class="modal-close btn waves-effect waves-light red">Annuler</a>
+            </p>
+        </div>
     </div>
-</section>
 
     <script src="../js/librairies/jquery.js"></script>
     <script src="../js/librairies/materialize.js"></script>
-    <script src="../js/navfoot.js"></script>
-    <script src="../js/swipe.js"></script>
+    <script src="../js/librairies/swipe.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
         crossorigin="anonymous"></script>
     <script src="../js/librairies/heure.js"></script>
-    <script src="../js/main.js"></script>
+    <script src="admin.js"></script>
 </body>
 
 </html>

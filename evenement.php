@@ -11,9 +11,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Agenda</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/materialize.css"></link>
-    <link rel="stylesheet" type="text/css" href="css/main.css"></link>
-    <link rel="stylesheet" type="text/css" href="css/navfoot.css"></link>
+    <link rel="stylesheet" type="text/css" href="css/materialize.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/navfoot.css">
 </head>
 
 <body>
@@ -74,7 +74,7 @@
                             </span>
                             <span class="TitleDateHide card-title grey-text text-darken-4" data-recupval="Val">'.$createCard['event'].'</span>
                             <span class="TitleDateHide card-title grey-text text-darken-4" data-recupval="Val">' . $debut . " " . $fin . '</span>
-                            <p>Atiste(s): '.$createCard['nom_artiste'].'</p>
+                            <p>Artiste(s): '.$createCard['nom_artiste'].'</p>
                             <p class="description">'.$createCard['descriptif']. '</p>
                             </div>
                         </div>';

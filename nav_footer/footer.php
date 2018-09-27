@@ -1,6 +1,6 @@
-<footer class="page-footer blue-grey lighten-1">
+<footer class="page-footer blue-grey lighten-1 fullwidth">
 
-        <div class="container  ">
+        <div class="container">
           <div class="row">
 
             <div class="col l6 s12 ">
@@ -9,19 +9,23 @@
             </div>
             <div class="col l4 offset-l2 s12">
               <h5 class="white-text">Réseaux sociaux:</h5>
-              <ul>
-                <li><a  href="https://www.facebook.com/colo.co.81/"><i class="fab fa-facebook" width="50%"></i></a></li>
-                <li><a  href="https://twitter.com/" class="grey-text text-lighten-3" ><img src="img/twitter.png" width="30%"></a></li>
-                <!-- <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li> -->
-              </ul>
+              <div class="section">
+                <div class="row">
+                  <div class="col s6 center-align">
+                    <a  href="https://www.facebook.com/colo.co.81/"><i class="fab fa-facebook fa-4x"></i></a>
+                  </div>
+                  <div class="col s6 center-align">
+                    <a  href="https://twitter.com/" class="grey-text text-lighten-3" ><i class="fab fa-twitter-square fa-4x"></i></a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
         <div class="footer-copyright">
           <div class="container">
           © 2018 Copyright Text
-          <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+          <a class="right btn indigo" href="admin/admin.php">Admin</a>
           </div>
         </div>
       </footer>

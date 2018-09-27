@@ -4,50 +4,50 @@
     </div>
     <div id="menuptdroit">
         <div class="containerBtnTitle">
-            <a href="index.php" class="">
+            <a href="index.php" id="lien_accueil">
                 <i style="font-size:2rem" class="fas fa-home"></i>
             </a>
         </div>
         <div class="containerBtnTitle">
-            <a href="evenement.php" class="">Agenda</a>
+            <a href="evenement.php" id="lien_agenda">Agenda</a>
             <div class="petitsAngre">
-                <i class="fas fa-cog petitAngre1"></i>
-                <i class="fas fa-cog petitAngre2"></i>
+                <i class="fas fa-cog petitAngre1" id="engre_agenda1"></i>
+                <i class="fas fa-cog petitAngre2" id="engre_agenda2"></i>
             </div>
         </div>
         <div class="containerBtnTitle">
-            <a href="" class="">A propos</a>
+            <a href="qui_sommes_nous.php" id="lien_apropos">À propos</a>
             <div class="petitsAngre">
-                <i class="fas fa-cog petitAngre1"></i>
-                <i class="fas fa-cog petitAngre2"></i>
+                <i class="fas fa-cog petitAngre1" id="engre_apropos1"></i>
+                <i class="fas fa-cog petitAngre2" id="engre_apropos2"></i>
             </div>
         </div>
         <div class="containerBtnTitle">
-            <a href="" class="">Contact</a>
+            <a href="contact.php" id="lien_contact">Contact</a>
             <div class="petitsAngre">
-                <i class="fas fa-cog petitAngre1"></i>
-                <i class="fas fa-cog petitAngre2"></i>
+                <i class="fas fa-cog petitAngre1" id="engre_contact1"></i>
+                <i class="fas fa-cog petitAngre2" id="engre_contact2"></i>
             </div>
         </div>
         <div class="containerBtnTitle">
-            <a href="" class="">Commentaire</a>
+            <a href="livre_dor.php" id="lien_commentaire">Commentaire</a>
             <div class="petitsAngre">
-                <i class="fas fa-cog petitAngre1"></i>
-                <i class="fas fa-cog petitAngre2"></i>
+                <i class="fas fa-cog petitAngre1" id="engre_commentaire1"></i>
+                <i class="fas fa-cog petitAngre2" id="engre_commentaire2"></i>
             </div>
         </div>
         <div class="containerBtnTitle">
-            <a href="" class="">Galerie</a>
+            <a href="galerie.php" id="lien_galerie">Galerie</a>
             <div class="petitsAngre">
-                <i class="fas fa-cog petitAngre1"></i>
-                <i class="fas fa-cog petitAngre2"></i>
+                <i class="fas fa-cog petitAngre1" id="engre_galerie1"></i>
+                <i class="fas fa-cog petitAngre2" id="engre_galerie2"></i>
             </div>
         </div>
         <div class="containerBtnTitle">
-            <a href="" class="">Pro-presse</a>
+            <a href="propresse.php" id="lien_infopresse">Info-presse</a>
             <div class="petitsAngre">
-                <i class="fas fa-cog petitAngre1"></i>
-                <i class="fas fa-cog petitAngre2"></i>
+                <i class="fas fa-cog petitAngre1" id="engre_infopresse1"></i>
+                <i class="fas fa-cog petitAngre2" id="engre_infopresse2"></i>
             </div>
         </div>
     </div>
