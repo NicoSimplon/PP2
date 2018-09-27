@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P"
         crossorigin="anonymous">
   <link type="text/css" href="css/commentaire.css">
-  <link rel="stylesheet" type="text/css" href="css/fomulaire.css">
+  <link rel="stylesheet" type="text/css" href="css/commentaire.css">
 	<link rel="stylesheet" type="text/css" href="css/navfoot.css">
 	<link rel="stylesheet" type="text/css" href="css/materialize.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
@@ -65,20 +65,21 @@
     </div>
   </div>
   <div class="container center-align">
-  <input id="btn" type="submit" name="envoi" value="envoyer">
+  <input id="btn_envoi" type="submit" name="envoi" value="envoyer">
   </div>
 </form>
 </div>
 
-    <H2>Commentaires :</H2>
+    <H5>Commentaires :</H5>
+    <div class="row ">
+
       <?php
           $valider = pg_query("SELECT * FROM commentaire");
          
           while ($req = pg_fetch_assoc($valider)){
        ?>
   
-      <div class="row comment_card">
-        <div class="col">
+        <div class="col offset-s3 s6">
           <div class="card">
             <div class="card-content ">
                 <span class="card-title"><?= $req['pseudo'] ?></span>
@@ -89,7 +90,7 @@
             </div>
           </div>
         </div>
-      </div>
+     
       
       <!-- <span></span>
    </br></br> -->
@@ -97,7 +98,7 @@
     <?php
     }
     ?>
-   
+    </div>
 <div>
 <?php
 include 'nav_footer/footer.php';

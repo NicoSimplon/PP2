@@ -416,13 +416,13 @@ c4 -222 10 -787 14 -1257z m-417 29 l1 -325 -28 55 c-80 154 -131 373 -138
 	<section>
 	<div class="last_com">
 	<h5 class="left_align">Avis : </h5>
+	<div class="row">
     <?php
        $last_comment = pg_query("SELECT commentaire, date_com, pseudo FROM commentaire LIMIT 5 OFFSET 3");
     	// print_r($last_comment);
     	while ($req = pg_fetch_assoc($last_comment)){
          	  ?>
-<div class="row center-align">
-   <div class="col s12 m6">
+   <div class="col offset-s3 s6">
      <div class="card ">
        <div class="card-content ">
          <span class="card-title"><?= $req['pseudo'] ?></span>
@@ -433,12 +433,12 @@ c4 -222 10 -787 14 -1257z m-417 29 l1 -325 -28 55 c-80 154 -131 373 -138
        </div>
      </div>
    </div>
- </div>
-
-
-            <?php  
+   
+   
+   <?php  
      	  }
            ?>
+		   </div>
     </div>
         
     </div>

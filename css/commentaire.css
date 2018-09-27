@@ -18,4 +18,17 @@ a{
 .formulaire{
     margin-bottom: 100px;
 }
+card_content{
+    width:50%;
+}
 
+#btn_envoi{
+    background-color: #cbd13d !important;
+    color : #fefefe;
+    border : 2px #cbd13d solid;
+    width:30%;
+}
+
+.card-magic{
+    width:50%;
+}
