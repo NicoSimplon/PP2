@@ -18,7 +18,7 @@ if (isset($_POST['nom'])){
             );
 
             if($result){
-                echo "nouvel utilisisateur : ".$nom_admin." créé" ;
+                echo "nouvel utilisateur : ".$nom_admin." créé" ;
             }
         }
         else{

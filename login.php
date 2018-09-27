@@ -43,17 +43,16 @@
 		<div class="row">
 			<div class="input-field col s12">
 				<input id="motdepasse" name="motdepasse" type="password" class="validate">
-				<label class="active" for="password">Password</label>
+				<label class="active" for="mot de passe">Mot de passe</label>
 			</div>
 		</div>
 		<div class="row">
 			<div class="input-field col s12">
-				<button class="btn waves-effect waves-light" type="submit">Se connecter
+				<button id="btn_submit" class="waves-effect waves-light btn" type="submit">Se connecter
 				</button>
 			</div>
-
 		</div>
-		</form>
+	</form>
 		<div class="row" >
 			<a class="row" href="index.php">
 			<div class="input-field col s12">

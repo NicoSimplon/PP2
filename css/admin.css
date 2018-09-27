@@ -1,53 +1,25 @@
 html body {
 	margin: 0;
-	display: inline-flex;
 	width: 100%;
 }
 
-#containerMenu {
-	float: right;
-	width: 72.1em;
-	height: 100%;
-	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
-	border-radius: 2px;
-	margin-left: 1em;
+#container {
+	padding-left: 300px;
 }
 
-.sousMenuContainer {
-	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
-	border-radius: 2px;
-	float: left;
-	width: 17em;
-	display: inline-flex;
-	flex-direction: column;
-	align-items: center;
+#content {
+	padding: 10px;
 }
 
-.collapsible {
-	box-shadow: none !important;
-	margin: 0;
+@media only screen and (max-width : 992px) {
+	#container {
+		padding-left: 0px;
+
+	}
 }
 
-section {
-	display: inline-flex;
-	width: 100vw;
-	justify-content: center;
-	flex-wrap: wrap;
-}
-
-#tabs-swipe {
-	height: 3.5em;
-	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
-}
-
-.mySwipe {
+.carousel .carousel-item {
 	width: 100%;
-	height: 40em;
-	overflow: hidden;
-}
-
-.mySwipe:hover {
-	overflow-y: auto !important;
 }
 
 .myName {
@@ -64,14 +36,6 @@ section {
 #myImg {
 	border-radius: 50px;
 	width: 5em;
-}
-
-.enTête {
-	width: 100%;
-	margin: 0.5em;
-	display: inline-flex;
-	flex-direction: column;
-	align-items: center;
 }
 
 .heureDate {
@@ -108,11 +72,14 @@ h5 {
 	border-color: black !important;
 }
 
-.row {
-	margin-bottom: 0px;
-	text-align: center;
+#btn_submit {
+	margin-left: 50px;
 }
 
-.btn:hover, .btn-large:hover, .btn-small:hover {
-	background-color: #bda76e;
+.btn,
+.btn-large,
+.btn:hover,
+.btn-large:hover,
+.btn-small:hover {
+	background-color: #bda76e !important;
 }

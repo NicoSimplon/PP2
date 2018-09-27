@@ -39,12 +39,13 @@ $(document).ready(function () {
 
 
 $(document).ready(function () {
-  $("#tabs-swipe").tabs();
+  //$("#tabs-swipe").tabs();
 
   $(".carousel.carousel-slider").carousel({
     fullWidth: true,
     indicators: true
   });
+
   function autoplay() {
     $(".sliderPerso").carousel("next");
   }
@@ -65,7 +66,10 @@ $(".ajaxBtn").click(function () {
       mailRecup: recupMail
     },
     success: function (arg) {
-      M.toast({ html: arg, inDuration: 8000 });
+      M.toast({
+        html: arg,
+        inDuration: 8000
+      });
       $("#Coloremail").val("");
     }
   });
@@ -78,18 +82,4 @@ $(document).ready(function () {
   }
   heure();
   setInterval(heure, 1000);
-
-  function saluTime() {
-    moment.locale("fr");
-    var myheure = $("#insertDate").text(moment().format("LTS"));
-    var heure = moment("18:00:00").format("LTS");
-    if (myheure > heure) {
-      $("#variente").html("Bonsoir," + "&nbsp");
-      // alert("bonsoir");
-    } else {
-      $("#variente").html("Bonjour," + "&nbsp");
-    }
-  }
-  saluTime();
 });
-

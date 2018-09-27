@@ -24,6 +24,8 @@
 	<!-- Partie contenant le bandeau -->
 
 	<header>
+	<div class="row">
+		<div id="bandeau" class="col s3">
 		<div class="bandOleft">
 			<div>
 				<img class="sizeImgBando" src="img/haut_gauche.png">
@@ -32,6 +34,8 @@
 				<img class="sizeImgBando" src="img/bas_gauche.png">
 			</div>
 		</div>
+		</div>
+		<div id="bandeau" class="col s6">
 		<div class="bandOmi">
 			<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
  "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
@@ -265,6 +269,8 @@ c4 -222 10 -787 14 -1257z m-417 29 l1 -325 -28 55 c-80 154 -131 373 -138
 			</svg>
 
 		</div>
+		</div>
+		<div id="bandeau" class="col s3">
 		<div class="bandOright">
 			<div>
 				<img class="sizeImgBando" src="img/haut_droite.png">
@@ -272,6 +278,7 @@ c4 -222 10 -787 14 -1257z m-417 29 l1 -325 -28 55 c-80 154 -131 373 -138
 			<div>
 				<img class="sizeImgBando" src="img/bas_droite.png">
 			</div>
+		</div>
 		</div>
 	</header>
 

@@ -54,7 +54,9 @@ label {
 	color: #bda76e;
 }
 
-.btn:hover, .btn-large:hover, .btn-small:hover{
+.btn:hover,
+.btn-large:hover,
+.btn-small:hover {
 	background-color: #bda76e !important;
 }
 
@@ -110,9 +112,13 @@ header {
 	flex-flow: column;
 }
 
+#bandeau {
+	padding: 0%;
+}
+
 .bandOmi {
 	height: 100%;
-	width: 60%;
+	width: 100%;
 	float: inline-start;
 	position: relative;
 	display: flex;
@@ -121,12 +127,13 @@ header {
 }
 
 .bandOright {
-	float: right;
+	/* float: right; */
 	width: 20%;
 	height: 100%;
 	display: flex;
 	align-items: end;
 	flex-flow: column;
+	margin-left: 80%;
 }
 
 .sizeImgBando {

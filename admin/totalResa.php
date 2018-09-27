@@ -13,6 +13,6 @@
         
         $resReqTotal = pg_fetch_array($reqTotal);
 
-        echo "<p>Nombre total de réservations: <span><strong>".$resReqTotal['sum']."<strong></span></p>";
+        echo "<p> Nombre total de réservations: <span><strong>".$resReqTotal['sum']."<strong></span></p>";
     }
 

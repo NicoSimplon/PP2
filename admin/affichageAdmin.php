@@ -18,7 +18,7 @@ echo'
         <i class="large material-icons circle '.$roleColor.'">person</i>
         <p class="title"><b>'.$recupUserCard['nom_admin'].'</b></p>
         <p>'.$role.'</p>
-        <a class="waves-effect waves-light btn secondary-content dropdown-trigger" data-target="'.$recupUserCard['nom_admin'].'">
+        <a class=" waves-effect waves-light btn-small dropdown-trigger waves-effect waves-light " data-target="'.$recupUserCard['nom_admin'].'">
             <i class="material-icons right " href="#">highlight_off</i>
             Supprimer utilisateur
         </a>

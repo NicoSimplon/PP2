@@ -1,20 +1,19 @@
-$(document).ready(function() {
-    $("select").formSelect();  
-    $("#tabs-swipe").tabs();
-    $('#modalAjoutUtil').modal();
-    $('.dropdown-trigger').dropdown();
-    $("#modal1").modal();
-
-    affichageAdmin();
+$(document).ready(function () {
+	$("select").formSelect();
+	$("#swipe").tabs();
+	$('#modalAjoutUtil').modal();
+	$('.dropdown-trigger').dropdown();
+	$("#modal1").modal();
+	affichageAdmin();
 
 	function heure() {
 		moment.locale("fr");
 		var myheure = $("#insertDate").text(moment().format("LTS"));
 	}
-	
+
 	heure();
 	setInterval(heure, 1000);
-	
+
 	// remplie la liste déroulante
 	setSelectEvent();
 
@@ -23,7 +22,7 @@ $(document).ready(function() {
 
 });
 
-function setSelectEvent(){
+function setSelectEvent() {
 
 	$("#eventList").html(
 		'<option value="" disabled selected>Sélectionner un évènement</option>'
@@ -32,20 +31,22 @@ function setSelectEvent(){
 	$.ajax({
 
 		url: 'eventList.php',
-		
+
 		type: 'POST',
 
-		data: {case: 'eventList'},
+		data: {
+			case: 'eventList'
+		},
 
-		success: function(data){
-			
+		success: function (data) {
+
 			var liste = JSON.parse(data);
 
-			for(var i = 0; i < liste.length; i++){
+			for (var i = 0; i < liste.length; i++) {
 
 				var nom = liste[i].event;
 
-				$("#eventList").append('<option value="'+ nom +'">'+ nom +'</option>');
+				$("#eventList").append('<option value="' + nom + '">' + nom + '</option>');
 
 			}
 
@@ -53,7 +54,7 @@ function setSelectEvent(){
 	});
 }
 
-$("#eventList").on('change', function(){
+$("#eventList").on('change', function () {
 
 	// Récupère le nom de l'évènement
 	var nomEvent = $("#eventList").val();
@@ -69,24 +70,24 @@ $("#eventList").on('change', function(){
 
 });
 
-function setEventTable(evenement){
+function setEventTable(evenement) {
 
 	$.ajax({
 		type: "POST",
 		url: "admin_req.php",
 		data: {
-		  nom_eve: evenement,
+			nom_eve: evenement,
 		},
-		success: function(arg){
+		success: function (arg) {
 
-		  $("#tableau_reservation").html(arg);
+			$("#tableau_reservation").html(arg);
 
 		}
 	});
 
 }
 
-function getTotalResa(evenement){
+function getTotalResa(evenement) {
 
 	$.ajax({
 
@@ -95,7 +96,7 @@ function getTotalResa(evenement){
 		data: {
 			nom_eve: evenement
 		},
-		success: function(data){
+		success: function (data) {
 			$("#total").html(data);
 		}
 
@@ -104,15 +105,15 @@ function getTotalResa(evenement){
 }
 
 // Gestion des réservations
-function modifResa(perso, event){
-	
+function modifResa(perso, event) {
+
 	$("#id_perso").val(perso);
 	$("#id_event").val(event);
-	
+
 }
 
-function setModif(){
-	
+function setModif() {
+
 	var id_perso = $("#id_perso").val();
 	var id_event = $("#id_event").val();
 	var nb_resa = $("#nbPerso").val();
@@ -121,13 +122,15 @@ function setModif(){
 
 		type: 'POST',
 		url: 'modifResa.php',
-		data:{
+		data: {
 			perso: id_perso,
 			event: id_event,
 			nb_resa: nb_resa
 		},
-		success:function(data){
-			M.toast({html:data});
+		success: function (data) {
+			M.toast({
+				html: data
+			});
 			var nomEvent = $("#eventList").val();
 			setEventTable(nomEvent);
 			getTotalResa(nomEvent)
@@ -137,18 +140,20 @@ function setModif(){
 
 }
 
-function deleteResa(perso, event){
+function deleteResa(perso, event) {
 
 	$.ajax({
 
 		type: 'POST',
 		url: 'deleteResa.php',
-		data:{
+		data: {
 			perso: perso,
 			event: event
 		},
-		success:function(data){
-			M.toast({html:data});
+		success: function (data) {
+			M.toast({
+				html: data
+			});
 			var nomEvent = $("#eventList").val();
 			setEventTable(nomEvent);
 			getTotalResa(nomEvent);
@@ -159,53 +164,73 @@ function deleteResa(perso, event){
 }
 
 // Gestion des admins
-$("#valideNewUser").click(function(){
+$("#valideNewUser").click(function () {
 	var nom_user = $("#nom").val();
 	var mail_user = $("#mail").val();
 	var password_user = $("#password").val();
 	var droit_user = document.querySelector('input[name="role"]:checked').value;
-  
+
 	$.ajax({
-		type:"POST",
-		url:'requetteNewUser.php',
-		data:{
+		type: "POST",
+		url: 'requetteNewUser.php',
+		data: {
 			nom: nom_user,
 			mail: mail_user,
 			password: password_user,
 			droit: droit_user
 		},
-		success: function(arg){
-			M.toast({html: arg})  
+		success: function (arg) {
+			M.toast({
+				html: arg
+			})
 			$("#listeAdmin").html("");
 			affichageAdmin();
 		}
 	});
 });
-  
-  
-function affichageAdmin(){
+
+
+function affichageAdmin() {
 	$.ajax({
-	  type:"POST",
-	  url:'affichageAdmin.php',
-  
-	  success:function(arg){
-		$("#listeAdmin").html(arg);
-	  }
+		type: "POST",
+		url: 'affichageAdmin.php',
+
+		success: function (arg) {
+			$("#listeAdmin").html(arg);
+		}
 	})
-  }
-  
-  $("#valideNewUser").click(affichageAdmin());
-  function getDate(evenement){
-  
+}
+
+$("#valideNewUser").click(affichageAdmin());
+
+function getDate(evenement) {
+
 	$.ajax({
 		type: "POST",
 		url: "date_req_admin.php",
 		data: {
 			eve: evenement,
 		},
-		success: function(dt){
-			$("#date_evenement").html('<p style="font-size:20pt;"><strong>'+ dt+'</strong></p>');
+		success: function (dt) {
+			$("#date_evenement").html('<p style="font-size:20pt;"><strong>' + dt + '</strong></p>');
 		}
 	});
-  
 }
+
+$(document).ready(function () {
+	$('.sidenav').sidenav();
+});
+
+$('.button-collapse').sideNav({
+	menuWidth: 300, // Default is 300
+	edge: 'right', // Choose the horizontal origin
+	closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+	draggable: true, // Choose whether you can drag to open on touch screens,
+});
+
+$(document).ready(function () {
+	$('ul.tabs').tabs({
+		swipeable: true,
+		responsiveThreshold: 1920
+	});
+});
