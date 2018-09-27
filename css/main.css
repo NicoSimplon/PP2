@@ -646,6 +646,11 @@ header {
 	margin-right: auto;
 }
 
+.hover
+{
+	cursor: pointer;
+}
+
 /* page commentaire */
 
 

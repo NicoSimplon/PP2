@@ -14,43 +14,40 @@
 	<link rel="stylesheet" type="text/css" href="css/navfoot.css">
 	<link rel="stylesheet" type="text/css" href="css/materialize.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<?php
-		include 'connexion/connexion_bdd.php';
-	?>
 </head>
-
 <body>
     <div class="nav">
 		<?php include 'nav_footer/nav.php'; ?>
 	</div>
 
-	<div class="container">
-		<div class="row">
-			<div class="col s12 center-align">
-				<h3 class="white-text">Galerie :</h3>
+    <div class="container">
+		<div class="section">
+        	<div class="row" id="galeries">
+
+			</div>
+        </div>
+
+		<div class="section">
+			<div class="row center" id="selection_galeries">
+				<div class="col s12 m6 no_margin_left">
+					<a class="btn">Choix des galeries</a>
+				</div>
 			</div>
 		</div>
-		<div class="row valign-wrapper">
-			<div class="col s12 m4">
-				<img class="materialboxed responsive-img" id="img1" src="img/spookyPumpkin.jpeg">
-			</div>
-			<div class="col s12 m4">
-			<img class="materialboxed responsive-img" src="img/spookyTrumpet.jpg">
-			</div>
-			<div class="col s12 m4">
-			<img class="materialboxed responsive-img" src="img/spookyPumpkin.jpeg">
+
+		<div class="section">
+        	<div class="row" id="rangée_galerie">
+    
 			</div>
 		</div>
-	</div>
+    </div>
 
     <?php include 'nav_footer/footer.php'; ?>
 
-    <script src="js/librairies/jquery.js"></script>
+	<script src="js/librairies/jquery.js"></script>
 	<script src="js/librairies/materialize.js"></script>
 	<script src="js/navfoot.js"></script>
-	<script src="js/main.js"></script>
-	<script src="js/gallerie.js"></script>
-	<script src="js/librairies/swipe.js"></script>
+    <script src="js/galerie.js"></script>
 	<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
 </body>
 
