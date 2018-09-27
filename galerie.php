@@ -24,8 +24,18 @@
 
 		<div class="section">
 			<div class="row center"  id="galerie_lieu">
-			
+				<div class="col s12 m4 no_margin_left">
+					<div class="card hover card_lieu">
+						<div class="card-image">
+							<img src="img/spookyTrumpet.jpg">
+							<div class="card-content">
+								<span class="nom_evenement">Colo & Co</span>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
+			
         	<div class="row" id="galeries">
 
 			</div>
