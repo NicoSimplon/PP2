@@ -113,6 +113,33 @@ h5 {
 	text-align: center;
 }
 
-.btn:hover, .btn-large:hover, .btn-small:hover {
+.btn:hover,
+.btn-large:hover,
+.btn-small:hover,
+.btn:focus,
+.btn-large:focus,
+.btn-small:focus {
 	background-color: #bda76e;
+}
+
+.modalAdmin {
+	width: 80%;
+}
+
+.cache{
+	display: none;
+}
+
+.titleCarrouInput{
+	background-color: rgba(0, 0, 0, 0.5) !important;
+	border: none !important;
+}
+
+.carrouTextChange{
+	width: 100%;
+}
+
+#previewing{
+	width: 100%;
+	height: auto;
 }

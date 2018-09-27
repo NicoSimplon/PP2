@@ -25,16 +25,34 @@
 
     <section>
         <?php 
-            $requete = pg_query("SELECT to_char(date_fin, 'dd/mm/YYYY')as fin , to_char(date_event, 'dd/mm/YYYY') as debut , event, nom_artiste, lib_genre, descriptif, nom_artiste
-                FROM artiste
-                INNER JOIN art_genre ON artiste.id_artiste=art_genre.id_artiste
-                INNER JOIN genre ON genre.id_genre=art_genre.id_genre
-                INNER JOIN eve_art ON artiste.id_artiste=eve_art.id_artiste
-                INNER JOIN evenement ON eve_art.id_event=evenement.id_event");
+            $requete = pg_query("SELECT id_event, to_char(date_fin, 'dd/mm/YYYY')as fin , to_char(date_event, 'dd/mm/YYYY') as debut , event, descriptif, url_img
+            FROM evenement 
+            WHERE date_event >= now()
+            ORDER BY date_event ASC");
 
             while ($createCard = pg_fetch_assoc($requete)) {
-                $fin='';
-                $debut='';
+                $fin = '';
+                $debut = '';
+                $artistes = '';
+
+                $id_event = $createCard['id_event'];
+
+                $getArtistes = pg_query(
+                    "SELECT nom_artiste, lib_genre 
+                    FROM artiste
+                    INNER JOIN eve_art ON artiste.id_artiste = eve_art.id_artiste 
+                    INNER JOIN art_genre ON artiste.id_artiste = art_genre.id_artiste
+                    INNER JOIN genre ON art_genre.id_genre = genre.id_genre
+                    WHERE eve_art.id_event =".$id_event
+                );
+
+                while($art = pg_fetch_assoc($getArtistes)){
+
+                    $artistes .= '<b>'.$art['nom_artiste'].'</b> (<i class="grey-text">'.$art['lib_genre'].'</i>), <br>';
+
+                }
+
+
                 if ($createCard['fin']) {
                     $fin .= "&nbsp;"."au" . " " . $createCard['fin'];
                     $debut .= "Du " . "&nbsp;" . $createCard["debut"];
@@ -49,7 +67,7 @@
                             <span class="TitleDate card-title grey-text text-darken-4" data-recupval="Val">' . $debut . " " . $fin . '</span>
                         </div>
                         <div class="card-image waves-effect waves-block waves-light containerImgCard">
-                            <img class="activator cardImg" src="img/logocolo.jpg">
+                            <img class="activator cardImg" src="img_event/'.$createCard["url_img"].'">
 
                         </div>
                         <div class="card-content ResumeCard">
@@ -74,7 +92,7 @@
                             </span>
                             <span class="TitleDateHide card-title grey-text text-darken-4" data-recupval="Val">'.$createCard['event'].'</span>
                             <span class="TitleDateHide card-title grey-text text-darken-4" data-recupval="Val">' . $debut . " " . $fin . '</span>
-                            <p>Artiste(s): '.$createCard['nom_artiste'].'</p>
+                            <p>Artiste(s): '.$artistes.'</p>
                             <p class="description">'.$createCard['descriptif']. '</p>
                             </div>
                         </div>';

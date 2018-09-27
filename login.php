@@ -33,7 +33,7 @@
 			<h4 class="text-center"> CONNEXION</h4>
 		</div>
 	</div>
-	<form id="logform" method="post" action="connexion.php">
+	<form id="logform" method="post" action="pages_back/connexion.php">
 		<div class="row">
 			<div class="input-field col s12">
 				<input id="mail" name="mail" type="email" class="validate">
@@ -43,7 +43,7 @@
 		<div class="row">
 			<div class="input-field col s12">
 				<input id="motdepasse" name="motdepasse" type="password" class="validate">
-				<label class="active" for="password">Password</label>
+				<label class="active" for="password">Mot de passe</label>
 			</div>
 		</div>
 		<div class="row">
@@ -55,7 +55,7 @@
 		</div>
 		</form>
 		<div class="row" >
-			<a class="row" href="../index.php">
+			<a class="row" href="index.php">
 			<div class="input-field col s12">
 				<button class="waves-effect waves-light btn"><i class="material-icons center">reply</i></button>
 				</a>

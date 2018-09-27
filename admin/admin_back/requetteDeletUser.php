@@ -1,5 +1,5 @@
 <?php
-include "../connexion/connexion_bdd.php";
+include "../../connexion/connexion_bdd.php";
 
 $nom_admin = $_POST['nom'];
 

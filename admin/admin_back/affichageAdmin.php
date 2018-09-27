@@ -1,5 +1,6 @@
 <?php
-include "../connexion/connexion_bdd.php";
+include "../../connexion/connexion_bdd.php";
+
 $UserCard = pg_query("SELECT nom_admin, droit_admin FROM tab_admin");
 
 while ($recupUserCard = pg_fetch_array($UserCard)) {
@@ -31,4 +32,4 @@ echo'
 ';
 }
 ?>
-<script src="affichageAdmin.js"></script>
+<script src="js_admin/affichageAdmin.js"></script>

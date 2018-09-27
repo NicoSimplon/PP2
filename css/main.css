@@ -54,7 +54,9 @@ label {
 	color: #bda76e;
 }
 
-.btn:hover, .btn-large:hover, .btn-small:hover{
+.btn:hover,
+.btn-large:hover,
+.btn-small:hover {
 	background-color: #bda76e !important;
 }
 
@@ -63,7 +65,9 @@ label {
 	background-color: #d4c541 !important;
 }
 
-.btn:focus {
+.btn:focus,
+.btn-large:focus,
+.btn-small:focus {
 	background-color: #bda76e !important;
 }
 
@@ -367,6 +371,8 @@ header {
 .testImg {
 	height: 100%;
 	width: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
 	transform: translate(0%, 00%);
 }
 
