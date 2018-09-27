@@ -2,6 +2,7 @@ $(document).ready(function(){
     $('#selection_galeries').hide();
   });
 
+//Récupère la liste des evenements dans liste_evenement
 function setSelectEvent(){
     $.ajax({
         url: 'admin/eventList.php',
@@ -16,6 +17,8 @@ function setSelectEvent(){
 
 setSelectEvent();
 
+//Récupère la première photo de l'évènement pour l'afficher sur le dossier de l'évènement concerné
+//Récupère et affiche le nom de l'évènement sur la card lors de sa création
 function getGalerieImage(liste_evenement){
     $.ajax({
         url:'requeteImageGalerie.php',
@@ -34,14 +37,18 @@ function getGalerieImage(liste_evenement){
     })
 }
 
+//Efface les images précédemment affichées
+//Affiche la galerie sélectionnée
+//Attribue a l'image un id correspondant à l'id enregistré dans la BDD, puis exécute getGalerie et affiche les images récupérées par getGalerie
 $(document).on('click','.card',function(){
     $('#rangée_galerie').html('');
-    $('#galeries').hide();
+    $('#galerie_lieu ,#galeries').hide();
     i = $(this).children('.card-image').children('img').attr('id').replace("dossier", "");
     getGalerie(i);
     $('#selection_galeries').show();
 });
 
+//Récupère les images liées à l'évènement indiqué dans l'id de l'image du dossier de l'évènement
 function getGalerie(i){
     id_evenement = i;
     $.ajax({
@@ -59,9 +66,9 @@ function getGalerie(i){
     });
 }
 
-
-$('#selection_galeries').click(function(){
+//Gère l'affichage des sections
+$('#btn_selection_galeries').click(function(){
     $('#selection_galeries').hide();
     $('#rangée_galerie').html('');
-    $('#galeries').show();
+    $('#galerie_lieu ,#galeries').show();
 });

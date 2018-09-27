@@ -21,7 +21,11 @@
 	</div>
 
     <div class="container">
+
 		<div class="section">
+			<div class="row center"  id="galerie_lieu">
+			
+			</div>
         	<div class="row" id="galeries">
 
 			</div>
@@ -30,7 +34,7 @@
 		<div class="section">
 			<div class="row center" id="selection_galeries">
 				<div class="col s12 m6 no_margin_left">
-					<a class="btn">Choix des galeries</a>
+					<a class="btn" id="btn_selection_galeries">Choix des galeries</a>
 				</div>
 			</div>
 		</div>
