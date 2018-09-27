@@ -84,10 +84,10 @@ else {
                     <a class="active" href="#renseigner">Evenements</a>
                 </li>
                 <li class="tab col">
-                    <a href="#modifier">Commentaires</a>
+                    <a id="commentLink" href="#commentaires">Commentaires</a>
                 </li>
                 <li class="tab col">
-                    <a href="#imageMod">Images</a>
+                    <a href="#imageMod">Galerie</a>
                 </li>
                 <li class="tab col">
                     <a href="#Carrousel">Carrousel</a>
@@ -119,8 +119,8 @@ else {
                                                 Supprimer l'événement
                                             </a>
                                             <ul id="btnDeleteEvent" class="dropdown-content row">
-                                                <a class="btn red col s6" href="#!" id="btnDelete">Supprimer</a>
-                                                <a class="btn col s6" href="#!">Annuler</a>
+                                                <a class="btn waves-effect waves-light red col s6" href="#!" id="btnDelete">Supprimer</a>
+                                                <a class="btn waves-effect waves-light col s6" href="#!">Annuler</a>
                                             </ul> 
                                         </p>
                                     </div>
@@ -162,7 +162,19 @@ else {
                     <input type="hidden" name="id_event" id="id_event">
                 </div>
             </div>
-            <div id="modifier" class=" mySwipe">Test 3</div>
+            
+            <div id="commentaires" class=" mySwipe">
+
+                <div class="row">
+
+                    <div class="col s12" id="displayComments">
+
+                    </div>
+
+                </div> 
+
+            </div>
+
             <div id="imageMod" class=" mySwipe">Test 2</div>
 
             <div id="Carrousel" class="mySwipe">

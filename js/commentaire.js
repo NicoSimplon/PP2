@@ -42,11 +42,10 @@ function displayComments(){
         success: function(data){
             
             var json = JSON.parse(data);
-            var i = 0;
 
             $("#divComment").html('');
 
-            for(vari = 0; i<json.length; i++){
+            for(var i = 0; i<json.length; i++){
 
                 $("#divComment").append(
                     '<div class="col s12">\

@@ -478,3 +478,55 @@ $("#btnDelete").click(function(){
 	});
 
 });
+
+
+// Partie modération des commentaires
+
+$("#commentLink").click(function(){
+
+	displayComments();
+
+});
+
+function displayComments(){
+
+	$.ajax({
+		type: 'POST',
+		url: 'admin_back/getComments.php',
+		success: function(data){
+
+			var json = JSON.parse(data);
+
+			$("#commentaires").html('');
+
+			for(var i = 0; i < json.length; i++){
+
+				$("#commentaires").append(
+					'<div class="col s12">\
+                        <div class="card">\
+                            <div class="card-content ">\
+                                <span class="card-title">'+json[i]['pseudo']+'</span>\
+                                <p class="text">'+json[i]['commentaire']+'</p>\
+                            </div>\
+                            <div class="card-action">\
+								<p>'+json[i]['date_com']+' \
+									<a class="waves-effect waves-light btn secondary-content dropdown-trigger" data-target="btnDeleteComment'+ i +'">\
+										<i class="material-icons right" href="#">highlight_off</i>\
+										Supprimer le commentaire\
+									</a>\
+									<ul id="btnDeleteComment'+ i +'" class="dropdown-content row">\
+										<a id="btnDeleteCom'+ i +'" class="btn red col s6 waves-effect waves-light" href="#!" >Supprimer</a>\
+										<a class="btn col s6 waves-effect waves-light" href="#!">Annuler</a>\
+									</ul> \
+								</p>\
+                            </div>\
+                        </div>\
+                    </div>'
+				);
+
+			}
+
+		}
+	});
+
+}
