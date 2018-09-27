@@ -20,7 +20,6 @@
 		$carrou2 = pg_fetch_array(pg_query("SELECT text_carrou, title_carrou FROM carrousel WHERE id_carrou = '2';"));
 		$carrou3 = pg_fetch_array(pg_query("SELECT text_carrou, title_carrou FROM carrousel WHERE id_carrou = '3';"));
 		$carrou4 = pg_fetch_array(pg_query("SELECT text_carrou, title_carrou FROM carrousel WHERE id_carrou = '4';"));
-
 	?>
 </head>
 
@@ -419,55 +418,35 @@ c4 -222 10 -787 14 -1257z m-417 29 l1 -325 -28 55 c-80 154 -131 373 -138
 
 	</section>
 	<section>
-		<div class="vuecommentaire ">
-			<h5 class="coms">Vos commentaires :</h5>
-			<div class="commentaire flipInX">
-				<p class="emailAccueil">mon@email.com</p>
-				<p class="infoMsg"> le12/12/2010 à 12:56</p>
-				<p class="comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum dignissimos doloribus pariatur dolores asperiores sunt
-					cupiditate nobis! Recusandae adipisci ut rerum qui nisi ex, labore velit minus distinctio, rem aliquid? Libero voluptatem
-					fugit omnis eaque, quod totam sed beatae explicabo provident quos ullam nostrum iusto, cupiditate reiciendis sit qui
-					nam eos praesentium reprehenderit odit! Facere eaque, eum vitae, ratione aliquid inventore exercitationem ab iure officia
-					sit quasi quibusdam sed. Repellendus quo adipisci nihil tempora enim animi rerum nostrum minima sapiente ipsam architecto
-					maxime explicabo, temporibus quos commodi eos sunt, expedita vero esse eveniet? Quibusdam ea dolorem maiores, necessitatibus,
-					magni quisquam voluptatum officiis aperiam assumenda culpa placeat nisi beatae libero porro, veniam deserunt ipsam neque
-					nam incidunt. Quod eius aut, magni, omnis amet accusamus nulla reiciendis dolorum, inventore ipsum vero nostrum iure
-					voluptatum beatae impedit molestias velit vitae accusantium reprehenderit nobis rerum repellendus dignissimos quisquam
-					quae. Officiis facilis, voluptas saepe a repellat id, qui nobis autem quae illo aperiam, sapiente aliquam exercitationem
-					atque est voluptatem dolor assumenda. Provident molestiae repudiandae quo cupiditate tempora expedita, ratione delectus
-					illum veritatis sequi, adipisci at culpa et minima odit consectetur eos asperiores saepe, nam sunt laborum. Iure architecto
-					praesentium tempore, consequuntur ab a sapiente magnam non quibusdam error ullam perspiciatis, facilis deleniti beatae,
-					quas facere. Culpa atque minima eum nihil, quaerat magni minus architecto est aliquid modi mollitia excepturi odit repellat
-					illum, iusto iure beatae voluptates reprehenderit consectetur delectus aperiam id eius! Ipsum fugit saepe minima sed
-					qui tempore rerum culpa error debitis, magni incidunt repellendus earum rem quasi inventore.</p>
-				<div class="redirCom">
-					<a>voir plus</a>
-				</div>
-			</div>
-			<div class="commentaire flipInX">
-				<p class="emailAccueil">mon@email.com</p>
-				<p class="infoMsg"> le 12/12/2010 à 12:56</p>
-				<p class="comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet quos sit voluptas sed soluta illo sapiente fuga ipsum dolor
-					libero voluptatem consequatur, aliquid qui quis eveniet aut minima nulla. Voluptas?</p>
-				<div class="redirCom">
-					<a>voir plus</a>
-				</div>
-			</div>
-			<div class="commentaire flipInX">
-				<p class="emailAccueil">mon@email.com</p>
-				<p class="infoMsg"> le12/12/2010 à 12:56</p>
-				<p class="comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis placeat, asperiores sunt accusamus odio est dignissimos,
-					obcaecati dolor minima fuga rerum voluptatem ducimus alias dolorem laboriosam numquam eveniet qui totam vitae eos beatae
-					tenetur. Corrupti provident minus quis perferendis ad mollitia deserunt impedit nemo fuga nesciunt optio vitae, ullam
-					quaerat magni eum libero porro. Molestias at maiores iure aliquam, placeat ipsum dolorum saepe repellendus ratione!
-					Consequuntur non illo corporis reiciendis. Dolore placeat nostrum tempore perspiciatis vel corporis eius quas aliquam
-					similique, cumque illum sunt. Officiis ex impedit totam animi. Dolor in quaerat quod temporibus mollitia? In aliquid
-					facere quo cum?</p>
-				<div class="redirCom">
-					<a>voir plus</a>
-				</div>
-			</div>
-		</div>
+	<div class="last_com">
+	<h5 class="left_align">Avis : </h5>
+	<div class="row">
+    <?php
+       $last_comment = pg_query("SELECT commentaire, date_com, pseudo FROM commentaire LIMIT 5 OFFSET 3 ORDER BY date_com DESC");
+    	
+    	while ($req = pg_fetch_assoc($last_comment)){
+         	  ?>
+   <div class="col offset-s3 s6">
+     <div class="card ">
+       <div class="card-content ">
+         <span class="card-title"><?= $req['pseudo'] ?></span>
+         <p><?= $req['commentaire'] ?></p>
+       </div>
+       <div class="card-action">
+         <p><?= $req['date_com']?></p> 
+       </div>
+     </div>
+   </div>
+   
+   
+   <?php  
+     	  }
+           ?>
+		   </div>
+    </div>
+        
+    </div>
+
 
 	</section>
 

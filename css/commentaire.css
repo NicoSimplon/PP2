@@ -1,0 +1,22 @@
+
+form{
+   
+    border-radius: 5px;
+    opacity: 0,3;
+    margin-top:15px;
+    height: 330px; 
+}
+
+a{
+    margin-bottom: 5px;
+}
+.formulaire{
+    margin-bottom: 100px;
+}
+card_content{
+    width:50%;
+}
+
+.card-magic{
+    width:50%;
+}

@@ -30,7 +30,7 @@
             </div>
         </div>
         <div class="containerBtnTitle">
-            <a href="livre_dor.php" id="lien_commentaire">Commentaire</a>
+            <a href="livre_dor.php" id="lien_commentaire">Livre d'or</a>
             <div class="petitsAngre">
                 <i class="fas fa-cog petitAngre1" id="engre_commentaire1"></i>
                 <i class="fas fa-cog petitAngre2" id="engre_commentaire2"></i>
