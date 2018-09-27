@@ -8,7 +8,8 @@
 	    crossorigin="anonymous"> 
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P"
         crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="css/fomulaire.css">
+  <link type="text/css" href="css/commentaire.css">
+  <link rel="stylesheet" type="text/css" href="css/fomulaire.css">
 	<link rel="stylesheet" type="text/css" href="css/navfoot.css">
 	<link rel="stylesheet" type="text/css" href="css/materialize.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
@@ -58,7 +59,7 @@
     <div class="col s12">
       <div class="row">
           <div class="container">
-          <input id="com" class="center-align" name="comment" type="text" placeholder="Votre commentaire" value="comment">
+          <input id="com" class="center-align" name="comment" type="text" placeholder="Votre commentaire" value="kzjfejr fj ezkf fjnhf kjearfjn afrjf jnf r jhjr nnekjr nf nreajg eqfkjnfg erng evkj">
           </div>
       </div>
     </div>
@@ -68,40 +69,35 @@
   </div>
 </form>
 </div>
-<div class="commentaire">
-  <H2>Commentaires :</H2>
-  <?php
-  $valider = pg_query("SELECT * FROM commentaire");
-  // print_r($valider);
-   while ($req = pg_fetch_assoc($valider)){
-      
-    ?>
-    <div>
-      
-      <div class="row">
-    <div class="col s12 m6">
-      <div class="card lime darken-2">
-        <div class="card-content white-text">
-          <span class="card-title"><?= $req['pseudo'] ?></span>
-          <p><?= $req['commentaire'] ?></p>
-        </div>
-        <div class="card-action">
-          <p><?= $req['date_com'] ?></p>
-         
+
+    <H2>Commentaires :</H2>
+      <?php
+          $valider = pg_query("SELECT * FROM commentaire");
+          // print_r($valider);
+          while ($req = pg_fetch_assoc($valider)){
+       ?>
+  
+      <div class="row comment_card">
+        <div class="col">
+          <div class="card">
+            <div class="card-content ">
+                <span class="card-title"><?= $req['pseudo'] ?></span>
+                <p class="text"><?= $req['commentaire'] ?></p>
+            </div>
+            <div class="card-action">
+            <p><?= $req['date_com'] ?></p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
       
-      <span></span>
-   </br></br>
+      <!-- <span></span>
+   </br></br> -->
 
-    </div>
     <?php
     }
     ?>
-</div>
-
+   
 <div>
 <?php
 include 'nav_footer/footer.php';

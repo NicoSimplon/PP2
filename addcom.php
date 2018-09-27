@@ -27,12 +27,5 @@ $reqq=pg_query("SELECT commentaire, pseudo, date_com FROM commentaire ");
 $resultat1 =pg_fetch_array($reqq);
 echo $resultat1 [3];
 
-//Requête de récup les 4 dernier commentaires avec la date 
-//$last_comment = pg_query("SELECT commentaire, date_com FROM commentaire LIMIT 5 OFFSET 3");
- 
-// requête valider en fonction de la condition 
-// $valider =  pg_query("SELECT * FROM commentaire Where valide = true");
-// while($valider == true);
-//     echo ($resultat4);  
 
 ?>
