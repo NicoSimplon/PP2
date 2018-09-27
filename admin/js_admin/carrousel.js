@@ -1,10 +1,12 @@
 
 $(document).ready(function (e) {
-    $("#uploadimage4").on('submit',(function(e) {
+    $("#uploadimage").on('submit',(function(e) {
+        
         e.preventDefault();
-        console.log($("#textarea4").val());
+        
         $.ajax({
-            url: "carrousel4.php",
+            
+            url: "admin_back/carrousel.php",
             type: "POST",
             data: new FormData(this),
             contentType: false,
@@ -12,18 +14,20 @@ $(document).ready(function (e) {
             processData:false,
             success: function(data)
             {
+                M.toast({html:data});
             }
+
         });
     }));
     
     $(function() {
-        $("#file4").change(function() {
+        $("#file").change(function() {
             var file = this.files[0];
             var imagefile = file.type;
             var match= ["image/jpeg","image/png","image/jpg","image/PNG"];
             if(!((imagefile==match[0]) || (imagefile==match[1]) || (imagefile==match[2])))
             {
-                $('#previewing4').attr('src','carrou4.png');
+                $('#previewing').attr('src','carrou1.png');
                 return false;
             }
                 else
@@ -35,7 +39,7 @@ $(document).ready(function (e) {
         });
     });
     function imageIsLoaded(e) {
-        $('#previewing4').attr('src', e.target.result);
-        $('#previewing4').attr('width', '250px');
+        $('#previewing').attr('src', e.target.result);
+        $('#previewing').attr('width', '250px');
     };
 });

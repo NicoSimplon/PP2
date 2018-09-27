@@ -2,9 +2,9 @@
 $(document).ready(function (e) {
     $("#uploadimage3").on('submit',(function(e) {
         e.preventDefault();
-        console.log($("#textarea3").val());
+
         $.ajax({
-            url: "carrousel3.php",
+            url: "admin_back/carrousel3.php",
             type: "POST",
             data: new FormData(this),
             contentType: false,
@@ -12,6 +12,7 @@ $(document).ready(function (e) {
             processData:false,
             success: function(data)
             {
+                M.toast({html:data});
             }
         });
     }));

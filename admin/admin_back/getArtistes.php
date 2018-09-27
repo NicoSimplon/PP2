@@ -1,6 +1,6 @@
 <?php
 
-    include '../connexion/connexion_bdd.php';
+    include '../../connexion/connexion_bdd.php';
 
     $req = pg_query(
         "SELECT nom_artiste FROM artiste"

@@ -1,6 +1,6 @@
 <?php
 
-    include "../connexion/connexion_bdd.php";
+    include "../../connexion/connexion_bdd.php";
 
     $evenement = $_POST['nom_eve'];
 

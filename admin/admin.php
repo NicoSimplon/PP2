@@ -31,8 +31,6 @@ else {
 
     <?php
 
-        include "../connexion/connexion_bdd.php";
-
         $mail = $_SESSION['user'];
 
         $requeteNom = pg_fetch_array(pg_query("SELECT nom_admin FROM tab_admin WHERE mail_admin = '".$mail."';"));
@@ -57,7 +55,7 @@ else {
                     </h6>
                 </div>
                 <div class="myName">
-                    <a class="myName" href="../deconnexion.php">
+                    <a class="myName" href="../pages_back/deconnexion.php">
                         <button class="btn waves-effect waves-light" type="button" name="deconnexion" id="bouton_deconnexion"
                             value="Déconnexion"> DECONNEXION
                         </button>
@@ -86,10 +84,7 @@ else {
                     <a class="active" href="#renseigner">Evenements</a>
                 </li>
                 <li class="tab col">
-                    <a href="#modifier">Comentaires</a>
-                </li>
-                <li class="tab col">
-                    <a href="#renseignement">Clients</a>
+                    <a href="#modifier">Commentaires</a>
                 </li>
                 <li class="tab col">
                     <a href="#imageMod">Images</a>
@@ -168,7 +163,6 @@ else {
                 </div>
             </div>
             <div id="modifier" class=" mySwipe">Test 3</div>
-            <div id="renseignement" class=" mySwipe ">Test 3</div>
             <div id="imageMod" class=" mySwipe">Test 2</div>
 
             <div id="Carrousel" class="mySwipe">
@@ -497,16 +491,14 @@ else {
 
     <script src="../js/librairies/jquery.js"></script>
     <script src="../js/librairies/materialize.js"></script>
-    <script src="../js/librairies/swipe.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
         crossorigin="anonymous"></script>
     <script src="../js/librairies/heure.js"></script>
-    <script src="admin.js"></script>
-    <script src="carrousel.js"></script>
-    <script src="carrousel2.js"></script>
-    <script src="carrousel3.js"></script>
-    <script src="carrousel4.js"></script>
-
+    <script src="js_admin/admin.js"></script>
+    <script src="js_admin/carrousel.js"></script>
+    <script src="js_admin/carrousel2.js"></script>
+    <script src="js_admin/carrousel3.js"></script>
+    <script src="js_admin/carrousel4.js"></script>
 
 </body>
 

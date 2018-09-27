@@ -1,8 +1,9 @@
 <?php
-    include '../connexion/connexion_bdd.php';
+
+    include '../../connexion/connexion_bdd.php';
 
     $req = pg_query(
-        "SELECT event FROM evenement WHERE date_event >= now()"
+        "SELECT lib_genre FROM genre"
     );
 
     $result = pg_fetch_all($req);

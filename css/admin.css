@@ -115,7 +115,10 @@ h5 {
 
 .btn:hover,
 .btn-large:hover,
-.btn-small:hover {
+.btn-small:hover,
+.btn:focus,
+.btn-large:focus,
+.btn-small:focus {
 	background-color: #bda76e;
 }
 

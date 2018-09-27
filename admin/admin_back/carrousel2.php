@@ -1,16 +1,15 @@
 <?php
-include "../connexion/connexion_bdd.php";
+include "../../connexion/connexion_bdd.php";
     if(isset($_FILES["file2"]["type"]))
         {
         $validextensions = array("png");
         $temporary = explode(".", $_FILES["file2"]["name"]);
         $textarea2 = str_replace("'", "&#39",$_POST["textarea2"]);
-        $textarea2 = str_replace('"', "&quot",$textarea2);
-        //$textarea1 = addslashes($textarea1);
-        
+        $textarea2 = str_replace('"', "&quot",$textarea2);        
         $titlearea2 = str_replace("'", "&#39",$_POST["titleArea2"]);
         $titlearea2 = str_replace('"', "&quot",$titlearea2);
         $file_extension = end($temporary);
+        
         if ((($_FILES["file2"]["type"] == "image/png")) && ($_FILES["file2"]["size"] < 10000000) && in_array($file_extension, $validextensions)) {
             
             if ($_FILES["file2"]["error"] > 0){

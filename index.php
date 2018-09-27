@@ -292,21 +292,21 @@ c4 -222 10 -787 14 -1257z m-417 29 l1 -325 -28 55 c-80 154 -131 373 -138
 
 	<section>
 		<div class="carousel carousel-slider  sliderPerso">
-			<div class="carousel-item red white-text" href="#one!">
+			<div class="carousel-item white-text" href="#one!">
 				<div class="styletext">
 					<h2><?php echo "$carrou1[1]";?></h2>
 					<p class="white-text"><?php echo "$carrou1[0]";?></p>
 				</div>
 				<div style="background-image:url(admin/img/carrou1.png)" class="testImg"></div>
 			</div>
-			<div class="carousel-item amber white-text" href="#two!">
+			<div class="carousel-item white-text" href="#two!">
 				<div class="styletext">
 					<h2 class="infoActua"><?php echo "$carrou2[1]";?></h2>
 					<p class="white-text infoActua"><?php echo "$carrou2[0]";?></p>
 				</div>
 				<div style="background-image:url(admin/img/carrou2.png)" class="testImg"></div>
 			</div>
-			<div class="carousel-item green white-text" href="#three!">
+			<div class="carousel-item white-text" href="#three!">
 				<div class="styletext">
 					<h2 class="infoActua"><?php echo "$carrou3[1]";?></h2>
 					<p class="white-text infoActua"><?php echo "$carrou3[0]";?></p>

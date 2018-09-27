@@ -2,7 +2,7 @@
 
 session_start();
 
-include 'connexion/connexion_bdd.php';
+include '../connexion/connexion_bdd.php';
 
     
     if(isset($_POST['mail'])){
@@ -21,7 +21,7 @@ include 'connexion/connexion_bdd.php';
                     $_SESSION['co'] = true;
                     $_SESSION['user'] = $mail;
                         
-                    header('Location: admin/admin.php');  
+                    header('Location: ../admin/admin.php');  
                 }  
                 else{
                     echo "le mot de passe n'est pas valide";

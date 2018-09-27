@@ -1,12 +1,11 @@
 <?php
-include "../connexion/connexion_bdd.php";
+include "../../connexion/connexion_bdd.php";
     if(isset($_FILES["file3"]["type"]))
         {
         $validextensions = array("png");
         $temporary = explode(".", $_FILES["file3"]["name"]);
         $textarea3 = str_replace("'", "&#39",$_POST["textarea3"]);
         $textarea3 = str_replace('"', "&quot",$textarea3);
-        //$textarea1 = addslashes($textarea1);
         
         $titlearea3 = str_replace("'", "&#39",$_POST["titleArea3"]);
         $titlearea3 = str_replace('"', "&quot",$titlearea3);

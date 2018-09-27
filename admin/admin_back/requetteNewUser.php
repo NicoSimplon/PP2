@@ -1,5 +1,5 @@
 <?php
-include "../connexion/connexion_bdd.php";
+include "../../connexion/connexion_bdd.php";
 
 if (isset($_POST['nom'])){
     if($_POST['nom'] != "" and $_POST['mail'] != "" and $_POST['password'] != ""){

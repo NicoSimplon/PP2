@@ -42,7 +42,7 @@ function setSelectEvent(){
 
 	$.ajax({
 
-		url: 'eventList.php',
+		url: 'admin_back/eventList.php',
 		
 		type: 'POST',
 
@@ -87,7 +87,7 @@ function setEventTable(evenement){
 
 	$.ajax({
 		type: "POST",
-		url: "admin_req.php",
+		url: "admin_back/admin_req.php",
 		data: {
 		  nom_eve: evenement,
 		},
@@ -105,7 +105,7 @@ function getTotalResa(evenement){
 	$.ajax({
 
 		type: 'POST',
-		url: 'totalResa.php',
+		url: 'admin_back/totalResa.php',
 		data: {
 			nom_eve: evenement
 		},
@@ -134,7 +134,7 @@ function setModif(){
 	$.ajax({
 
 		type: 'POST',
-		url: 'modifResa.php',
+		url: 'admin_back/modifResa.php',
 		data:{
 			perso: id_perso,
 			event: id_event,
@@ -156,7 +156,7 @@ function deleteResa(perso, event){
 	$.ajax({
 
 		type: 'POST',
-		url: 'deleteResa.php',
+		url: 'admin_back/deleteResa.php',
 		data:{
 			perso: perso,
 			event: event
@@ -181,7 +181,7 @@ $("#valideNewUser").click(function(){
   
 	$.ajax({
 		type:"POST",
-		url:'requetteNewUser.php',
+		url:'admin_back/requetteNewUser.php',
 		data:{
 			nom: nom_user,
 			mail: mail_user,
@@ -196,11 +196,10 @@ $("#valideNewUser").click(function(){
 	});
 });
   
-  
 function affichageAdmin(){
 	$.ajax({
 	  type:"POST",
-	  url:'affichageAdmin.php',
+	  url:'admin_back/affichageAdmin.php',
   
 	  success:function(arg){
 		$("#listeAdmin").html(arg);
@@ -213,7 +212,7 @@ function affichageAdmin(){
   
 	$.ajax({
 		type: "POST",
-		url: "date_req_admin.php",
+		url: "admin_back/date_req_admin.php",
 		data: {
 			eve: evenement,
 		},
@@ -229,7 +228,7 @@ function getArtites(){
 
 	$.ajax({
 		type: 'POST',
-		url: 'getArtistes.php',
+		url: 'admin_back/getArtistes.php',
 		success: function(json){
 			var jsonParse = JSON.parse(json);
 			var data = {};
@@ -259,7 +258,7 @@ function getGenres(){
 
 	$.ajax({
 		type: 'POST',
-		url: 'getGenres.php',
+		url: 'admin_back/getGenres.php',
 		success: function(json){
 			var jsonParse = JSON.parse(json);
 			var data = {};
@@ -289,7 +288,7 @@ function getEvents(){
 
 	$.ajax({
 		type: 'POST',
-		url: 'getEvents.php',
+		url: 'admin_back/getEvents.php',
 		success: function(json){
 			var jsonParse = JSON.parse(json);
 			var data = {};
@@ -331,7 +330,7 @@ $("#validerAjout").click(function(){
 
 	$.ajax({
 		type: 'POST',
-		url: 'newEvent.php',
+		url: 'admin_back/newEvent.php',
 		data: {
 			array: tabData,
 		},
@@ -376,7 +375,7 @@ $("#modalModifEvent").click(function(){
 
 	$.ajax({
 		type: 'POST',
-		url: 'modalModifEvent.php',
+		url: 'admin_back/modalModifEvent.php',
 		data:{
 			nomEvent: nomEvent
 		},
@@ -448,7 +447,7 @@ $("#validerModifForm").click(function(){
 
 	$.ajax({
 		type: 'POST',
-		url: 'modifEvent.php',
+		url: 'admin_back/modifEvent.php',
 		data:{
 			tabData: tabData
 		},
@@ -467,7 +466,7 @@ $("#btnDelete").click(function(){
 
 	$.ajax({
 		type: 'POST',
-		url: 'deleteEvent.php',
+		url: 'admin_back/deleteEvent.php',
 		data:{
 			event: event
 		},
