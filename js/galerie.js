@@ -15,8 +15,6 @@ function setSelectEvent(){
     });
 }
 
-setSelectEvent();
-
 //Récupère la première photo de l'évènement pour l'afficher sur le dossier de l'évènement concerné
 //Récupère et affiche le nom de l'évènement sur la card lors de sa création
 function getGalerieImage(liste_evenement){
@@ -36,6 +34,8 @@ function getGalerieImage(liste_evenement){
         }
     })
 }
+
+setSelectEvent();
 
 //Efface les images précédemment affichées
 //Affiche la galerie sélectionnée
