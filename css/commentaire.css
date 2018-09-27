@@ -7,11 +7,6 @@ form{
     height: 330px; 
 }
 
-#com{
-    width: 100%;
-    height: 8em;
-}
-
 a{
     margin-bottom: 5px;
 }
@@ -20,13 +15,6 @@ a{
 }
 card_content{
     width:50%;
-}
-
-#btn_envoi{
-    background-color: #cbd13d !important;
-    color : #fefefe;
-    border : 2px #cbd13d solid;
-    width:30%;
 }
 
 .card-magic{

@@ -123,7 +123,43 @@ if(empty($_SESSION['co'])){
                     <input type="hidden" name="id_event" id="id_event">
                 </div>
             </div>
-            <div id="modifier" class=" mySwipe">Test 3</div>
+            <div id="modifier" class=" mySwipe">Test 3
+            <H5>Commentaires :</H5>
+    <div class="row ">
+
+      <?php
+          $valider = pg_query("SELECT * FROM commentaire");
+         
+          while ($req = pg_fetch_assoc($valider)){
+       ?>
+  
+        <div class="col offset-s3 s6">
+          <div class="card">
+            <div class="card-content ">
+                <span class="card-title"><?= $req['pseudo'] ?></span>
+                <p class="text"><?= $req['commentaire'] ?></p>
+            </div>
+            <div class="card-action">
+            <p><?= $req['date_com'] ?></p>
+            <a class="waves-effect waves-light btn secondary-content dropdown-trigger" data-target="Nicolas Marty">
+            <i class="material-icons right " href="#">highlight_off</i>
+            Supprimer commentaire
+        </a>
+        <a class="deleteUser btn red col s6" href="#!" value="Nicolas Marty" tabindex="0">Supprimer</a>
+        <a class="btn green col s6" href="#!" tabindex="0">Annuler</a>
+            </div>
+          </div>
+        </div>
+     
+      
+      <!-- <span></span>
+   </br></br> -->
+
+    <?php
+    }
+    ?>
+    </div>
+            </div>
             <div id="renseignement" class=" mySwipe ">Test 3</div>
             <div id="imageMod" class=" mySwipe">Test 2</div>
             <div id="gestionUser" class=" mySwipe">

@@ -5,100 +5,76 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk"
-	    crossorigin="anonymous"> 
+			crossorigin="anonymous"> 
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P"
-        crossorigin="anonymous">
-  <link type="text/css" href="css/commentaire.css">
-  <link rel="stylesheet" type="text/css" href="css/commentaire.css">
+				crossorigin="anonymous">
+	<link type="text/css" href="css/commentaire.css">
+	<link rel="stylesheet" type="text/css" href="css/commentaire.css">
 	<link rel="stylesheet" type="text/css" href="css/navfoot.css">
 	<link rel="stylesheet" type="text/css" href="css/materialize.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
 
 <body>
 <div class="nav">
 		<?php 
-      include 'nav_footer/nav.php';
-      include 'connexion/connexion_bdd.php';
-
+			include 'nav_footer/nav.php';
 		?>
-    </div>
+		</div>
 <div class="formulaire">
-    <h4>Laissez-nous un commentaire !</h4>
+		<h4>Laissez-nous un commentaire !</h4>
 
 <form id="form"  method="post">
-       <!-- 1er champ pseudo -->
-       <div class="row">
-    <div class="col s12">
-      <div class="row">
-        <div class="input-field col s12">
-          <i class="material-icons prefix">account_box</i>
-          <input  id="pseudo" type="text" placeholder="ananas22" name="pseudo" value="scoob33">
-        </div>
-      </div>
-    </div>
-  </div>
+			 <!-- 1er champ pseudo -->
+			 <div class="row">
+		<div class="col s12">
+			<div class="row">
+				<div class="input-field col s12">
+					<i class="material-icons prefix">account_box</i>
+					<input  id="pseudo" type="text" name="pseudo" value="Anonyme">
+					<label for="pseudo">Choisissez un pseudo (6 caractères max)</label>
+				</div>
+			</div>
+		</div>
+	</div>
 
 <!-- deuxième champ mail -->
-   <div class="row">
-    <div class="col s12">
-      <div class="row">
-        <div class="input-field col s12">
-          <i class="material-icons prefix">mail</i>
-          
-            <input id="mail" type="email" placeholder="adress@mail.com" name="mail" value="loralicia@gmail.com">
-        </div>
-      </div>
-    </div>
-  </div>
+	 <div class="row">
+		<div class="col s12">
+			<div class="row">
+				<div class="input-field col s12">
+					<i class="material-icons prefix">mail</i>
+						<input id="mail" type="email" name="mail">
+						<label for="mail">Adresse mail</label>
+				</div>
+			</div>
+		</div>
+	</div>
 
 <!-- troisième champ commentaire -->
-  <div class="row">
-    <div class="col s12">
-      <div class="row">
-          <div class="container">
-          <input id="com" class="center-align" name="comment" type="text" placeholder="Votre commentaire" value="kzjfejr fj ezkf fjnhf kjearfjn afrjf jnf r jhjr nnekjr nf nreajg eqfkjnfg erng evkj">
-          </div>
-      </div>
-    </div>
-  </div>
-  <div class="container center-align">
-  <input id="btn_envoi" type="submit" name="envoi" value="envoyer">
-  </div>
+	<div class="row">
+		<div class="col s12">
+			<div class="row">
+					<div class="input-field col s12">
+						<label for="com">Votre commentaire</label>
+						<textarea id="com" class="materialize-textarea" name="comment"></textarea>
+					</div>
+			</div>
+		</div>
+	</div>
+	<div class="container center-align">
+	    <button id="btn_envoi" class="btn waves-effect waves-light" type="button" name="envoi">Envoyer</button>
+	</div>
 </form>
 </div>
 
-    <H5>Commentaires :</H5>
-    <div class="row ">
+	<h5>Commentaires :</h5>
+	<div id="divComment" class="row ">
 
-      <?php
-          $valider = pg_query("SELECT * FROM commentaire");
-         
-          while ($req = pg_fetch_assoc($valider)){
-       ?>
-  
-        <div class="col offset-s3 s6">
-          <div class="card">
-            <div class="card-content ">
-                <span class="card-title"><?= $req['pseudo'] ?></span>
-                <p class="text"><?= $req['commentaire'] ?></p>
-            </div>
-            <div class="card-action">
-            <p><?= $req['date_com'] ?></p>
-            </div>
-          </div>
-        </div>
-     
-      
-      <!-- <span></span>
-   </br></br> -->
-
-    <?php
-    }
-    ?>
-    </div>
+			
+	</div>
 <div>
 <?php
 include 'nav_footer/footer.php';
@@ -108,7 +84,7 @@ include 'nav_footer/footer.php';
 
 
 <script src="js/librairies/jquery.js"></script>
-<script src="js/mail.js"></script>
+<script src="js/commentaire.js"></script>
 	<script src="js/librairies/materialize.js"></script>
 	<script src="js/navfoot.js"></script>
 	<script src="js/main.js"></script>
