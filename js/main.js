@@ -14,6 +14,7 @@ $(document).ready(function () {
   $('#modalReservation').modal();
   $("#modal1").modal();
   $('.materialboxed').materialbox();
+  $('.datepicker').datepicker();
 
 
   $(".modal-trigger").click(function () {

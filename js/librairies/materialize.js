@@ -8606,7 +8606,7 @@ $jscomp.polyfill = function (e, r, p, m) {
   var _defaults = {
 
     // the default output format for the input field value
-    format: 'mmm dd, yyyy',
+    format: 'mmmm dd, yyyy',
 
     // Used to create date object from current input string
     parse: null,

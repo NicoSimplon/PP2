@@ -722,3 +722,25 @@ header {
 {
   margin: 0;
 }
+
+/*Formulaire de réservation*/
+
+.formu{
+	border-color: #577866 !important;
+	color:#577866 !important;
+
+  }
+
+  #dato{
+	border-color: #577866 !important;
+    color:#577866 !important;
+  }
+
+  .desc{
+	border-bottom: 1px solid #577866 !important;
+    border: hidden;
+  }
+
+  .form{
+	  color: white;
+  }
