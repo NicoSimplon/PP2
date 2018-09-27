@@ -19,7 +19,7 @@ include "../../connexion/connexion_bdd.php";
             {
                 $sourcePath = $_FILES['file4']['tmp_name']; // Storing source path of the file in a variable
                 $targetPath = "/img/carrou4.png"; // Target path where file is to be stored
-                move_uploaded_file($sourcePath,"img/carrou4.png") ; // Moving Uploaded file
+                move_uploaded_file($sourcePath,"/img/carrou4.png") ; // Moving Uploaded file
 
                 $result = pg_query(
                     "UPDATE carrousel
