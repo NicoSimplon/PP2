@@ -6,7 +6,7 @@
     include "../../connexion/connexion_bdd.php";
 
     $reqComments = pg_query(
-        "SELECT commentaire, date_com, pseudo 
+        "SELECT commentaire, date_com, pseudo, id_com 
         FROM commentaire
         ORDER BY date_com DESC"
     );

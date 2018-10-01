@@ -515,7 +515,7 @@ function displayComments(){
 										Supprimer le commentaire\
 									</a>\
 									<ul id="btnDeleteComment'+ i +'" class="dropdown-content row">\
-										<a id="btnDeleteCom'+ i +'" class="btn red col s6 waves-effect waves-light" href="#!" >Supprimer</a>\
+										<a data-id="'+ json[i]['id_com'] +'" id="btnDeleteCom'+ i +'" class="btn red col s6 waves-effect waves-light" href="#!" onclick="deleteComment(this)" >Supprimer</a>\
 										<a class="btn col s6 waves-effect waves-light" href="#!">Annuler</a>\
 									</ul> \
 								</p>\
@@ -526,7 +526,29 @@ function displayComments(){
 
 			}
 
+			$('.dropdown-trigger').dropdown();
+
 		}
+	});
+
+}
+
+function deleteComment(e){
+
+	var id_comment = $(e).data('id');
+
+	$.ajax({
+
+		type: 'POST',
+		url: 'admin_back/deleteComment.php',
+		data: {
+			comment: id_comment
+		},
+		success: function(data){
+			M.toast({html:data});
+			displayComments();
+		}
+
 	});
 
 }

@@ -14,6 +14,7 @@ $(document).ready(function () {
   $('#modalReservation').modal();
   $("#modal1").modal();
   $('.materialboxed').materialbox();
+  displayLastComments();
 
 
   $(".modal-trigger").click(function () {
@@ -72,24 +73,37 @@ $(".ajaxBtn").click(function () {
   });
 });
 
-$(document).ready(function () {
-  function heure() {
-    moment.locale("fr");
-    var myheure = $("#insertDate").text(moment().format("LTS"));
-  }
-  heure();
-  setInterval(heure, 1000);
+function displayLastComments(){
 
-  function saluTime() {
-    moment.locale("fr");
-    var myheure = $("#insertDate").text(moment().format("LTS"));
-    var heure = moment("18:00:00").format("LTS");
-    if (myheure > heure) {
-      $("#variente").html("Bonsoir," + "&nbsp");
-      // alert("bonsoir");
-    } else {
-      $("#variente").html("Bonjour," + "&nbsp");
-    }
-  }
-  saluTime();
-});
+    $.ajax({
+
+        type: 'POST',
+        url: 'pages_back/getLastComments.php',
+        success: function(data){
+            var json = JSON.parse(data);
+
+            $("#lastComments").html('');
+
+            for(var i = 0; i < json.length; i++){
+
+                $("#lastComments").append(
+                    '<div class="col s12 m12 l12">\
+                        <div class="card">\
+                            <div class="card-content ">\
+                                <span class="card-title">'+json[i]['pseudo']+'</span>\
+                                <p class="text">'+json[i]['commentaire']+'</p>\
+                            </div>\
+                            <div class="card-action">\
+                                <p>'+json[i]['date_com']+'</p>\
+                            </div>\
+                        </div>\
+                    </div>'
+                );
+
+            }
+
+        }
+
+    });
+
+}

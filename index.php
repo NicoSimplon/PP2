@@ -418,31 +418,13 @@ c4 -222 10 -787 14 -1257z m-417 29 l1 -325 -28 55 c-80 154 -131 373 -138
 
 	</section>
 	<section>
-	<div class="last_com">
-	<h5 class="left_align">Avis : </h5>
-	<div class="row">
-    <?php
-       $last_comment = pg_query("SELECT commentaire, date_com, pseudo FROM commentaire LIMIT 5 OFFSET 3 ORDER BY date_com DESC");
+	<div class="container">
+		<h5 class="left_align">Avis : </h5>
+		<div id="lastComments" class="row">
+       
     	
-    	while ($req = pg_fetch_assoc($last_comment)){
-         	  ?>
-   <div class="col offset-s3 s6">
-     <div class="card ">
-       <div class="card-content ">
-         <span class="card-title"><?= $req['pseudo'] ?></span>
-         <p><?= $req['commentaire'] ?></p>
-       </div>
-       <div class="card-action">
-         <p><?= $req['date_com']?></p> 
-       </div>
-     </div>
-   </div>
-   
-   
-   <?php  
-     	  }
-           ?>
-		   </div>
+
+		</div>
     </div>
         
     </div>

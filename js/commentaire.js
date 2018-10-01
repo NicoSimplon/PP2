@@ -48,7 +48,7 @@ function displayComments(){
             for(var i = 0; i<json.length; i++){
 
                 $("#divComment").append(
-                    '<div class="col s12">\
+                    '<div class="col s12 m12 l12">\
                         <div class="card">\
                             <div class="card-content ">\
                                 <span class="card-title">'+json[i]['pseudo']+'</span>\
@@ -67,3 +67,4 @@ function displayComments(){
     });
 
 }
+

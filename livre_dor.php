@@ -18,68 +18,70 @@
 </head>
 
 <body>
-<div class="nav">
-		<?php 
-			include 'nav_footer/nav.php';
-		?>
-		</div>
-<div class="formulaire">
-		<h4>Laissez-nous un commentaire !</h4>
-
-<form id="form"  method="post">
-			 <!-- 1er champ pseudo -->
-			 <div class="row">
-		<div class="col s12">
-			<div class="row">
-				<div class="input-field col s12">
-					<i class="material-icons prefix">account_box</i>
-					<input  id="pseudo" type="text" name="pseudo" value="Anonyme">
-					<label for="pseudo">Choisissez un pseudo (6 caractères max)</label>
-				</div>
+	<div class="nav">
+			<?php 
+				include 'nav_footer/nav.php';
+			?>
 			</div>
-		</div>
-	</div>
+	<div class="formulaire">
+			<h4>Laissez-nous un commentaire !</h4>
 
-<!-- deuxième champ mail -->
-	 <div class="row">
-		<div class="col s12">
-			<div class="row">
-				<div class="input-field col s12">
-					<i class="material-icons prefix">mail</i>
-						<input id="mail" type="email" name="mail">
-						<label for="mail">Adresse mail</label>
-				</div>
-			</div>
-		</div>
-	</div>
-
-<!-- troisième champ commentaire -->
-	<div class="row">
-		<div class="col s12">
-			<div class="row">
+	<form id="form"  method="post">
+				<!-- 1er champ pseudo -->
+				<div class="row">
+			<div class="col s12">
+				<div class="row">
 					<div class="input-field col s12">
-						<label for="com">Votre commentaire</label>
-						<textarea id="com" class="materialize-textarea" name="comment"></textarea>
+						<i class="material-icons prefix">account_box</i>
+						<input  id="pseudo" type="text" name="pseudo" value="Anonyme">
+						<label for="pseudo">Choisissez un pseudo (100 caractères max)</label>
 					</div>
+				</div>
 			</div>
 		</div>
+
+	<!-- deuxième champ mail -->
+		<div class="row">
+			<div class="col s12">
+				<div class="row">
+					<div class="input-field col s12">
+						<i class="material-icons prefix">mail</i>
+							<input id="mail" type="email" name="mail">
+							<label for="mail">Adresse mail</label>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	<!-- troisième champ commentaire -->
+		<div class="row">
+			<div class="col s12">
+				<div class="row">
+						<div class="input-field col s12">
+							<label for="com">Votre commentaire</label>
+							<textarea id="com" class="materialize-textarea" name="comment"></textarea>
+						</div>
+				</div>
+			</div>
+		</div>
+		<div class="container center-align">
+			<button id="btn_envoi" class="btn waves-effect waves-light" type="button" name="envoi">Envoyer</button>
+		</div>
+	</form>
 	</div>
-	<div class="container center-align">
-	    <button id="btn_envoi" class="btn waves-effect waves-light" type="button" name="envoi">Envoyer</button>
-	</div>
-</form>
-</div>
 
 	<h5>Commentaires :</h5>
-	<div id="divComment" class="row ">
-
-			
+	<div class="container">
+		<div id="divComment" class="row">
+	
+				
+		</div>
 	</div>
-<div>
-<?php
-include 'nav_footer/footer.php';
-?>
-</div>
+
+	<?php
+		include 'nav_footer/footer.php';
+	?>
+
 
 
 
