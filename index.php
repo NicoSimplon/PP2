@@ -326,8 +326,9 @@ c4 -222 10 -787 14 -1257z m-417 29 l1 -325 -28 55 c-80 154 -131 373 -138
 
 		<div class="barre_alert ">
 			<?php
-				$alertDyn = pg_query("SELECT event, TO_CHAR(date_event, 'DD/MM/YYYY') as debut, TO_CHAR(date_fin, 'DD/MM/YYYY') as fin
+				$alertDyn = pg_query("SELECT event, TO_CHAR(date_event, 'DD/MM/YYYY') as debut, TO_CHAR(date_fin, 'DD/MM/YYYY') as fin, url_img
 					FROM evenement
+					WHERE date_event > now()
 					ORDER BY date_event asc
 					limit 3;");
 
@@ -345,17 +346,17 @@ c4 -222 10 -787 14 -1257z m-417 29 l1 -325 -28 55 c-80 154 -131 373 -138
 					}
 					$stockAlert .= '<div class="event_alert lightSpeedIn">
 										<div class="partleft">
-											<img src="concert.png" class="img/testImg">
+											<div style="background-image:url(img_event/'. $recupInfoAlert["url_img"] .')" class="event_pic"></div>
 										</div>
 									<div class="partright">
 										<p class="infoalert">
 										' . $debut . " " . $fin . '
 										</p>
-										<h6 class="infoalert">
+										<h6 class="center">
 											' . $recupInfoAlert["event"] . '
 										</h6>
 									<div class="redirAlert">
-										<a class= "plus"href="evenement.php">
+										<a class="plus" href="evenement.php">
 											Interessé ?
 										</a>
 									</div>
