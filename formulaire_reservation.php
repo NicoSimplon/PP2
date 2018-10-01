@@ -85,6 +85,13 @@
             <label for="descript" class="formu">Descriptif</label>
           </div>
       </div>
+      <div class="row">
+           <div class="col s12 center-align">
+                <button class="btn waves-effect waves-light" type="submit" name="action">Faire une Réservation
+                <i class="material-icons right fleche">send</i>
+                </button>
+            </div>
+        </div>
     </form>
   </div>
 
