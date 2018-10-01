@@ -41,17 +41,17 @@
     <form class="col s12">
       <div class="row">
         <div class="input-field col s6">
-          <input id="first_name" class="formu" type="text" class="validate">
+          <input id="first_name" class="formu" type="text" class="validate" require>
           <label class="formu" for="first_name">Prénom</label>
         </div>
         <div class="input-field col s6">
-          <input id="last_name" class="formu" type="text" class="validate">
+          <input id="last_name" class="formu" type="text" class="validate" require>
           <label class="formu" for="last_name">Nom</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input id="address" class="formu" type="text" class="validate">
+          <input id="address" class="formu" type="text" class="validate" require>
           <label class="formu" for="address">Adresse</label>
         </div>
       </div>
@@ -63,19 +63,19 @@
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input id="email" class="formu" type="email" class="validate">
+          <input id="email" class="formu" type="email" class="validate" require>
           <label class="formu" for="email">Email</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input id="number" class="formu" type="text" class="validate">
+          <input id="number" class="formu" type="text" class="validate" require>
           <label class="formu" for="number">Nombre de Personne</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input id="dato" type="text" class="datepicker">
+          <input id="dato" type="text" class="datepicker" require>
           <label class="formu" for="dato">Date</label>
         </div>
       </div>
