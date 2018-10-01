@@ -1,11 +1,12 @@
 $(document).ready(function(){
-    $('#selection_galeries').hide();
+    $('#selection_galeries, #rangee_galerie').hide();
+    getGalerieLieu();
   });
 
 //Récupère la liste des evenements dans liste_evenement
 function setSelectEvent(){
     $.ajax({
-        url: 'admin/eventList.php',
+        url: 'requeteListeEvenement.php',
         type: 'POST',
         data: {case: 'eventList'},
         success: function(data){
@@ -41,12 +42,12 @@ setSelectEvent();
 //Affiche la galerie sélectionnée
 //Attribue a l'image un id correspondant à l'id enregistré dans la BDD, puis exécute getGalerie et affiche les images récupérées par getGalerie
 $(document).on('click','.card_evenement',function(){
-    $('#rangée_galerie').html('');
-    $('#galerie_lieu ,#galeries').hide();
-    i = $(this).children('.card-image').children('img').attr('id').replace("dossier", "");
-    getGalerie(i);
-    $('#selection_galeries').show();
-});
+        $('#rangee_galerie').html('');
+        $('#galerie_lieu ,#galeries').hide();
+        i = $(this).children('.card-image').children('img').attr('id').replace("dossier", "");
+        getGalerie(i);
+        $('#selection_galeries, #rangee_galerie').show();
+    });
 
 //Récupère les images liées à l'évènement indiqué dans l'id de l'image du dossier de l'évènement
 function getGalerie(i){
@@ -59,7 +60,7 @@ function getGalerie(i){
             var photos = JSON.parse(data);
             for (var i = 0; i < photos.length; i++){
                 var url_photos = photos[i].photo;
-                $('#rangée_galerie').append('<div class="col s12 m4 center-align"><img src="'+ url_photos +'" class="galerie-img materialboxed"></div>');
+                $('#rangee_galerie').append('<div class="col s12 m4 center-align"><img src="'+ url_photos +'" class="galerie-img materialboxed"></div>');
             }
             $('.materialboxed').materialbox();
         }
@@ -69,30 +70,33 @@ function getGalerie(i){
 //Gère l'affichage des sections
 $('#btn_selection_galeries').click(function(){
     $('#selection_galeries').hide();
-    $('#rangée_galerie').html('');
+    $('#rangee_galerie').html('');
     $('#galerie_lieu ,#galeries').show();
 });
 
 //Récupère les photos liées à la galerie lieu
-function getGalerielieu(){
+function getGalerieLieu(){
     $.ajax({
         url: 'requeteImageGalerieLieu.php',
         type: 'POST',
         data: {galerie: 'lieu'},
         success: function(data){
             var photos_galerie_lieu = JSON.parse(data);
+            $('#dossierLieu').attr('src', photos_galerie_lieu[0]['photo'] );
             for (i = 0; i < photos_galerie_lieu.length; i++){
                 var url_photos_galerie_lieu = photos_galerie_lieu[i]['photo']; 
-                $('#rangée_galerie').append('<div class="col s12 m4 center-align"><img src="'+ url_photos_galerie_lieu +'" class="galerie-img materialboxed"></div>');
+                $('#rangee_galerie').append('<div class="col s12 m4 center-align"><img src="'+ url_photos_galerie_lieu +'" class="galerie-img materialboxed"></div>');
             }
         }
     });
 }
 
+
+
 //Affiche la galerie Lieu
 $(document).on('click','.card_lieu',function(){
-    $('#rangée_galerie').html('');
-    $('#galerie_lieu ,#galeries').hide();
-    getGalerielieu();
-    $('#selection_galeries').show();
-});
+        $('#rangee_galerie').html('');
+        $('#galerie_lieu ,#galeries').hide();
+        getGalerieLieu();
+        $('#selection_galeries, #rangee_galerie').show();
+    });

@@ -25,9 +25,9 @@
 		<div class="section">
 			<div class="row center"  id="galerie_lieu">
 				<div class="col s12 m4 no_margin_left">
-					<div class="card hover card_lieu">
+					<div class="card hover card_lieu card_evenement">
 						<div class="card-image">
-							<img src="img/spookyTrumpet.jpg">
+							<img src="" id="dossierLieu">
 							<div class="card-content">
 								<span class="nom_evenement">Colo & Co</span>
 							</div>
@@ -35,7 +35,7 @@
 					</div>
 				</div>
 			</div>
-			
+
         	<div class="row" id="galeries">
 
 			</div>
@@ -50,7 +50,7 @@
 		</div>
 
 		<div class="section">
-        	<div class="row" id="rangée_galerie">
+        	<div class="row" id="rangee_galerie">
     
 			</div>
 		</div>
