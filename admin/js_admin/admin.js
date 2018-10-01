@@ -42,11 +42,9 @@ function setSelectEvent(){
 
 	$.ajax({
 
-		url: 'admin_back/eventList.php',
+		url: 'admin_back/getEvents.php',
 		
 		type: 'POST',
-
-		data: {case: 'eventList'},
 
 		success: function(data){
 			

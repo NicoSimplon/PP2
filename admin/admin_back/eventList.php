@@ -4,7 +4,10 @@
 
     if(isset($_POST['case'])){
 
-        $NameEvent = pg_query("SELECT event FROM public.evenement");
+        $NameEvent = pg_query(
+            "SELECT event FROM evenement 
+            WHERE date_event >= now()"
+        );
         
         $recupNameEvent = pg_fetch_all($NameEvent);
 
