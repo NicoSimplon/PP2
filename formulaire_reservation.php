@@ -100,5 +100,6 @@
     <script src="js/main.js"></script>
     <script src="js/resa.js"></script>
     <script src="js/librairies/swipe.js"></script>
+    <script src="js/datepicker.js"></script>
 </body>
 </html>
