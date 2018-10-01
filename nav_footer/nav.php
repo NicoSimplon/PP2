@@ -23,7 +23,7 @@
             </div>
         </div>
         <div class="containerBtnTitle">
-            <a href="contact.php" id="lien_contact">Contact</a>
+            <a href="reservation.php" id="lien_contact">Réservation</a>
             <div class="petitsAngre">
                 <i class="fas fa-cog petitAngre1" id="engre_contact1"></i>
                 <i class="fas fa-cog petitAngre2" id="engre_contact2"></i>
@@ -45,6 +45,13 @@
         </div>
         <div class="containerBtnTitle">
             <a href="propresse.php" id="lien_infopresse">Info-presse</a>
+            <div class="petitsAngre">
+                <i class="fas fa-cog petitAngre1" id="engre_infopresse1"></i>
+                <i class="fas fa-cog petitAngre2" id="engre_infopresse2"></i>
+            </div>
+        </div>
+        <div class="containerBtnTitle">
+            <a href="contact.php" id="lien_infopresse">Contact</a>
             <div class="petitsAngre">
                 <i class="fas fa-cog petitAngre1" id="engre_infopresse1"></i>
                 <i class="fas fa-cog petitAngre2" id="engre_infopresse2"></i>
