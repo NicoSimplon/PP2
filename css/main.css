@@ -643,6 +643,17 @@ header {
   }
 
 /* page galerie */
+.galerie-img
+{
+	height: 12em;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.hover
+{
+	cursor: pointer;
+}
 
 /* page commentaire */
 
@@ -660,8 +671,7 @@ header {
 }
 
 .propresse-img
-{
-  height: 33vh;
+{	
   width: 100%;
   margin-top: 2em;
 }

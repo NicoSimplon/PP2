@@ -10,12 +10,6 @@
         );
         
         $recupNameEvent = pg_fetch_all($NameEvent);
-
         $json = json_encode($recupNameEvent);
-        
         echo $json;
-
     }
-
-
-

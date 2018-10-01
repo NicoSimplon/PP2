@@ -20,30 +20,31 @@
 		<?php include 'nav_footer/nav.php'; ?>
 	</div>
 
-	<div class="container valign-wrapper" id="propresse_container">
+	<div class="container">
 		<div class="row fullwidth">
 			<div class="col s12 m6 center-align">
 				<div class="card">
         			<div class="card-image">
 						<img class="responsive-img" id="pro" src="img/pro/pro.jpg">
-        			</div>
-				</div>
-				<div class="card-content">
-					<span class="card-title black-text">Vous souhaitez plus d'informations ?</span>
+    				</div>
+					<div class="card-content">
+						<span class="card-title black-text">Vous souhaitez plus d'informations ?</span>
+					</div>
 				</div>
 			</div>
 			<div class="col s12 m6 center-align">
 				<div class="card">
-        			<div class="card-image">
-						<img class="responsive-img"  id="presse" src="img/presse/presse.jpg">
-        			</div>
-				</div>
-				<div class="card-content">
-					<span class="card-title">Ils ont parlé de nous</span>
+    				<div class="card-image">
+						<img class="responsive-img"  id="presse"src="img/presse/presse.jpg">
+    				</div>
+					<div class="card-content">
+						<span class="card-title">Ils ont parlé de nous</span>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+	
 	
 	<div class="container" id="pro_container">
 		<div class="row">
