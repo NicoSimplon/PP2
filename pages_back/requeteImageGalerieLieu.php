@@ -1,6 +1,5 @@
 <?php
-    //Changer lien lors du déplacement dans un dossier
-    include './connexion/connexion_bdd.php';
+    include '../connexion/connexion_bdd.php';
     
     if(isset($_POST['galerie'])){
         $lieu = pg_query("SELECT photo FROM tab_photo WHERE lieu = TRUE");

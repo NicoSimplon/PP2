@@ -1,6 +1,5 @@
 <?php
-    //Changer lien lors du déplacement dans un dossier
-    include './connexion/connexion_bdd.php';
+    include '../connexion/connexion_bdd.php';
     
     if(isset($_POST['case'])){
         $type_evenement = pg_query("SELECT * FROM tab_photo WHERE id_tab_photo IN (SELECT MIN(id_tab_photo) FROM tab_photo GROUP BY id_event) ORDER BY photo DESC");

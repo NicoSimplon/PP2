@@ -6,7 +6,7 @@ $(document).ready(function(){
 //Récupère la liste des evenements dans liste_evenement
 function setSelectEvent(){
     $.ajax({
-        url: 'requeteListeEvenement.php',
+        url: 'pages_back/requeteListeEvenement.php',
         type: 'POST',
         data: {case: 'eventList'},
         success: function(data){
@@ -20,7 +20,7 @@ function setSelectEvent(){
 //Récupère et affiche le nom de l'évènement sur la card lors de sa création
 function getGalerieImage(liste_evenement){
     $.ajax({
-        url:'requeteImageGalerie.php',
+        url:'pages_back/requeteImageGalerie.php',
         type: 'POST',
         data: {case: 'eventList'},
         success: function(data){
@@ -53,7 +53,7 @@ $(document).on('click','.card_evenement',function(){
 function getGalerie(i){
     id_evenement = i;
     $.ajax({
-        url: 'requeteImageEvenement.php',
+        url: 'pages_back/requeteImageEvenement.php',
         type: 'POST',
         data: {event: id_evenement},
         success: function(data){
@@ -77,7 +77,7 @@ $('#btn_selection_galeries').click(function(){
 //Récupère les photos liées à la galerie lieu
 function getGalerieLieu(){
     $.ajax({
-        url: 'requeteImageGalerieLieu.php',
+        url: 'pages_back/requeteImageGalerieLieu.php',
         type: 'POST',
         data: {galerie: 'lieu'},
         success: function(data){
