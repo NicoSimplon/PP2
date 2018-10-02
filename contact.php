@@ -66,7 +66,7 @@
             <div class="input-field col s12">
             <i class="material-icons prefix conticone">phone</i>
                 <input id="num" class="texbo" type="text" name="num" class="validate">
-                <label for="num" class="texbo">Téléphone</label>
+                <label for="num" class="texbo">Téléphone (facultatif)</label>
             </div>
         </div>
         <div class="row">

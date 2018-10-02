@@ -511,6 +511,7 @@ else {
     <script src="js_admin/carrousel2.js"></script>
     <script src="js_admin/carrousel3.js"></script>
     <script src="js_admin/carrousel4.js"></script>
+    <script src="../js/datepicker.js"></script>
 
 </body>
 
